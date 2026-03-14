@@ -1,0 +1,16 @@
+# Core
+jiwer>=3.0
+soundfile
+librosa
+
+# Whisper
+openai-whisper
+
+# Faster-Whisper
+faster-whisper
+
+# Moonshine
+useful-moonshine
+
+# FunASR (SenseVoice, Paraformer)
+funasr

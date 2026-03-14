@@ -7,12 +7,18 @@ Benchmark top open-source ASR models on NVIDIA Jetson (16GB) for Japanese, Chine
 
 ### Phase 1: Setup & Test Data
 - [ ] Initialize git repo and push to GitHub
-- [ ] Prepare test audio dataset (5–10 clips per language, ~30s each)
-  - [ ] English: LibriSpeech / CommonVoice samples with ground truth
-  - [ ] Chinese (Mandarin): AISHELL / CommonVoice samples with ground truth
-  - [ ] Japanese: CommonVoice / JSUT samples with ground truth
-  - [ ] Include noisy samples (1–2 per language) for robustness testing
+- [ ] Prepare SHORT test audio (5–8 clips × 30s per language)
+  - [ ] EN: earnings call excerpts, board meetings, conference calls
+  - [ ] ZH: 财报电话会 excerpts, 国新办发布会, business calls
+  - [ ] JA: 決算説明会 excerpts, 記者会見, shareholder meetings
+  - [ ] Include noisy samples (conference call / phone quality)
+- [ ] Prepare LONG test audio (15min / 30min / 60min per language)
+  - [ ] EN: full earnings call (15m), board meeting (30m), hearing (60m)
+  - [ ] ZH: full 财报电话会 (15m), press conference (30m), meeting (60m)
+  - [ ] JA: full 決算説明会 (15m), 記者会見 (30m), 株主総会 (60m)
 - [ ] Prepare ground truth transcription files (JSON format)
+  - [ ] Short clips: manual transcription
+  - [ ] Long clips: source from official transcripts / subtitles
 - [ ] Set up Jetson environment (CUDA, Python 3.10+, venv)
 
 ### Phase 2: Model Integration
@@ -36,20 +42,46 @@ Benchmark top open-source ASR models on NVIDIA Jetson (16GB) for Japanese, Chine
   - [ ] Meta Omnilingual ASR (1B or smaller variant)
 - [ ] Verify each model loads and runs on Jetson 16GB
 
-### Phase 3: Benchmarking
-- [ ] Run all models against all test clips
-- [ ] Collect metrics: WER/CER, RTF, VRAM peak, load time, first-token latency
-- [ ] Run 3x per model for variance
+### Phase 3: ASR Benchmarking
+- [ ] Run all models against short clips (3x per model for variance)
+- [ ] Run all models against long clips (15/30/60 min)
+- [ ] Collect metrics: WER/CER, SeMaScore, RTF, VRAM peak, load time, first-token latency
+- [ ] Compute long-form drift and memory stability
+- [ ] Generate composite score ranking
 
-### Phase 4: Analysis & Report
-- [ ] Generate comparison table (model × language × metric)
-- [ ] Identify top 3 per language
-- [ ] Identify best "all-rounder" for JA+ZH+EN
+### Phase 4: Speaker Diarization Benchmarking
+- [ ] Prepare RTTM ground truth files with speaker labels for all test clips
+- [ ] Integrate diarization models:
+  - [ ] pyannote/speaker-diarization-3.1
+  - [ ] NVIDIA NeMo MSDD
+  - [ ] NVIDIA Sortformer
+  - [ ] SpeechBrain ECAPA-TDNN
+  - [ ] DiariZen
+- [ ] Integrate combined ASR+diarization pipelines:
+  - [ ] WhisperX (Whisper + pyannote)
+  - [ ] NeMo Canary + MSDD
+  - [ ] FunASR SOND
+  - [ ] Qwen3-ASR + pyannote
+- [ ] Run diarization benchmarks: DER, JER, Missed/FA/Confusion
+- [ ] Run combined pipeline benchmarks: cpWER
+- [ ] Run on long-form audio (15/30/60 min)
+
+### Phase 5: Analysis & Report
+- [ ] Generate ranked comparison tables
+  - [ ] Best ASR per language (EN, ZH, JA)
+  - [ ] Best ASR all-rounder (JA+ZH+EN)
+  - [ ] Best diarization model
+  - [ ] Best combined ASR+diarization pipeline
+  - [ ] Best for long-form meetings
 - [ ] Write summary report with recommendations
 - [ ] Push final results to GitHub
 
 ## Acceptance Criteria
-- All models that fit in 16GB are benchmarked
-- WER/CER computed against ground truth for all 3 languages
-- RTF and VRAM measured for each model
-- Results reproducible via single `python bench.py` command
+- ≥12 ASR models benchmarked across 3 languages
+- ≥4 diarization models benchmarked
+- ≥3 combined ASR+diarization pipelines with cpWER
+- Short clips (30s) AND long clips (15/30/60 min) tested
+- WER/CER + SeMaScore computed for all ASR models
+- DER + cpWER computed for all diarization pipelines
+- RTF and VRAM measured for all models
+- Results reproducible via `python bench.py`
