@@ -11,10 +11,17 @@ class FasterWhisperRunner(ASRRunner):
 
     def load(self):
         from faster_whisper import WhisperModel
+        import ctranslate2
+        # Check if CUDA is supported by CTranslate2
+        try:
+            ctranslate2.get_supported_compute_types("cuda")
+            device, compute = "cuda", "float16"
+        except ValueError:
+            device, compute = "cpu", "int8"
         self.model = WhisperModel(
             "large-v3",
-            device="cuda",
-            compute_type="float16",
+            device=device,
+            compute_type=compute,
         )
 
     def transcribe(self, audio_path: str, language: Optional[str] = None) -> str:

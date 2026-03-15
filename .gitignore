@@ -1,0 +1,14 @@
+# Audio data (too large for git)
+data/en/
+data/zh/
+data/ja/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+venv*/
+.venv/
+
+# OS
+.DS_Store
