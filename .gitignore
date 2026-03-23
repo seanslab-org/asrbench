@@ -2,6 +2,8 @@
 data/en/
 data/zh/
 data/ja/
+data/standard/
+data/stress/
 
 # Python
 __pycache__/

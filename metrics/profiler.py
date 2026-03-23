@@ -26,12 +26,25 @@ class ProfileResult:
 
 
 def get_audio_duration(path: str) -> float:
-    """Get duration of a WAV file in seconds."""
+    """Get duration of an audio file in seconds (WAV, FLAC, etc.)."""
+    # Try soundfile first (handles WAV, FLAC, OGG)
+    try:
+        import soundfile as sf
+        info = sf.info(path)
+        return info.duration
+    except Exception:
+        pass
+    # Fallback to wave module (WAV only)
     try:
         with wave.open(path, "r") as wf:
             return wf.getnframes() / wf.getframerate()
     except Exception:
-        # Fallback for non-WAV or broken files
+        pass
+    # Last resort: librosa
+    try:
+        import librosa
+        return librosa.get_duration(path=path)
+    except Exception:
         return 0.0
 
 

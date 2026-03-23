@@ -1,46 +1,30 @@
-"""WER/CER computation with text normalization."""
-import re
-import unicodedata
-
-
-def normalize_text(text: str, language: str = "en") -> str:
-    """Normalize text for fair WER/CER comparison."""
-    # Unicode NFKC normalization (important for CJK)
-    text = unicodedata.normalize("NFKC", text)
-    # Lowercase
-    text = text.lower()
-    # Remove punctuation (keep CJK characters)
-    text = re.sub(r'[^\w\s\u4e00-\u9fff\u3040-\u309f\u30a0-\u30ff]', ' ', text)
-    # Collapse whitespace
-    text = re.sub(r'\s+', ' ', text).strip()
-    return text
+"""WER/CER computation with proper text normalization."""
+from metrics.normalize import normalize
 
 
 def compute_wer(reference: str, hypothesis: str, language: str = "en") -> dict:
-    """Compute Word Error Rate."""
-    from jiwer import wer, mer, wil
-    ref = normalize_text(reference, language)
-    hyp = normalize_text(hypothesis, language)
+    """Compute Word Error Rate (primary metric for English)."""
+    from jiwer import wer
+    ref = normalize(reference, language)
+    hyp = normalize(hypothesis, language)
     if not ref:
-        return {"wer": 1.0, "mer": 1.0, "wil": 1.0}
-    return {
-        "wer": wer(ref, hyp),
-        "mer": mer(ref, hyp),
-        "wil": wil(ref, hyp),
-    }
+        return {"wer": 1.0}
+    return {"wer": wer(ref, hyp)}
 
 
 def compute_cer(reference: str, hypothesis: str, language: str = "zh") -> dict:
-    """Compute Character Error Rate (for CJK languages)."""
+    """Compute Character Error Rate (primary metric for ZH/JA).
+
+    Uses jiwer.cer directly on normalized strings — it handles
+    character-level edit distance internally. Do NOT space-separate
+    and then call cer(), as spaces get counted as characters.
+    """
     from jiwer import cer
-    ref = normalize_text(reference, language)
-    hyp = normalize_text(hypothesis, language)
-    # For CER, split into characters
-    ref_chars = " ".join(list(ref.replace(" ", "")))
-    hyp_chars = " ".join(list(hyp.replace(" ", "")))
-    if not ref_chars:
+    ref = normalize(reference, language)
+    hyp = normalize(hypothesis, language)
+    if not ref:
         return {"cer": 1.0}
-    return {"cer": cer(ref_chars, hyp_chars)}
+    return {"cer": cer(ref, hyp)}
 
 
 def compute_accuracy(reference: str, hypothesis: str, language: str) -> dict:
@@ -48,6 +32,13 @@ def compute_accuracy(reference: str, hypothesis: str, language: str) -> dict:
     if language == "en":
         return compute_wer(reference, hypothesis, language)
     else:
+        # For ZH/JA: CER is primary, also compute WER for reference
         result = compute_cer(reference, hypothesis, language)
-        result.update(compute_wer(reference, hypothesis, language))
+        # Also compute WER on the original (lightly normalized) text
+        from jiwer import wer
+        from metrics.normalize import normalize_en
+        ref_words = normalize_en(reference)
+        hyp_words = normalize_en(hypothesis)
+        if ref_words:
+            result["wer"] = wer(ref_words, hyp_words)
         return result
