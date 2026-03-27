@@ -1,0 +1,242 @@
+Webinar is being put on by the Empire State Library Network. Um, it is on Wikipedia for libraries with collections in New York heritage. Um, so hopefully you are all in the right place and that's what you're expecting to see right now.
+My name is Ryan Perry. I'm the Digital Collections Librarian for the Central New York Library Resources Council. And I also serve as the statewide project coordinator for New York Heritage Digital Collections.
+We are, we are working to promote your content from ESLN's various digital repositories and expand public.
+understanding and appreciation of New York State's history and culture. So, um, we really believe that the best way to do this is to meet our users where they are. And one of the places they are is Wikipedia.
+Uh, Wikipedia is a remarkable resource that has helped millions of users research a dizzying array of topics. Our hope is that we can find ways to expand the reach of our materials while further enriching this invaluable resource.
+Um, with that, I'm really excited to introduce Lane Raspberry. Lane Raspberry is Wikimedia and residence at the School of Data Science at the University of Virginia. In this role, Lane specializes in sharing information in ways that make it free and accessible to all. Um, and with that, Lane, I'll turn it over to you.
+Thank you so much, Ryan, for the introduction. Thanks for having me. Thanks for Winnie Lark for having me five years ago. One of my, one of my earlier Wikipedia presentations to libraries.
+And I've been editing Wikipedia as a hobby since I was an undergraduate. This was in, in the mid 2000s.
+And it's always been my wish that more people have easier and ready access to library resources.
+If you'd like to ask questions, just put them in the chat. I would be happy to stop during my presentation and explain anything. Please don't be shy.
+But, uh, I'm going to continue with the presentation until then, unless I get questions and.
+Let's try to have some conversation today about Wikipedia. Anything you ever wanted to ask? Uh, nothing's out of bounds.
+future reference, so you will have it up afterwards. And there are also closed captionings, um, live transcript available. Um, if you click down at the bottom of the screen, you'll see an option for live transcript.
+Also, um, as Lane mentioned, please try to use the Q&A module to ask questions. It just makes it a little bit easier for us to keep track of, of your questions and ask Lane, um, as they come in. So thank you so much.
+These slides are going to be available. So it's, it's all there for you. And parts of this are interactive, which is why I'm telling you about the slides.
+If you want to follow up with this presentation by clicking any of the links, that's going to be possible.
+In this talk, I'm going to give an introduction to Wikipedia, what it is and why it matters.
+And then I'm going to talk particularly about Wikipedia libraries and Wikipedia and, and my library at the University of Virginia. So, introduction of Wikipedia, what is it? Well.
+So we use this definition of an encyclopedia, which is tied to how we maintain the quality of Wikipedia, which is.
+If anybody shares information in Wikipedia.
+Then following that claim, that fact, that statement, they should cite the source from which the information came. And this is what we say in encyclopedias. If somebody's citing a source, sources have to be reliable.
+We in the community, we make these judgments about what constitutes reliability.
+When we do this, we, we're really looking to what's most familiar to most of our editors, which is the undergraduate library experience at Western universities. So if a typical university librarian would say a source is reliable,
+Then we try to import that culture into the wiki community. We've, we've often looked to librarians.
+I'm just starting with this. So Wikipedia system of quality control. That's not really what I want to talk about today. It's, it's very well documented in, in scholarly critiques and the academic literature. You can see what different people have said about this, but I want to say what, what, why an institution, why a university?
+Why a library should care about Wikipedia. And that's because Wikipedia is extremely popular.
+It seems to be the case that for many topics, Wikipedia is.
+the most requested, published, accessed and consulted source of the information on the internet, perhaps in the world on that topic.
+In that very same year, 2001, a large company in the search engine business, Google.
+made the decision that if there was a Wikipedia article for a given topic, then
+If somebody were to search for that topic in their search engine, then they would put the Wikipedia article at the top of the search results.
+And it's not just one search engine that did that. Microsoft's Bing does that.
+Nowadays, if you ask Apple Siri a question or Amazon Alexa a question in response to search in general.
+If there's a staff Wikipedia somewhere, this is usually what that person is engaged to do. In the same way that organizations, they come up with a communication strategy. That communication strategy can include.
+Setting up a website, driving traffic to the, to the website, counting how many people read it. Or it can include having a social media profile.
+And collecting tweets or collecting Facebook, Facebook likes and counting those up.
+Which you measure with social media metrics or, or communication metrics. And in that same way, if somebody posts something on Wikipedia, there's metrics that we can get, which.
+Demonstrate audience engagement and response and delivery of information that people are actually wanted.
+And in this way, Wikipedia can be a measurable part of a communication strategy. That is you put your information into Wikipedia and then
+The people who read that are people who just a few seconds ago requested information on that very topic in a search engine. So Wikipedia's audience is the people who just now are looking for information on a particular topic. And if your information is in that Wikipedia article, then you, you've served the consumer need. Now we can, we can be the activities. I'm going to describe what it is that, that.
+I do what Wiki editors do. Most of them are volunteers. There's very few professionals. I happen to be at a university that's, that's very uncommon. Uh, but if there's, if there's a Wikipedia.
+But if you were to ask individual Wikipedia editors, the, the several hundred thousand volunteers, why it is that they're contributing to Wikipedia, they would say that they enjoy it. That's a, that's a very, very common sentiment.
+People should be able to engage in peer to peer communities or something about nonprofit networks. These, these kind of ideas come up.
+In, in Wikipedia, the, the kind of things that people do, we can talk about this if you like, but just.
+Briefly, the easiest way to explain it is that if you can imagine there's a magazine and then there's a publishing house and there's all these functions that people have to do. You have to have, you, you, you have to have a journalist go out and do interviews and then.
+It's got to go under editorial review to combine with other stories.
+You need to have a publishing plan where people prioritize certain content over other content. There's HR departments. There's dispute resolution.
+There's outreach to make sure that if you have something in the production queue that's not getting done, you get somebody to fulfill those roles.
+Wikipedia does all these things and it does all this with volunteers. It's really an army of administrators. It's not just the content creators. And if I had to break down.
+There's the one group that's the content creators. This is what most people think of Wikipedia editors, the people writing the articles. There's another group doing some kind of administration, which could be the.
+Kind of abstract. It can be abstract administration or abstract content creation. Usually with software, sometimes with data sets.
+But doing something technical to try to make it all scale.
+I'm going to put this aside right now. If you have questions, we'll come back to individual editors, but I, I know you guys are associated with cultural institutions.
+And that's really what I want to talk about today. So what do cultural institutions do on Wikipedia? What does any kind of organization do on Wikipedia? Four classes of activities that I'm going to go over. Okay. The first class of activity.
+Is what I've already described to you. What I think is Wikipedia's greatest strength and why people should really care about Wikipedia.
+The metrics reports inside Wikipedia say that it reaches an audience of about 500 million people a month.
+So there's, there's different metrics reports published by the Wikimedia Foundation and other people. You can check on those yourself and maybe there's some dispute. Maybe it's off by a couple of hundred million, but.
+For most people, it's enough to say Wikipedia is reaching a very large audience on a global scale. And this is unprecedented, nearly unfathomable.
+Just so long as you're willing to comply with Wikipedia's ethics and values. And by ethics and values, there's.
+I just mean share information in the public interest, share general interest information that serves the user.
+And so if you're in a library, if you're in a cultural institution, you're already doing that. When I share information in Wikipedia.
+I, I do it to support researchers and students at my university. This can be in all kinds of fields. I.
+Support a lot of different classes in, in, in some ways, this is kind of an administration or support staff role. I also.
+Get different grant funding from time to time that, that I apply for. And I'm speaking for myself. I've been editing Wikipedia's medical information for a long time. And when I've been able to get funding most easily.
+Uh, every day of a year and actually you can show multiple years or whatever arbitrary time range you want. So you can show any, any set of days and then how much traffic, how many page views did that Wikipedia article get for, for any day or any set of days over a range of time?
+This is for the English Wikipedia article on tuberculosis. And so when I've had public health messages from expert health organizations to share.
+I spent this amount of time developing this with these expert sources, these latest publications.
+these, these key messages. And we reached, we reached two million people who.
+Right before they arrived at this Wikipedia article, they had just searched for tuberculosis in a search engine. So that's the audience we were able to reach. And I can pull these reports up for every single article in Wikipedia on any day.
+Going back years and in any language in the world, Wikipedia is not any language in the world, but Wikipedia supports about a thousand languages. And it's got active communities for about 300 of those. So we've got, we've got good language coverage. You can do translation and Wikipedia if that's important to you.
+You can play this game with any, any article. So whatever your expertise is, you drop a category into this metrics tool and it will.
+How many people are reading these articles? And you can find out which articles are the most popular. How many people would you reach if you were sharing such and such kind of information? These kind of, these kind of things are possible. Now, the second thing that organizations do on Wikipedia.
+And this, this may be related to wanting to get page views also, uh, is.
+Wikipedia also does document archiving through a project called WikiSource, where people.
+People convert these, uh, convert handwritten documents into, into machine readable text or just, uh, store, store documents of any sort.
+There's also a picture repository. We can media comments. We can take images of all sorts.
+Uh, increasingly non, non-text media includes structured data sets. We're able to, to take those also. I can tell you a lot about these kinds of archival projects.
+Uh, welcome, the Welcome Trust, the, the big, um, form on nonprofit based in the UK.
+So we, we were able to integrate these into different Wikipedia articles about the history of HIV per country.
+They had an alchemy collection, books from centuries ago. We did different things with these.
+There's large numbers of photographers, people whose hobby is photography. These aren't necessarily institutions. These are usually single photographers.
+He uploaded these into Wikipedia and that's, that's his own personal archive. So we have a lot of individual photographers doing these kinds of things.
+Are there large collections that are just kind of sitting there in Wikimedia Commons or in Wikisource? Do you have a sense for, like, what, what percentages is being, um, referenced by other places?
+It, it largely depends on the community engagement around the project. So we've seen time and time again, if somebody drops a very interesting collection into Wikipedia and they say, this isn't sorted, you guys just sort this out.
+Then we're not able to recruit the labor to go through and sort all of everybody's collection.
+But what our community really could pick up on was this. We have a large LGBT activist community in Wikipedia.
+They had HIV posters mixed up with a bunch of their other stuff, and we curated that as a collection of interest to us.
+So that wasn't anything that they've, they've ever profiled themselves. It was just based on our interests. This is, this is what our community wanted to do with the content that they gave us.
+So I would say, for example, the welcome collection, it was a, it was a huge number of images, maybe almost a million. I would say, if I had to guess, I would say 5% of them got, got well curated, probably only
+One to 2% of them actually made it into Wikipedia articles. And then our communities at capacity, we're sorting so much other stuff.
+So if they bring in a subject matter expert and say, let's, let's have a social event. Let's have a party and we're going to go through media archives and do something with them. That's one of the ways by means of which we convert archival collections into views.
+Because if you build a community around a concept and you start curating the stuff and you have good structured data, then.
+We, we, we eventually get the stuff into, into Wikipedia.
+Anybody can edit, but somebody's got to do the work to say this, this media collection would be good for this article, or this is how we're going to distribute such and such.
+And then people would go through their collections, then integrate, develop the Wikipedia articles on time, time periods or countries or regions or whatever else the case may be.
+We have ways of providing, uh, calculating metrics of, for any arbitrary cohort of Wikipedia, to what extent are they engaged in Wikipedia and editing and how many people are they reaching? So I'm at, I'm at a university.
+Wikipedia events, they're actually classes at universities, means a group of students under the direction of a professor. Each student edits a Wikipedia article.
+So we have this class. It was to teach students what is a reliable source. How do you trust what's on the internet?
+see what it's like to have conflicting sources and reconcile what's reliable and what's less reliable, whatever the case may be. Here's the report that it generated. So we had.
+17 students who had never edited Wikipedia before. They.
+Made 400 edits to those articles, adding 16,000 words. So easy to count. They cited 190 sources. Many of those are repeated.
+And then since the time the students have edited those articles, they've been viewed 600,000 times. And this is, this is that communication impact that I was telling you about earlier. So you can.
+Are archive collections not available for the public until Wiki staff can sort, et cetera? So basically, um, those large, uh, archive collections with, or those as soon as they're up available to the public, or do they need to be sorted before they can be made available?
+We do in indexing of nonpublic information. So for example,
+And you'll get a certain number, a certain number of page views for that. So it's not like it's a complete dead end. Most of the engagement is around, um, articles, the multimedia and the articles.
+The ones that get a little more engagement are the ones that we have copies of in our archives. And then.
+It takes a special kind of person that's going to click through to the original organization and engage with the content on the website.
+Surface in a way that most typical users would, would access them. So when you were saying that a small, only a couple percent of those posters were available in articles or referenced elsewhere.
+So if you're, if you're wanting to target serious researchers.
+In many archives, that's their audience. They don't want a casual, casual crew. Then it's still worthwhile to put a link to your archives in relevant Wikipedia articles.
+Um, and it actually feeds into another question that just came through. I'm sorry to throw you off here.
+And I've got to tell you, there's just not an audience out there that's enthusiastic for pop culture information about professors or CEOs or, uh, people in, people in general, unless you're a celebrity or in a movie. Uh, we have a tremendous flood of, of, especially business people making their profiles in Wikipedia.
+We want professors, but we want professors from a certain perspective. We really don't want what professors say about themselves.
+But we really want third party neutral journalism or reviews or critiques about all these organizations and.
+Maybe a billion dollars a year. I know medical organizations that go through a billion dollars a year and don't attract a single piece of journalism in most years, despite consuming that amount of money.
+And it's not that journalism's not coming out. It's just, oh, they're all press releases that are published exactly in other websites. We have different biases in Wikipedia. Like, um, it's often said that it's the truth. So we've got about, um, nearly 2 million biographies in Wikipedia. In English, 80% of those are male.
+So there's this, this tremendous bias against, against women, for example. And.
+We're still sort, there's a lot of reasons for this. And I'm not going to be able to sort this out. But among the many reasons why this is happening is in external media, definitely.
+Um, it's not Wikipedia, but just if you're a man, you're more likely to be interviewed, featured, profiled, critiqued, whatever. And if we, if we don't have anything to cite about a demographic or a person, then.
+Uh, we, that's, you know, we're, we're looking for good content that we keep.
+Alright. Last thing, uh, organizations do in Wikipedia. So I've said, they're trying to get page views. They do some archiving. They, they build up some community. This has nothing to do with Wiki. This is,
+I'm going to give some examples. So Metropolitan Museum of Art, very generous of them, right? To give those 300,000 images.
+How about their collection? Finding errors, misspellings.
+Uh, putting topic tags to label what is the, the, the subject matter content. What's depicted in all these pictures.
+So we were, we were also cleaning up their archives. People were willingly doing this.
+And they, they pull that data back out and they used it to enrich their own database. Uh, welcome trust. It's not like they were exactly.
+But when they put this history of medicine, cultural content out.
+One of the things that I've worked on and some other people have worked on is the better structuring of data about clinical trials.
+And connecting this with different kinds of cultural or advertising products associated with different drugs or pharma companies.
+In environment where there's a lot of people looking at all kinds of medical data and people foster this kind of thing.
+There's something called the, the SNAC database. My university participates in this. It's a.
+There's profiles of biographies, there's biographies, profiles of organizations, all these kinds of content. The database itself didn't have a lot of images.
+Hey, Wikipedia, we have this list of people. Do you have images in the public domain that we could integrate with the database? And so.
+This particular database, it actually gave, gave to the Wiki ecosystem, but it, it pulled some things back out.
+Sometimes birthdays, sometimes other, other, other bits of data and especially pictures.
+And this isn't associated with any particular organization, but organizations that are doing mapping of any kind. If they're looking for free mapping data.
+But if OpenStreetMap, for example, is mapping out a museum, they don't want to talk about the text of the museum or what. That, that's general reference. That's Wikipedia's domain. So.
+Wikipedia points to OpenStreetMap, OpenStreetMap points to Wikipedia, and organizations that are also doing mapping of any kind, they may pull from, from both of these projects.
+It all kind of supports each other in a non-profit collaborative framework.
+Alright, so now I'm going to talk about libraries, like particular projects in libraries.
+Uh, I would take questions. So if you have questions about any aspect of this, you know, slow me down, put them in the chat. Let's talk it through.
+I told you that we have to, we're not doing original research. We're not making up things. Wikipedia is not what people have in their heads. Wikipedia is what experts have written and what we're able to cite. So.
+And how we want to serve this need is making sure that they find the best information in the world. We're looking for the best information on every, every topic to decide. We want to make this as easy as possible.
+And we're, we're digging on accessibility, things like translation, web accessibility, making sure it looks good on your phone.
+What we, we really don't want to do in Wikipedia is localization of the, of the knowledge or replacing of the communities. We feel like libraries are the place where local knowledge should be stored.
+And where, where people should organize, you, you have to have local, uh,
+to be able to manage it. And it's, it's just Wikipedia's duty to summarize, not to sort this out.
+There are presidents of, of libraries hiring Wikipediaians.
+For some years, the wiki community in New York City has met at Metropolitan Library Council in New York. I forget what it's called. Metro. Metro.
+So they don't have a Wikipedia right now, but they've still been hosting Wikipedia events or they did before COVID at least. Uh, OCLC.
+They've employed several Wikipedians over the years. They do a lot of reconciliation of Wikipedia's articles with their authority control, VF identifier.
+In the Kansas City Public Library, they hired their Wikipedia in full time for a one year term.
+If a Wikipedia is associated with the library, one of the first things that usually comes up is, how do you surface special collections? And at this point, I guess you guys would have an idea about that. You look in the special collections, you integrate whatever you can, text, facts, images into Wikipedia articles.
+that are relevant and then, and then you, you showcase these, you count the views. You can also do these kind of classroom programs. I already told you about one of them. Students come in and, and.
+They learn what is a reliable source. Wikipedia is good for teaching this because it's peer review. Someone puts their content into Wikipedia and an experience that consistently comes up is some student is going to get a warning. It's not a warning. It seems like a warning. They get scared. They're going to get friendly advice from a Wikipedia reviewer and they're going to say, Hey,
+And so that's a nice experience. It's a very, very common reason why teachers and professors would, would introduce students to Wikipedia.
+Or, or this thing, especially universities, scholarly profiles. So I told you, we're not so keen on, we give you the articles about professors.
+Because they tend to self cite the university self published materials. It's not that we don't want them. We just want appropriate ones, but something that we really do want in wiki and that is accessible.
+This isn't really what the professor wants, but it's what the wiki community wants. We want scholarly metadata. We want biographical data to index these people. Author disambiguation. We do a lot of manipulation of catalogs of source metadata.
+And we try to associate people with their publications, especially in the academic literature. So I'm going to say some things about this. So.
+Special collections at the library. We, we, we've had a few different projects.
+Uh, one is looking at old archival newspapers pulling out. I'm in Charlottesville, by the way, Charlottesville, Virginia. This is known for some, some mass insanity that's happening in different times.
+In the, in the, in the civil rights era, Charlottesville had a lot of activism. And we've got these newspapers on, uh,
+black, black activism in, in the civil rights area. And it's, it's crazy to bring these newspapers out and show them to students. Tell them, Hey, did you know that?
+There used to be a black hospital and a white hospital and you had to go to the one for your race. And if you didn't like that, there was a black lawyer and a white lawyer.
+And you couldn't go to the lawyer that isn't associated with your race. Just all this insanity in these archives and you pull this stuff out.
+And have the, have the students edit it. And it makes it a lot more real to see something that's, that's older. And then they can actually do something with it. Have these kinds of conversations, cite the sources. Uh, so special collections in Charlottesville. We, we talk a lot about race.
+I was saying something that's kind of low impact. So we have this, this activist. His name is Julian Bond. He's an activist of the civil rights era. We happen to hold his archives at our university. Copyrighted material.
+But we are able to at least link to his archives in his biography. And that's not going to be high impact, but also.
+It's what's appropriate for a Wikipedia article. If somebody's researching this guy, they need to know who's holding his archives. And where do I, where do I find more materials? So it's the least that we can do.
+You need the link to his archives. It's just appropriate. Of course you do. So some library activities there.
+I've got different undergraduates classes that have edited.
+I've got links to all of these. I'm not going to click any of these now except by request, but just like I showed you, class editing before.
+Pressing you guys and more actively soliciting questions.
+But I want to, I want to give an example of a typical thing that happens at a university that it's just kind of a bonker situation and.
+It comes up in so many circumstances. And what I say is no matter what happens, almost no matter what happens.
+I'm in the school of data science. I'm going to describe a typical project. So we've got, we've got this researcher who works with hardware. He works with thousands of sensors.
+you, you set these cheap little devices up in a place, spread them around the city or a forest, they take the temperature, they take the humidity, air pressure, count particulate matter, how much dust is in the air,
+I don't know what else they do. They, they sense everything that a sensor can do. It's a little device.
+And you need these sensors around to get a survey of climate change, the effects of climate change around the world. So this is a popular sort of research to do. This particular research project, sponsored by the US government, is supposed to do it in Alaska.
+They have their own lives. They're doing their own thing. And they, they may not necessarily, uh, particularly,
+Actually, you know, it's hard. You can't do proper community outreach without representation. I'm not going to say, Wiggy's definitely not going to solve your problems, but if you don't know where else to start.
+In Wikipedia, some of the things that we were able to look at were, well, we can, we can map out the area. We can, we can write.
+And see if we can get photographs of all of them. We can do the articles for all of them. And then we have a list of the wildlife in the area. We can track the rivers, the natural bodies of water.
+We can talk about the art and culture. And that's contemporary. If there's artists that need biographies nowadays.
+We can host Wikipedia editing events with the local community in this way. We can look at historic art and we take what we can get. A lot of this is.
+But such as it is, if we have pictures and it's about the community and about the culture, we do the best that we can. What, what, what are we supposed to do? And we can even do this in the local languages. So if somebody wants to do language preservation or somebody wants to try to do translation, then it's certainly within the realm of possibility to.
+Make these Wikipedia articles in this information in the local language. Wikipedia accepts input in all kinds of languages, translated cross languages, and do the best we can. This is not community buy-in. This is, this is, what this is, is better than nothing.
+So if somebody needs to do a community project, I, I, I'm, I'm showing this to demonstrate
+That no matter what someone wants to talk about, and if you go to a town and you talk about environmental sensors, and then somebody wants to talk about the local cultural festival.
+And this is the kind of curation you can do when you have a media collection and open archives. So I don't think there's any museum that's ever curated.
+The exhibit on paintings which contain an iceberg. But we have these, these systems in Wikipedia.
+Where you can, if you, if you have topic tags and paintings, you can run.
+Queries. We have a, we have a web-based query service for querying Wikipedia, these media collections, all this stuff. I, I'm just going to show a bit of computer code and what comes up.
+And the, the people who, who put these labels on the icebergs, this is crowdsourced labels on these icebergs. So we have, we have some, some, some image.
+Right. And somebody, somebody helped curate this to say, what, what did it contain? They applied structured data to this thing.
+Before I, I really insist on questions is I, I do a lot of scholarly profiling at my university. So I said, we can keep the articles are off topic.
+So I say, I get the researcher profile. I try to track, import the list of, uh, from Crossref and, and other sources, scholarly, scholarly indexes. What is the list of their publications?
+To try to do different kinds of data visualizations and understand what it is people are writing about at my university and what relationship do they have with other people at other universities. So you can do all the other classic things. Well, who are the author networks? Who is out of the author network? Who are the clicks? Like,
+This group will write papers on this subject with this group. But what do you know? They don't want to work with that group. What's up with that?
+You know, and what kind of papers come out of these, these different social networks or.
+Show me on a map who's publishing the most papers on a given topic in the same way that you can tag a painting is depicting an iceberg. You can also tag it in academic paper is having the main subject of an iceberg. And that query is just the same way. If you can query about paintings.
+We're expecting every university to sort their own papers. You got to come up with your own list of faculty.
+This gets a surprise out of some other people. Did you know that most universities don't even know who they're employing? Like, if you ask the university, give me a list of all your professors. They can't do that.
+is it doesn't accept data set imports, not raw data set imports. Everything has to be mapped. So.
+Like, for example, we have a property in Wikipedia for author, and it's got a map to your concept of, of author. And depending on the, the kind of.
+Think about starting with a few representative models.
+DPLA, the Digital Public Library of America, and they didn't do any of the hosting themselves. They would do a.
+So yeah, that's, that's how I would, uh, you know, say it from, uh, from our perspective. So yeah, I think it could be in both, but, um, you know, you always have that crosswalk issue of is creator or is it author or, you know, and then there's some things that are less, even less straightforward than that. So it can be a lot of work.
+There was another question. What is the timeline for community review? If a student creates new entries, like the artist biographies you mentioned, can they see the result of the process before the end of the semester?
+And if you go through them, they'll actually get a, they'll give you online training and
+A human that will talk to you on the phone or by email or whatever will help you meet your goals. But in, in short.
+The wiki communities, 90% of the time, they're going to give their feedback within one week. And like, 70% of the time, it happens within one day.
+where they're just seeing does this citation or the source being cited look legitimate that's and is there a swear word in it so if there's no swear word in it and the citation looks legitimate then it passes to the second round of review and the second round of review
+So we do have a Catholic Church Review Squad.
+Because if you have politics, and that's probably why, why this error slipped through and why the person was editing this anyway.
+Submit a week in advance. And then also after that, give another week for the student to respond to the feedback and actually correct what was wrong, if anything. Two weeks in advance. Yes.
+Yeah, so, um, that's, uh, that's actually a lot faster than I would have expected. I would, you know.
+In my mind, I think, like, okay, if it's a page that's not viewed very often, or not really, like, kind of in the outer reaches of Wikipedia, that it probably wouldn't, um, get, get a response. But there's a, there's a system in place, it sounds like, for getting that review happening on a more, uh, regular basis. Is that accurate?
+You want to do some review right now? Let's do some review right now. Okay. So there's many review tools in Wikipedia.
+Uh, so I just pulled this up. Here's one of the review tools. Left side of the screen is before.
+So, this is just like something, somebody edited this.
+And here we have a Japanese army officer. Okay.
+Okay. So it looks like what we have here is just someone having trouble translating English because this doesn't make sense.
+And so, uh, devising a scheme to detonate some trains. So I don't know who this guy is.
+Arrested. He arrested the women and children. You know, but I, I know a lot. Let's see.
+This can go to an expert community. I don't want to be involved in this one. How about that? Okay. Here's, here's another one. Okay. This one's easy. Okay. What's happening here is I see a sentence and a citation.
+I don't know about this, but I know that if you're removing information with a citation to an academic journal, you should, you should, you should give an explanation.
+So I'm, I'm going to take this one. This should revert and somebody's going to double check that. So there we go.
+Some, somebody, some people are clicking through Instagram on their phone and some people are clicking through Wiki fact checking on their phone. So it's just like, this is what you do when you're passing time.
+Um, I don't, I'm not seeing any other questions, but I have a question for you that might be a good way to kind of wrap up.
+More diversity in the representation. We can, PBS has.
+Different institutional biases that often reflect the biases of privilege in society.
+the source of shared objective, objective truth. And that there is a shared objective truth, by the way. Like that's, I didn't think that that was an activist position, but evidently it is. So there is such a thing as objective truth. And I'm glad that
+It's not that we want people to necessarily be so enthusiastic about Wikipedia, but we do feel strongly you shouldn't criticize the mission.
+Well, yeah, I think, I think that's a great way of putting it. Um, you know, the, the goal is always been noble. It's, it's how, um, successful it's being. And I, I've seen a couple of comments in the, in the chat, like, you know, whether, um, you know, some, some teachers or, you know, college professors might, you know,
+Aspects of that, and that's kind of filtered back into culture and how, how, uh.
+Especially lately about all the issues happening in all these other corners of the internet and Wikipedia's generally been, been this very positive organization.
+Alright, so I'm not seeing any other questions coming through and we're, we're to the top of the hour here. So, uh.
+The chat window now a link to a Google form where we're going to be having a second session with Lane. That's going to be a lot more hands on. Unfortunately, because it is hands on, there will only be 10 slots available. So we're asking people to fill out that form and just kind of say why you're interested.
+And, uh, that way we can ensure that we can get people from all over the state and that, um, you know, have some equity in terms of, um, access to that, uh, that workshop.
+Thank you so much. Uh, we'll hopefully see many of you at other ESLN workshops and webinars. And Lane, we'll see you at the next, uh, next event coming up in a month or so, or a couple of weeks. Bye, everyone.

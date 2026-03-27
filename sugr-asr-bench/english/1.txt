@@ -1,0 +1,257 @@
+This is a talk on translation technologies.
+Corresponding to many of your questions which saw these technologies as.
+Something to oppose or something that threatens the translation profession rather than something that can help it.
+But my corrector said that didn't sound very appropriate, so it's become something like.
+translation technologies helpful for me, which is rather more anodyne. This question concerns.
+In principle, just the process part of my model of translation studies, because translation technology is concerned how you produce a translation, obviously.
+But I would argue that the technologies themselves are more powerful as drivers of communication history.
+And that they affect also the nature of the products of the text we produce and the text we work from.
+And, very much, the kind of people we are, the people we're involved, the skill sets we need, and the kinds of different range of professions that are available to us. So, I'll be addressing, in fact, all three parts of translation studies.
+So, what technologies are we talking about here? Well, traditionally, really since the 1990s, we've had translation memories, TMs.
+And I'm hoping you're aware of what they are and what they do.
+tools that store your previous translations. As you translate a new text, you finish that sentence or that chunk and
+Those two, the ST and the TT, the start text and your translation of it, go into a memory. When you have that same sentence to translate again, or a similar sentence, your previous translation is brought up. And this can save you.
+Not saving your translations, but working from a database of previous translations. That's MT.
+These were transfer-based and now they're statistics-based. I'll come to that in a minute. And I want to show you how both these come together in TM-MT systems, that is translation memories that incorporate machine translation.
+To find out about these technologies, you don't really have to come to me or come to class. Everything is available online and you can download demos and you can find out for yourself.
+And then there were discussion groups for all of the tools. So really.
+Trados Studio. This is a translation memory suite. You can see what it's doing over here. You have the text that you have to translate.
+It's divided up into, in this case, mainly sentences, but you can join the chunks together and you can split them if you want.
+And then it brings up, here they're translating the first.
+the title, getting started. It's located an exact match from the database. This has been translated previously as, yes, the shit. Your first step is actually a very good translation and it's marked in green as an exact context match. So all you have to do is say, yes, that is a valid translation.
+Let's see. This is from the Trados online tutorial. So there's no secrets there. The thing is explained at great length and great detail. That's too much. And we can then see what the translator does with the next segment if they get to it.
+Basically, the interface has up here space for the previous translation, so you can select from the ones that are there.
+And over here, you get further information from your database, your terminology base, if you like.
+This is almost exactly what you want. It's got all the words you want there, except you don't want that first word, do you? So that's actually a 91% match. Up here, you've got the other
+Fuzzy matches. Fuzzy matches means just not exact match. The first one is green. That's an exact match. This one is 91%. You could have fuzzy matches down to 80, 70%.
+Okay. And he got a 91% and this is in the 80s. I can't actually read it anyway. So the first one's the one you want. You, you affirm that. And then to translate that, you really just remove the first word and you've got your translation.
+Okay. It's a fairly minor change that's needed. What are you doing here? You're actually repairing your previous translation.
+That's good at a 90% fuzzy match. That's an easy and logical thing to do. When you get down to 70% or so, you'll find proposals here where you might have three or four things to change. And that becomes cognitively quite difficult.
+No matter, you can just wipe it clean and do a translation from scratch. That is, translate as you normally would. What are the advantages here?
+Firstly, a silly advantage, but a very clear one is that you don't skip sentences. Everything is divided up here and everything is here. So you don't overlook sentences as you might if you're going from one place to another in traditional paper-based or screen-based translation. Secondly, you're saving time.
+By bringing up your previous translations. And thirdly, you're getting more consistent terminology. You can make, and phraseology. You can make sure that you're using the same word for the same thing throughout the entire translation.
+All of them have these days virtually the same interface and the same techniques.
+So, for example, we would start with MemoQ, which is quite accessible and they get the basic skills of working with that. They can transfer those skills and the memories into Trados or any other tool that your client might require.
+machine translation is different from translation memories in that the database is compiled from.
+Either translations generated by linguistic algorithms through an analysis of the start text and the generation of the target text.
+Or, a basis of previous translations.
+In the early days of machine translations, you had transfer-based architecture, which was based on the linguistic algorithms.
+And that worked well enough between cognate languages, for example, between romance languages, you get quite good quality output, which then has to be repaired or post edited, as we say.
+Really, in the new century, since 2000, when statistical-based machine translation has been used.
+This involves the probability of let's say three words appearing together in the start text, the probability of them
+Uh, having been translated as three words in the target text. And you get the probability for those three words, then the three words after and the three words prior to it. And you get quite good matches purely on statistical probabilities.
+The mathematics is far more complicated than anything I can explain or understand.
+But the results and the difference in the results.
+machine translation. I'm sure you all use something like Google Translate or Microsoft Translate. These are systems that are using
+statistical machine translation. And they give results that can give you the gist or give you an idea of what's going on.
+What you're looking at here, though, is Google Translator Toolkit, which is, uh,
+A good thing to have fun with and to use in the training situation because it, it actually brings together machine translation with translation memory options.
+Here you can see the source text, dot text has been divided up into sections as you translate. It's going to happen. Here we're translating the title, Great Pyramid of Giza.
+And over here, it's just into Chinese. We brought up a suggestion from the machine translation database, which the translator then works on repairs or post edits up in this space before moving on to the next text, the next fragment and so on throughout the text.
+This is again from Google's online tutorial. Here you've got them working on the next segment and bringing up the toolkit.
+Where you actually have previous translations of this. So here it's working like a translation memory.
+And up there, it's working like machine translation. So you can either work
+From scratch, do your own translation from the start text. You can post edit, that is, repair the machine translation suggestion, or you can select any of the previous translations from the various translation memories and work on them.
+tools that enable you to share your translation with other people to
+co-translate or do collaborative translation. A group of people can be working on the same document at the same time.
+What it can't do, and this is the reason why you should not use this tool professionally. What it can't do is keep the translation a secret. Well.
+I dunno, Google might promise you that there is an option.
+For the text not to be made publicly available to anyone. But would you trust Google? That's up to you. We've tried some experiments with this. We say only keep the translation in my personal translation memory. And we discovered, lo and behold,
+that the translation had been fed into the general database. It may be different this week. I don't know.
+However, for reasons of confidentiality, most of your clients would like their texts to be kept confidential and not made public.
+You would want to use a different tool, rather than this one. This one is great for
+localizing websites, or working on translating Wikipedia, anything where secrecy, confidentiality is not at stake.
+for your big high paying clients. No, don't do this. Go to one of the translation memories.
+When the translation memory doesn't give you a good match, it draws a blank. It can draw on a database of some kind and give you a machine translation proposal to work on.
+So much the same thing as you see happening here can happen in the more recent translation memory suites.
+The way statistical machine translation is working and why it's going to give us some interesting solutions.
+And in the text it says, vuelos y quebrantos.
+And online, you can actually find a recipe for dwelling the cabrantos in the picture. Yum, yum. Eggs and chorizo, spicy, spicy pork. Okay.
+It turns out though that this dish was invented perhaps in the 19th century in response to the text.
+It's failing. And this is when we all declare, ah, machine translation can't work. It will never get anything acceptable.
+Even then I put in Duelos y Quebrantos. Quebrantos is translated here as losses, duels and losses. Would you want to meet that? Probably not.
+You write in just the next word, los, los sabados. Okay. Or Saturdays. And what happens?
+Duelos y cabrantos los sábados. Scraps on Saturdays. How did it do that?
+Linguistic algorithm could make that transition. There is no linguistic algorithm.
+Found in the database somewhere that those four words dwell on Zika Branto's loss.
+With this one, which is from a previous translation of the Kikote by a previous translator.
+What this means is that the machine is not composing the translation.
+Decomposing, recomposing a sentence. It is locating a previous human translator.
+All the translations are by, well, we hope, are by humans or, in theory, are by humans. And the machine is just a tool for locating the most appropriate human translation or the one we might then want to work on.
+The problem is not banal. You can see here from a series of translations of the Quixote that no one really knows what he had to eat on Saturdays. Everyone was guessing and scraps is as good a guessing as anything else you might like to come up with.
+Now, statistical machine translation seems to promise a revolution.
+between translators and machines for the following logic.
+Our repairs, our post editing, our corrections are then fed into the database. And so the database improves. And.
+The better the database gets, the more people use it. The more people use it, the better it gets. And you get this virtuous circle.
+We will have perfect machine translation simply because everybody is using this tool for free. Google has this great knack of making a lot of money out of giving away things for free. Okay. What they did with their search engine.
+Interest in the idea of singularity. Singularity is this California idea for the moment when the capacity, the processing capacity of computers
+Will be the same as that of the human brain and will surpass it. This moment of singularity when the computer thinks as well as we do and then we'll do much better. Uh, there's lots of, uh,
+In the case of translation technologies though, singularity seems to be some way off.
+As indeed does the idea of the virtuous circle going up to heaven.
+The reason for this is that people are stupid. How are people stupid? Well.
+They pick up a machine translation produced by Google translate or any other tool you can find on the web.
+They think it is a good translation, probably because they don't know the language is concerned and they have to trust it.
+The Google crawler comes across that feeds that rubbish into the database. And instead of.
+People using it to make the database better. People use it and the database gets worse and worse and worse. And the fewer people use it because it gets worse. And instead of the virtuous circle, you have a vicious circle bringing us down to hell or sending the whole thing down the toilet.
+Which of these two circles is prevailing? I suspect at the moment as does Google that the second is bringing down all the promises.
+How do you save? How do you resolve that problem?
+Well, one is you can educate people in what machine translation can and can't do. It's there as a source of suggestions to be post edited, to be repaired.
+And two, you can stop making the Google Translate suggestions available in other tools, which is what Google has indeed done.
+I talked about the machine translation feeds going into translation memories. Google has now made that a pay service instead of a free service. So people won't use the tool stupidly.
+Stay tuned. I don't know where that story is going to head. I suspect that sooner or later we will restore things towards the logic of the virtuous circle.
+That is, we will have to pay serious attention to.
+statistical machine translation and work with it.
+In my classes in Monterey, every year I do a test. I never tell my students what they have to do with translation technologies. I just say, find out for yourself. And that's my message to you. Go and discover what it can do.
+One of the reasons is it changes so fast. New tools come up, new technologies. And, uh, I'm not up to speed with them.
+However, this is a simple test. You get a 200-word text. You get by students. You see this is a mixed language group here in these two years.
+They do it with machine translation and some do it without machine translation. Then you compare the two and you find that in both years, machine translation gives you a slightly faster text. So there's a slightly faster translation story. So there is a productivity gain of some kind.
+And then we get the students to revise each other's translations and I do this in a situation where they don't know if they're revising machine translation text or fully human.
+And I can show them that there's no significant drop in quality. That is, they make approximately the same number of corrections when they're revising.
+Through machine translation. Machine translation does not bring the quality of the text down, at least not in a systematic, across-the-board way.
+So the message here is, look, try it. You've got nothing to lose.
+And found something similar, uh, that whatever you do, it's not going to be worse. There may be something to gain and nothing really to lose. So the message is there again, try it and see.
+We are at the moment, then, with respect to these particular technologies, particularly statistical machine translation, we're at a tipping point.
+Where you can't say that the gains will be huge.
+It used to be Trados in the market. Leaders in translation. Remember, they used to sell their product as a productivity tool. You will gain time.
+And you find that the time gain is not as great as advertised. And then they started to sell it as a translation control tool, a terminology control tool.
+Which is true enough. These technologies enable big projects to be harmonized and revised and terminology to be made consistent. And that is a significant advantage.
+The various experiments on which translation tools work better.
+are, are, are rather spurious in some way, basically because in most cases you're testing the quality of the database.
+And not the, the usefulness of the tool itself. Um, if machine translation is giving you bad results for a particular field or set of texts, feed in some good translations into the database and the quality gets higher.
+So it's not the tool, it's the database that you're testing.
+The way forward, I think with statistical machine translation seems to be, uh, to find ways to stop idiots from polluting the databases. That is keep the databases clean. And the way to do this is to develop your own in-house machine translation system. For example, um,
+You can do this for each product that you have in a company. So the, the terminology and phraseology for that product is kept very consistent. And there is an empty tool for that product. Translators have to use it. Uh, and they correct it and clean it as they go along. And.
+This in fact means that within the company.
+machine translation is becoming like a big collective translation memory.
+Here are our, here is our translation memory, our storehouse of previous translations for all texts related to this particular product.
+This is the way forward chosen by IBM, for example. And it seems to be getting very good results with significantly less post-editing being needed. That is real productivity gains.
+So that's the way forward. It's not that the solution will not be in, in automatic crowdsourcing and letting everybody participate in it.
+And thereby the logic of the masses will improve the quality of translation. That seems not to be the solution.
+Post-editing is a term we use for correcting machine translation output.
+It's called post editing because if you want machine translation to work well, there are two things you can do.
+You can pre-edit the text, that is, write the text in simple language, which the machine cannot misconstrue, or post-edit.
+repair the text when the mistakes are being put in by the machine.
+We don't do much training in Europe. We don't do enough training in technical writing, which should lead into pre-editing. How to write good, clean, clear, technical texts for machine translation. That's a field that should be developed in our, in our training programs, I think.
+Most of our attention these days is focused on post-editing, repairing the mistakes once they're there. Post-editing
+machine translated text will give you quite good specific terminology and phraseology.
+Probably better than a human translation done by a non-expert in the field. But when it's wrong, it's really wrong.
+Noun plural, noun verb, mismatch, or you'll have the verb in the wrong, entirely in the wrong position in the sentence. In a sense, this is helpful. I mean,
+If you're going to make a mistake, make a big obvious one, because the cognitive effort to correct it is less than when you got three small mistakes.
+You see, the logic of fuzzy matches in translation memory systems, when you get 70 to 80% fuzzy matches is, here's a translation.
+There are a couple of mistakes in it. You have to find those mistakes and modify them. And that can often take more cognitive effort than simply recognizing a big obvious mistake or getting rid of the sentence entirely, the machine translation proposal and translating from scratch in a fully human way.
+So, this logic is operating in a slightly different way.
+a great deal of, uh, data on that. But we have found that the translation memory databases, when people use translation memories, they will tend not to use, uh, as many the, some of the, uh,
+Linguistic elements and structures that are in the target language and not in the start language, as predicted by the theory of, of, of tendencies that I've mentioned previously.
+a lack of time spent revising people when they're doing post editing tend to
+focus their revision on each segment as they go along, and it's harder to see the text as a whole.
+Gave you this list of translation solutions. These ones here and then can be broken down into all these ones.
+When we go back and look at the kind of text resulting from empty post-editing.
+We tend to find that there are fewer solutions lower down in the list. MT will not tailor the text. I mean, it's programmed to, so you've got something there for every sentence in the, in the start text. So we'll not do any of that.
+It will do very little or you get lucky sometimes on the idioms, but it can't apply a logic of compensation, for example.
+And it's not very good at changing the density, simplifying a text or making it more dense as the case may be. Similarly, it will not use any of the
+copying strategies, uh, as an expressive resource.
+It will copy the start text as a default. When it draws a blank, it has nothing else to propose. It'll say what was in the start text. But we've seen that translators can consciously use copying procedures as a stylistic device.
+So what happens with machine translation, post editing machine translation? Our solutions tend to stay in this middle range around here and do not do the kind of flashy, uh,
+Procedures that, that humans might take a risk doing up the top and down the bottom.
+That is, machines teach us to play it safe. Once again, risk aversion comes to the fore and risk taking takes it back seat.
+I know what they mean, and I think that's a good message. We have to get that out to the whole world. Do not believe that machine translation is an adequate translation for all purposes. It's there to give you the gist of what's going on.
+But look at the way the logic then. I mean, this is a very good social warning. I agree very much. But then they go down and you call on a certified translator for all your translation needs. The conclusion is here. Don't trust any of the technologies at all.
+Come to us, good old, the, the, the human translator you've always known, trusted, and respected. Ultimately, this becomes an argument against the technologies.
+These are some of the questions that you asked. There are also questions, you know, about the fear of technology, which you seem to have collectively.
+But others were asking questions. How do I make my place in the market? How do I, uh, establish myself in the wide sea of translators? I like that. How do I differentiate myself? Now,
+by doing things you can do as a new generation and that the older generation doesn't want to do, doesn't know how to do.
+And the use of translation technologies is probably one of those things.
+It's a kind of rule. The younger you are, the better you are at technologies, at computer stuff.
+My 10 year old son. Don't have a problem with my.
+My cell phone, mobile phone, handy, whatever you want to call that. I give it to him and he fixes up in two seconds. And they say, how did you do that? Yes. It has to reply. I'm younger than you.
+Okay. You're younger than the people who are opposing the technologies and saying, bring it back to your good old human translator who will not make a mistake. You are the people who can make your way
+And become professionals who are highly competent in areas that the older professionals are not.
+These technologies are also threatening us as professionals because they enable anyone to translate. And it's true.
+The tool there in Google Translator Toolkit says, yes, translate this with your friends, share your translations with your friends. Anybody can participate in it.
+And it's very clear, I think, from that example that.
+You may have a very weak knowledge of the start language.
+I do that with my class. We translate a text in Russian and nobody knows Russian and the, the output is usable.
+How do they do that? They just use what the machines are suggesting and they repair it and use common sense, basically.
+So this seems to be a threat from whatever you want to call it. There are many names, mass voluntary translation. I think crowdsourcing, collaborative translation, et cetera.
+The most famous example of crowdsourcing is, that means work going out to people who do it for free, is Facebook, which all of you know and use, I suspect.
+And this is an example of the crowdsourcing translation of Facebook into Spanish. They have to translate the phrase, can't find who you're looking for.
+And then you have some proposals made by translators, and then the community votes for the translation they like best. I rather like that, you know, democracy is good for your governments, why not for translation as well?
+Sometimes people vote for something that's linguistically incorrect, but hey, it's a social community.
+These are the people who know and feel what works best for them in their community. Perhaps they know things that linguistic rules don't.
+In most cases, though, particularly in electronic texts, the shortest translation is generally the best.
+That's the way it works, and it's not taking money particularly away from professional translators. We're doing Facebook crowdsourcing translation into Catalan, for example. Facebook is not going to localise into Catalan for any commercial.
+the users themselves will do this because they want to have that product in their language and the benefits are for them.
+A very good, well-known example of the way free machine translation.
+is being used, free, almost free, is called Reuters Markup Lite. You can look that up on Wikipedia.
+And you'll find the way this has helped farmers in India get information on their, on their mobile phones. People don't have computers. Everybody has a mobile phone.
+The information is in noun phrases and numbers, so it's fairly easy to process through machine translation.
+And it has meant that the farmers, instead of being the victims of the merchants in the cities who had that information and could control the prices, the farmers now have that information themselves and are significantly empowered by machine translation. It's a, an intriguing example and something that
+We might like to see extended to other fields as well. Uh, in the face of Facebook, it's a cultural social benefit to a certain language community that results. Uh, Reuters market light suggests that this logic can be applied in the commercial sphere as well.
+You do find that there are free online services for what's called participatory, participatory culture, the participatory culture foundation. Okay.
+Which goes through various ideologies such as opposing global capitalism, empowerment to the masses, empowerment of minor cultures, minor languages. Those are all good things and possible things.
+What we also see, though, is that some of the companies that are set up to do this apply the logic of offering something for free, but also having a commercial operation in the background.
+Uh, and that's good fun, but .sub is also a company that provides professional subtitling, uh, to clients. So they can take people over from the voluntary field, and you've learned how to use the tool, you're good at this. Here, over, now you can do a commercial project as well.
+So the, the ideologies of the voluntary technologies are crowdsourcing collaborative participatory culture also tends to mesh in with the, uh, the commercial sphere.
+There are numerous online fansub communities these days. This is one. Quite a lot of people are involved in this.
+They're producing subtitles for films and TV series. They do it for free. It's done as a social activity.
+Is it challenging global capitalism? Well, yes and no. What it does is, is channel Hollywood, American culture all over the world, which seems to upset no particular capitalism ideologically.
+And then there are interesting ideas like Duolingo. Uh, I've used this with my son to learn German at the moment. Uh, you have free online courses. They're good fun.
+Go and try them to learn a language online by yourself there.
+And the translations they get to correct are translations from websites. So as people, the idea is this, as people learn the languages at advanced levels, they're actually translating the web for free. It's a win-win situation. A nice idea. Something similar.
+is claimed for the captures that we use, you know, when you have to write the numbers or write the words that you see in the image that you are proving, improving the optical recognition.
+However, uh, it's a whole field out there to explore. How can these technologies help us solve real problems using voluntary work, but also using professional work? What are the models that has intrigued me? Here it's by
+The Center for Global Intelligent Content. I suspect they've now changed their name again.
+These are people in Ireland, and this is a workflow model of the way the technologies allow crowd translation, that is, volunteer translation, to interact with the work of professionals.
+So, a text comes in, it's broken up for the translation memory database. That then goes through machine translation and
+It's crowd translated. That is, it goes out to area experts, people who know about it, but perhaps don't know about the languages so much, or at least the, the start language. Think of, um, a website or a,
+a document for Greenpeace where the people in Greenpeace are volunteers and they know a lot about ecology, environment and the history of the politics of whatever issue they're dealing with. They'll know a lot and can.
+Correct that first machine translation. So there's a first post editing done there through crowd translation.
+So, the, the professionals intervene here, revising the translation, and then a stylistic revision, and there are more professionals here who have to put the document back together.
+Uh, often the images and, and things are stripped out here. It has to be put in here or it has to be re-engineered for the website. And then you have your localized content at the end.
+This is intriguing first because it suggests that professionals can work productively with area experts with voluntary people or people who may indeed be paid that it can be collaborative effort made possible by these technologies.
+And secondly, it suggests that the kinds of work that are, that are called upon
+Firstly, there are jobs in project management for anything as complex as that. You need someone who can control it and coordinate it.
+Secondly, you need professionals who are good here at post editing and recognizing the problems involved there. You need stylistic editors, people who write the target language very, very well, and they're experts in that.
+And you need the engineers who can, uh, set up the technologies for the process and do the desktop publishing or put the whole thing back together and make it look nice at the end.
+So, there's a new range of skill sets that are being called upon. And if we're training you just to do a good old fashioned language to language translation,
+So, I would like to question some of the myths that are circulating about translation technologies.
+Of course, it can't, but it doesn't have to. The machines we have now locate human translations. All the translations that come through the statistical system are human.
+It's just a matter of having the wrong human in the wrong time and place.
+Progress with machine translation is inevitable. Wrong. The logic of the vicious circle could predominate and progress will come, I think, from greater control of the databases.
+Machine translation takes work away from professionals. I have no real evidence of that.
+I suspect that what happens is that in the past 30 years, let's say, translation technologies have risen, productivity of translators has risen, but so has the number of translations done, by whatever index or
+The taking work away from professionals might apply.
+in the field of subtitling of films and, and, and, and series, although a lot depends on the level of quality of subtitling required by certain television stations or cinema distributors, for example.
+Yes, we do get that at the beginning. A lot of people.
+I say, oh yes, I'm trained to translate. I do not post edit. And I've had students who say, I came here to learn to translate. I will not be a post editor.
+But every technology, every new technology has always been resisted, resisted by the people who came to power with the old technology. So we would have to ask which professionals are these? How old are they? And who has been telling them things?
+machine translation will eventually replace human translation.
+It may, it just depends which way it goes, okay? It will probably do that for many of the boring, repetitive texts that do not require the high-risk kinds of solutions that do ultimately
+call upon the responsibility of the human translator.
+Okay. Uh, so, I don't think that's going to happen. It may happen. It may happen that, that the language professionals will move on to even more exciting jobs, such as company representation or producing new texts in new languages.
+Human translating will always be what it always was.
+On one level, yes. On one level, that basic skill set will still be there. Will it be in the same demand in our societies? No. And will translators be able to require that they have a job where they're only translating in the previous traditional way? No. Not any more than, than, uh,
+Literature will always be written with a pen and paper.
+People didn't want to move to computers. Journalists didn't want to move to computers. Now everybody's moved to computers. That initial resistance.
+is overcome, and it does alter the way people write literature, the way people
+right to journalistic articles and indeed the way people translate.
+Perhaps it will be that the fully human high quality translation will become a luxury good. People will pay for it.
+and we'll pay a lot of money for it and only some very highly qualified professionals will be able to do it.
+It may not be economically justifiable. In many situations, a cheaper translation is just as good. It may not be necessary.
+A degree of imperfection has to be allowed. People recognize mistakes and overlook them.
+There is this forgetting of translation imperfections that is necessary for the simple functioning of communication.
+I suspect though that that high quality fully human translation will still have a place.
+It happened, I think, two weeks ago when the United States on Europe on Iran agreed to sort of agree.
+on a deal concerning Iran's nuclear capacity. And two statements were read out. One in English.
+And then the second by the Iranian Ministry of Foreign Affairs in Persia, in Farsi.
+And he said at the beginning, apologizing to the journalist, you know, you don't have to pay any attention to this. It's a text in Farsi. It's exactly the same as what you just heard in English. So I'm sorry about this, but I have to read this in Farsi.
+Now, I know and you know it's not exactly the same because translations are not exactly the same.
+And there's probably some little cunning tricks going on there in the differences between the languages. But why, therefore, do we have to have that Farsi text?
+He, uh, said this in perfect English. Obviously, the negotiations had been carried out in English, and yet the translation was necessary.
+Why? I think the first, probably the most important reason is that the existence of that translation and the presumption of equal value, old fashioned equivalence.
+Accords respect to both parties in that negotiation. It gives respect to the language and culture of one of the parties there. Most people in the world who are unhappy.
+with those in power. I'm happy with the West, especially the people.
+We want to create new forms of life and government.
+We are not respected. People do not respect me. People do not respect my language, my culture, my history, my traditions. This kind of translation is still needed in order to accord real respect to cultural difference.
+If not, if we move translation into the imperfections and efficiencies of machine translation,
+Respect. We will gain productivity, gain in amount of communication, but lose a lot of that intercultural respect that is really so necessary.

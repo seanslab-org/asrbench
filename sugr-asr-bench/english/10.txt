@@ -1,0 +1,199 @@
+So our story, uh, started pretty early. Um, even where it's been around for over 20 years, uh, providing services to games. Um, I think like they, Activision acquired them, so they were providing games before that. But, um, we,
+We had to change how we did things. So we introduced sharding to our bare metal databases and it worked for a while.
+Um, as time went on and our catalog grew, we had to adapt. So we thought, Hey, why don't we use KVM and LXC to build?
+You know, make it more flexible and, and give us the, you know, build an orchestration layer in there and make it more manageable.
+And that, that was good, um, until, yeah, we hit thousands of databases and it became kind of unmanageable. Um, so we started building.
+Something on top of that, which, um, manage the connections and manage the, uh, failovers and the errors and all that. And it worked, but, uh, yeah, we, we, uh.
+We're kind of, you know, still like a little bit stressed by it. So as we, uh.
+continued through there. We investigated, um, some different, you know, things and, and it came that, uh, we kind of like,
+Yeah, we started seeing multiple operational issues, which were challenges for us when we, when we started to find solutions, how to fix them. What we did is we.
+Worked with multiple service teams and we identified few key areas of the issues that those teams were seeing.
+First area was around scalability.
+AAA, uh, game titles every year. Um.
+A game lounge is a very important event for us where, um, many billions players will show up at the same date, uh, around the same time.
+And this is, um, maybe very pleasant problem to have for a business, but it's a very.
+big technical challenge to, to solve. Um, to have a smooth experience, uh, for the ga, uh, game launch, we prepare many months before and we spend a lot of time load testing, load testing, uh, how
+The new game client behaves. What are the new workloads that we are seeing from the new game title?
+But we also try to predict how many players will show up on the, on the launch date.
+It's not always possible to predict.
+Exactly how many players will show up. So, um, we, what we tend to do is we, uh, over, overbuilt our database platform to handle any potential peak that we might be seeing during, during the launch.
+You will think as, as the time goes and, uh, the workload decreases after game is launched, uh, you will think that we, we would.
+Decrease the, the capacity of the database to in order to save resources. That sounds logical.
+Uh, it's not that easy though. Um, we were able to scale out our database in certain hecky way, but, um,
+We weren't really able to, um, scale down without having a significant player impact. That's why we actually never or.
+Like, very long time ago, uh, scaled down our database after, after we, we had launched.
+Another scalability issue, which I would mention is about co connections. Uh, since our, um, application layer, uh, has no, um,
+Another area is about operational burden. Um.
+At our scale, uh, we see failures, hardware failures happening every day. Um, those affect databases. Uh.
+We had quite thorough automation in place to, uh, automatically remediate, uh, a primary failover. So like if, if MySQL primary went down, it would have been automatically, uh, failed over to one of the replicas.
+But still there was a lot of operational overhead for on-call that had to run a manual ansible automation to replace missing MySQL node. Um.
+We run on premise. We run in, in, uh, data center that, um, we've rarely seen large scale issues with.
+But I'm not saying like we haven't had any issues. We, we had few large scale, uh, like infra failures that resulted in, in many, many, um, uh,
+engineering hours, uh, to fix, um, broken MySQL replicas. What we saw is that, um,
+MySQL replicas, at least in, in our case, um, uh, broke in, in a ways that, uh, they couldn't, couldn't have been used as the, as the new potential primaries.
+Um, as I mentioned earlier, we were lacking a robust scaling solution. Uh, we were somewhat, we were able to scale out, but only by a doubling number of charts. That was not ideal because.
+Uh, scaling by doubling is probably not very, uh, resource efficient. If you just want to add only, let's say 10%.
+The last area which we identified was about the setup complexity.
+operates in multiple, um, platform and service teams. Uh, service teams, uh, own their own, uh, database operations. Um, as such, um,
+Each team is required to have at least certain level of database operations experience.
+That's not always true for every team. Um, and some teams were delayed by.
+By this, because they, they had to wait for, basically they had to wait for help from other teams.
+Large scale database build out. And we are talking about the database with over 100 charts took very long time. It took.
+between two and three days, and, uh, this was not acceptable for, um,
+Development agility when you want it to iterate on the database quickly, when you want it to change configuration, try different things, drop database, build database. Um, it was delaying us. Uh, schema migrations were.
+also hard to execute by certain teams. Those required.
+High experience running database in production. They required very careful planning and execution. So that often, uh, led to delays in, um, in development workflows.
+So, yeah, the next, um, section is the Tech Adoption. So, uh, I ran the Tech Adoption for Vitesse at Demonware. Um, yeah.
+So we started by doing a next gen DB evaluation.
+We set a bunch of criteria. This is, you know, six of them, but I think we had a hundred in the, in the spreadsheet and we kind of went through many different.
+products, all of them were working at some level, but we decided that the major things that we wanted were the SQL query compatibility.
+So that the application didn't really have to change anything.
+We wanted it to run MySQL in the backend, if possible. Uh, we were currently, when we started this, we were.
+Looking at our platform and we were saying, okay, well, everything is kind of moving towards Kubernetes internally in the company. So it would be nice if we found something that was Kubernetes native.
+Um, a bonus feature would be that it provides an operator. Uh, after taking these all into account, we evaluated and, uh, yeah, the test came out as a pretty clear winner.
+When we started the adoption process post, um, you know, testing and, and, you know, that we, uh.
+discovered that the test was a near drop in replacement for most of the services that we had targeted.
+had problems. We could just be like, Hey, we're seeing this thing. Like what's going on in.
+99% of the time, it wasn't like a problem with the test. It was like, you know, oh, hey, we can change this or do this this way. And it was fine. Um.
+Another big thing was that there were a lot of success stories from other companies, uh, just kind of like in the community. We, we, we heard about, um, we start, you know, we joined the, um, the test slack and random people would.
+Come out and see us asking questions and just be like, Hey, you know, what's going on? And, you know, I reached out to a bunch of people just like, Oh, I see you asking questions. So it was a pretty lively, um, community.
+We'll get, like, we're, we're, we're gonna talk about two main parts of the adoption. Um, the small service, uh, which was a, a social service, um, that, uh, was not critical path.
+And a large service, which was fairly business critical. So I ran the, um, first track, um, of the small service, uh, where we were doing a lot of platform things and Vlad ran the large service. So small service wise, why we chose it, it, uh,
+Well, like the backstory of this is actually a little bit different. So we had targeted to do a large service and we're like, okay, well, if we can do our most complex service.
+Then we can do any service and as time progressed, we were like, no, no, that's, that's actually not going to work. So we, uh, we, we, I was actually walking on the seawall in Vancouver with one of my coworkers and he was like, why don't you take, you know, the, the, our group service and just like, you know, it's new, it's, it's, it, it doesn't have any data, you know, just use that. And I was like.
+Yeah. Okay. Let's, let's do that. So like a few days later, we'd, we'd started working on it. Um, we got to start with fresh data, which was quite nice. We didn't have to do a migration.
+As I mentioned in the previous slide, it wasn't in the critical login path. So if something did happen with it during the proof of concept, it wasn't going to block players from logging in.
+Another feature of it was, it was very easy to make architectural changes to it. So we didn't end up making that many architectural changes, but, you know, we, we made some and it, uh, it was much easier to do to a service that was not in production at the time. Um.
+What this did though was give us an opportunity to see what a service would look like running.
+The pod disruption budgets, the, you know, work all of those things out. Like we couldn't just go say, Hey, you know, we're going to run the test on our Kubernetes cluster because that, I mean, that just.
+When we first started looking at this, for V0, we, we weren't very serious about adopting it at the time.
+Um, we kind of were like, Hey, we should build a proof of concept. Like there was a few engineers and we were like, we should build a proof of concept of this and see what it looks like running. Um, so.
+We were like, if we're going to build this, you know, and move it into our Kubernetes platform, maybe we build it parallel to what we have now, see how it runs and then migrate that into the Kubernetes platform.
+We didn't get super far with that. So we started doing it. We got it running, but it just didn't seem.
+Like, it wasn't, there was no magic moment. Um, so a little bit of time passed and we were taking it a little more seriously.
+And we moved to a V1, which was using the now deprecated helm charts and, uh, on our Kubernetes platform. And I think we kind of had it like that magic moment where it was like, okay, this, this works. And you know, we, we were, we started, we had tied this, uh, set up into the small service that I was talking about. We had run queries against it. We had done even, I believe some like minor load tests and we were like, okay, this is, this is, this is real.
+And, um, as we continued, we were like, okay, now we need to figure out like these operational burdens and the, the other things that we're talking about, you know, what, how are we going to deal with that? So.
+The Helm chart was working good, but we just, you know, it was missing something. So we.
+Decided to be early adopters of the operator, which, um, you know, it was, it, it, it worked out of the box. Um, it was, it was, you know, we could just throw our cluster definition in and we had a, a working, um, system there.
+It's still, it was, it was great. And we were like, okay, this is like almost on par with what we have like right now, but it's still like, like why this, this feels like a vertical move and not like an upgrade. So we decided to be, we may have been one of the first, um, adopters of Vtorc, which, um,
+We were, we were, we were confused at how well it worked. Um, we were doing bad things to clusters and it just wouldn't, it wouldn't die. So, uh, we ended up shipping with our, this V3 into production.
+Uh, for both the small service and the large service. And, uh, yeah.
+So the proof of concept, how it actually went was it was like the previous slide with the timeline. Um, it was pretty slow to start because there was a lot of different ways we could do things. Um, there was a lot of.
+You know, it felt like it wasn't just something who Google because there was not really anybody that, you know, was, was running it like how we were running it. And we had a lot of platform requirements. Um, it turned out that our platform team was great and they ended up.
+Um, you know, helping quite a bit and it went pretty smoothly.
+Um, once we had it like fully working and everything, we started on the testing of the small service and it was ruthless because this is when the people come out of the woodwork and they're like, what about this small edge case? Like what, you know, what's going to happen when this happens? And it's like, yeah, I can, I think this and they're like, have you tested it? And I'm like.
+No, so there was a lot of edge case testing, which, which turned out to be very helpful. Um, at the end, um, we ended up testing, uh, shard expansion, uh, up and down during, uh, one of the larger betas.
+It was, uh, the first time it happened, I actually did it accidentally. And then I went to the washroom and came back and I was like, why is this still running? I deleted it. And I was like, looking at my history and looking at the events and I was like, okay, this is, I was like, I didn't realize that the backups were something that were automatically triggered when the anyways, uh, it was.
+It was unexpected, but like quite nice. Um, we started the load testing and it went pretty well.
+And, uh, you know, during all of this, we started building quite good relationships with the open source community.
+It was, you know, really, really helpful, uh, to have them. They, they helped out a lot. Um, and then we launched, uh,
+And it was so successful that nobody talked about it, um, until January when they were like, okay, we're going to look at a much bigger service here and we're going to try and, uh, implement it for that, which Vlad was mainly working on and he will take over.
+We were thinking, okay, what's next? Um, what are our biggest?
+pain, uh, what's our biggest pain and where which service, uh, has the biggest pain. So we were absolutely clear about that. We, we are continuing with, uh, a large business critical service.
+Which you may think like, Oh, that's, that's really crazy. Like you, you just finished your small scale adoption. Like, why are you picking the.
+Business critical service. Well, um.
+We had committed ourselves that we don't want to repeat those nights again, and we want to fully automate the next scaling operation for this large service. Um.
+What do we picked? We picked, uh, what we call inventory service.
+What is this service doing? It stores, it mainly stores player items. So you can think of inventory of what a player owns in the game. Uh, examples would be guns, attachments, like various modifications. Uh, there are like.
+Even things that you would not really consider to be items. Uh, so like anything in the game that can be related to a player and it's, it's in a way granted by certain achievements.
+Um, and the data size has been.
+a pain, too, we are seeing.
+Additional challenge opto, on top of, uh, of the request rate that, that we are seeing.
+We identified few adoption, high level adoption stages. Um, we knew that it's not going to be easy.
+This, this service has been around for more than eight years. It's a big monolith application with very complex business, business logic, full of transactions, uses foreign keys in the database. Uh, so we knew that, uh,
+It's gonna take some time to get there. And if, if possible.
+What we were trying to define is what actually an MVP for an existing service would mean in our case of adoption VTES.
+So we, we came up with a definition of a core.
+It sounds easy. You identify, okay, this is important to my application, but how do you confirm that like such thing actually runs without any disruptions on, on your new database?
+Fortunately, we had a very good, uh, unit and integration tests coverage. So we, we decided, yeah, why don't we use those tests to, to confirm that, uh, that our integration works on VTES.
+About 50% of the tests were failing and we were really, uh, I'm not saying like we were not ready to give up.
+But it felt overwhelming.
+What we did is we, we tried to, like, obviously you, and, oh, I, I need to mention that, uh, it's about 4,000 unit tests that this, uh, that this, uh, service has. And like, when you have 2,000 tests failing, uh, you won't go one by one.
+Uh, instead we try to find like similarities, uh, like why these tests are failing. And, and we, we, we were slowly coming up with like similar patterns and, uh, similar issues. Um, and we were able to group these unit tests into a few smaller set of issues.
+And the MVP took about two months to finish. Um, we were able to, uh, resolve all these issues that we, that we set ourselves for this, uh, basic MVP. And.
+Incompatible, few SQL incompatibilities or a different behavior, which, which was not necessary a blocker for us, but like it required some.
+I would say minor work too.
+to update our application code. The first one that I'm.
+Then I'm showing here is about the MySQL name blocks. Um.
+The application was full of them. Uh, we were having multiple places where we needed to stay synchronized to protect the data and stay consistent. Uh, what we learned with VTES was that, uh, the, at least with version 14, uh, that's what we are, um, still using in production. Um,
+We test implements named logs using the first chart, which turned out to be a, I'm not saying.
+Like a blocker, but a potential, uh, performance bottleneck.
+What we did was to look around at these places and we, um, we updated the application code to, uh, reduce number of, um, logs that we are acquiring per second.
+Another one is about the foreign keys. I mentioned that the application is full of them.
+Tables use, um, foreign key constraints to implement certain business, business rules. And, um, VTest does not, um,
+Does not fully support the foreign keys. Like, uh, it doesn't mean they don't work. They, they, they do for us and they do, and they work well. It's just certain.
+Um, scenarios where, um, um.
+Things were failing for us. Um, actually it was only one, which was about the, when, when we were scaling. So adding, adding more shards.
+Um, the operation was, was failing, um, on those foreign key checks when the database schema was being created. We worked around it by temporarily disabling the foreign key checks on the, the target new charts, um,
+The new charts were not, not receiving live data at that moment. So, um, we felt absolutely safe about this workaround we, we, we had chosen. Um.
+Last one, but yeah, these are just examples is, uh, for example, replace into, uh, was heavily used in our, um.
+Data layer abstraction in, in, in the application.
+And, uh, we, um, the, the problem was that, uh, replace into statement by definition requires all columns to be included.
+Which means that you had to include even shard key, but you just can't update shard key in a sharding solution, because that would just mean that you are expecting to, to data to start moving between different shards. That's, that's just, doesn't make sense.
+Um, so like it made, made sense why this is not supported, but we had to update our application to.
+To work, to work, uh, again. And what we did, we, we just simply switched to using insert, uh, insert on duplicate and that worked.
+We continued with, uh, with load testing. We, we needed to, uh, feel confident that, uh,
+The new database solution will handle the traffic that we expect on the, on the game launch. Uh, what we.
+We, we already had like a lot of experience from the previous years with the load testing, my SQL workloads. Uh, so we, we knew that, uh,
+MySQL is behind. So like, we don't really need to focus on those parts. Like instead of be focused on the, uh, uh, VTS components that.
+we're new to us. So we, we are basically trying to confirm that, uh, that VTS components that are on the request path on the query path, uh, that they, uh, scale, um,
+Scale linearly with, uh, adding more shards and that we would not hit any performance bottleneck.
+The new solution will require, uh, some additional CPU resources, which was kind of expected. We like anytime you, you run like additional proxy somewhere or like side cars to your applications. Like, of course it will take.
+More resources, uh, but, uh, the benefits that we were about to get from the, the new platform, uh, much more outweighed the additional, uh, resources that we were bringing into the platform. So what we learned is that, um,
+Uh, the component, which is a sidecar, uh, to the MySQL runs on the data nodes, uh, requires about the, at least in our case, um, requires about the same CPU resources as the MySQL process itself.
+Uh, that was kind of surprised to us, but, um, we were also positively, um, surprised by the fact that, uh,
+The, the connection pooling that is provided by VITES greatly offsets, um,
+CPU utilization that is, uh, that is on the MySQL process itself. So the fact that we were not having over 10,000 connections on the MySQL process anymore. So we, we went from.
+10,000, 15,000 to something around 300, 400 connections per database. That greatly helped to.
+Uh, for my sequel to, to start breeding again.
+We were done with the load testing. Uh, so all our expectations were, um, um,
+were confirmed, uh, so we, we went to the last stage where we, we needed to prove that we will be able to operate the new database at scale and that, um.
+Yeah, that the, the database remains stable, uh, after, in certain, uh, failure scenarios. So we already, we already did like a lot of failure testing before and during the small service.
+Adoption, but we, we continued further. We went even more aggressive. So we, again, we were doing very bad things to the database and, uh, um,
+It was always able to recover, which, which was magical.
+Configuration deployment testing. So we, we, we really wanted to make sure that, uh,
+Changing a database configuration is, is, should be.
+Seen by people as a normal change, as you would be changing configuration to your application. That seemed to be like huge difference compared to the past where we, where we felt like, Oh,
+As a result of this work, we came up with, uh, tuned with this configuration that, uh,
+We are mentioning few features that we used and, um, yeah, uh, it was stable.
+What I would like to highlight, uh, on this slide is, uh, the, the key points. What, what we, what, what has changed? Um, we went from.
+Shards defined in the application configuration. So we, we had pretty much every, uh, every shard defined in the config. Uh, we, we went to a single database endpoint where the shards are abstract to the, to the application.
+Uh, since previously, since, um, shards were defined in the config, uh,
+That in past that allowed us to make certain assumptions when we were designing database queries. Some queries were just too short of there and they were like implicit assumptions. They are just that you are working just with the.
+Being, with a single shard data, uh, such kind of queries where, uh, not running, um,
+Efficiently with VITAS at the, like at the first stage. But when we learned that we just need to, we just need to give a hint VITAS that, Hey, like.
+You need to, you need to target a specific shard by just like including, um, including aware condition that helps, uh, with this query planner to, to route your query to just one or subset of the shards instead of all of them.
+On the charts in a serial or a parallel manner.
+When you have a single database endpoints, uh, and, uh, shards are abstracted, uh,
+I guess that's the reason why, why delete with limit is not supported by VTS. Because if you think about it, like you, you can't really.
+Identify which rows you really want to delete from those charts. So it's, it's just, it makes, it makes total sense that it just can't be supported, uh, for the safety, safety reason.
+What we did instead is Vita still supports a way to.
+Talk to the shards individually, even though it's definitely not the best practice, but that's what we have chosen to, uh, to address this, uh, this issue. And we, we kind of in our like data layer, we implemented what we call shard walking where we.
+So yeah, we can get some conclusions from all this information. Uh, so the benefits that we had.
+We now had tested it a bunch, tested it in production scenarios, and we had a very proven method of sharding up and sharding down.
+The shard tools were provided by the upstream of a test team, which is pretty great.
+Um, the on-call burden that, um, that we were talking about earlier was greatly reduced. Um, when we were creating these slides, I was thinking like, okay, there's going to be at least one escalation before this happens. But yeah, uh, to my knowledge, there has been no escalations to our production, um, for test cluster.
+the, uh, operator and orchestrator have just kind of taken care of anything. So, but take this with a grain of salt, like this, like if some, if you do do this and something happens, please don't blame me. Um, the, uh, the database, uh, set up, um, is using our GitOps model, which the rest of the Kubernetes services are using. So, uh, the rest of the company is quite happy with that. Um,
+you know, short, like, we can see them quite, quite there. So, um, I guess, did it work? Yes. Uh, it worked, uh, to our expectations. Um, so much so that we were building a team around supporting it.
+Uh, and currently there, uh, we're, I would say about one year into opening it up to multiple teams. And there's about 60 separate but test clusters running in our different environments.
+Um, and as of like, uh, I would say about two months ago, the test has become.
+the, uh, default database solution for anything that we, uh, any new products. And a lot of our teams are, uh, kind of jealous of the people running it. So they're starting to, uh, talk about migrating their data into it.
+Uh, thank you for coming here. Uh, thank you to everyone at DemonWare who helped make this possible. And thank you to PlanetScale for helping us along the way. And yeah, if anybody has questions.
+So the, the thing was, was like, we, um, had an opportunity to start fresh. So right now we're, um, in our adoption process, we're, we're figuring out the best ways to do data migrations, but it is, um, you know, it's different kind of for every service. So, uh, yeah, we're, we're, we're working on that right now and it looks quite promising.
+Hi, I was wondering if you could speak a little, you mentioned that you use Ceph. I don't know if everything is using Ceph, but if you could speak a little to the Ceph configuration and what the performance is like on Ceph.
+Sure, um, so, uh, yeah, he's asking what is the performance like on Ceph and what do we use Ceph for? So, um, were you, we initially just used Ceph, um, for the etcd backing, um,
+Because the way that the operator had set it up, it was kind of expecting network storage, but then we were like, why don't we move less performant volumes into Ceph storage? So.
+It, uh, right now, I think we only have some test clusters running with the actual, um, data backed, uh, Seth, but it seems to be fine. Um, I don't think we will ever run any like high performance requirements stuff. Seth backed, um, potentially just dev environments and, and, um, some staging environments. Is that answer?
+Yeah, so then I guess my follow up question would be is, what's the stored back end for like the prod, the test?
+Yeah, so we, uh, we use local storage. So we have our own, um, disk provisioner. Um, and I guess that this is actually the question that a lot of people who've talked to me have asked because they're like, how do you actually do this? We're trying to solve this. Um.
+Yeah, we, we have an in-house thing that we use that just, um, pre-provisions volumes and we just, uh, create a PVC and, and it pulls it in. So each server has the PVs, uh, available. And then we just say, Hey, we want this PVC and they're all pre-formatted. They're all everything. So it's, uh, it's not very flexible, but it actually ended up working quite well because with the way we have it set up, we can, um, it's, it's like.
+I'm calling it like persistent ephemeral, persistently ephemeral. So, you know, we, we can, um, treat the volumes as ephemeral volumes, but they're, they're quite persistent as well.
+Hi, I have two, if you have time. So first question is, are you using any high availability, like, primitives that the test provides? And like, have you had any troubles with them?
+And secondly is when you scale the VD tablets, do you see any trouble?
+With the time it takes the VDW to start and restore from a backup and the load is gone already.
+No, no, no, for, for, for the, for the, no for the multi-region, but, uh, uh, BTS itself.
+has great high availability built-in mechanisms itself. Um, so the proxy layer is, is fully redundant. You just keep adding replicas in, in the deployment. Uh, shard is highly available, uh, by.
+Yeah. I mean, like we use VT tablets and sometimes we have like load spikes. So we want to have more database, but by the time we restore like a terabyte of data.
+The spike is gone. So we need to vertically scale and not horizontally scale. If you see something like that.
+So I think what greatly helps in our case is that we, we use, uh, CEF, uh, that is, uh, locally in our network and it's, it's, it's extremely fast. I don't remember the, the numbers.
+And, and what we also did to, I totally get your question because that was one of our implementation requirements to, to make sure that.

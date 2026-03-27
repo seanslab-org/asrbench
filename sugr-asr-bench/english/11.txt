@@ -1,0 +1,209 @@
+Welcome to the Global Virtual Lecture Hall. Welcome to the Shanghai Lectures. Today
+these sites that you already know. The schedule is as follows. We start with a short introduction and then we talk about artificial evolution, morphogenesis. We have
+Two highlights, two guest presentations, one by Francesco Mondada from EPFL and one by Robert Drainer from ETH Zurich, which will be broadcast from California and
+The lecture today, as you can see here, will be broadcast from the University of Madrid, Carlos III,
+And the host today is Professor Fabio Bonsignorio. Now just for geography.
+And the Madrid would be somewhere there in the center. Now what I will do is so that you have an idea what people do here in Madrid in the field of artificial intelligence and robotics. I will pass the floor.
+And, uh, let me see. Yes. So he will shortly, uh, introduce the laboratory here.
+Okay, let me say first of all thanks to Rolf for being here. We are very glad and I would say honored to have such an important researcher here.
+So, the Robotics Lab is, I would say, a middle-sized robotics research center. We have about 40 researchers, about, at least about 15 PhD and 30 are students.
+We have a long history. Actually, the history of Robotics Lab started in 92 when this university, which is a very young university, started.
+In many fields, from mobile robotics to, to assistive robotics or social robotics.
+We are also involved in the Fed flagship proposal, which is a famous initiative ongoing in Europe now. And that's all for now because I think we should try to save time and I will give back the floor to Rolf. Thank you, Rolf, again.
+Okay, so back, maybe we can switch off the other microphone. So, back again.
+have this ongoing frame of reference, uh, issue competition, and this issue is so fundamental, as I mentioned many times, that I should mention it every week. So, if you don't remember anything about the lecture series, you should remember the frame of reference problem.
+And should I forget, the first one to notice is entitled to either a bottle of champagne or a box of Swiss chocolate.
+Now, perhaps, we can, not done, we can briefly switch to Berlin, where we have a lucky winner of the FOR competition, because I think about three weeks, two or three weeks ago, I forgot to mention the problem in Markus Scheunemann from the Humboldt University in Berlin, from Professor Hoffner's
+laboratory, notice that. So, maybe, and I think, uh, Verena.
+We'll now hand over the, the, the chocolate to, uh, Marcus. Okay, Verena?
+And we also have the chocolate here, so it's a huge box of Swiss Lind chocolate.
+Right. So congratulations. Congratulations. And as you can see by the size of the box, it's really worth paying attention.
+Okay. So the, the competition will continue until the end of the lecture series. So it's really worth paying attention. And thanks a lot, Farina, for, you know, managing the, uh,
+the chocolate. So Verena also got her PhD in our laboratory in Zurich, so she's very familiar with the Switzerland and Swiss chocolate. Okay. Thanks again, Verena. Okay.
+Now we're back in Madrid, and so today it's going to be evolution.
+view the recorded video on, uh,
+building brains for bodies. And one of the issues that were discussed there is what's called the brain in a vat. So imagining that you have an isolated brain in a nutritious liquid, but it's not connected to a body. And I think it's a very philosophically a very interesting
+problem and issue namely because our main topic in this lecture series is actually embodiment. And I'm looking for a
+volunteer for a short presentation of Brain in Event. Maybe, uh, we can ask our new friends from Wood.
+I think there's a lot of noise in the, in the, uh, lecture room. Okay. So last week we had the, uh, lecture on artificial neural networks. There are many excellent books.
+There is also some text in the book, how the body shapes the way we think. And those who are really interested, they can join the lecture in the spring term where we go in depth into neural networks. But for now, let's continue.
+I guess fundamental principles or fundamental issues are the time perspectives. Whenever we are
+Interested in understanding or designing intelligent systems, we always have to focus on three time perspectives. So there is one which is called, which is called the, uh, the here and now.
+which is the actual mechanism. So basically, you know, the way it works, we look at an insect, we look at the neural system, and we look at the wiring. And, you know, if there is some kind of stimulation, the insect will react in a particular way. That's the here and now perspective. Then we have the second one, which is the ontogenetic.
+perspective, which means the, uh, the time scale of, um,
+the lifetime of an individual, and then we have the phylogenetic time scale, which is over generations. Now, if you look at this in some detail, we find that, uh, we have here,
+They hear it now, perspective, that's the state-oriented perspective.
+is called the ontogenetic one, ontogenetic and learning, so basically what we design here is we design
+The learning and developmental mechanisms and the initial conditions, and then we let the system
+Evolutionary algorithms and then have a population of individuals and let them evolve what we want. And I'm going to give you examples on how that works.
+Right. Now, just to get into the spirit of artificial evolution, let's look at the Rickenberg's fuel pipe problem. So, it was basically in the 1960s.
+Regenberg was at the, uh, an engineer at the, uh, Technical University of, uh, Berlin.
+And he asked the following question. He said, okay, let's assume we have a fuel pipe here and the fuel is coming in this way. And for some reason, it has to sort of be directed
+Uh, over here. Now, the question was, what is the optimal shape connecting this
+And so the fuel pipe from the fuel comes in here should go this way. Question, what is the optimal shape of the connecting piece here? Now, normally people would think this is a quarter circle. But it turns out.
+Uh, Reckenberg did an evolutionary algorithm, you know, where he could vary the shape, that the optimal shape actually has, you know, a particular hunch here.
+And human designers did not come up with that solution. So now.
+is indeed the better solution than the quarter circle. Now, the question that comes up is, well, is this a creative, is this a solution creative? And can computers
+In that sense, robots, can they be creative? Maybe we can briefly switch to, if Moscow is connected, maybe we can briefly switch to Moscow for a short statement about whether you think computers or robots can be creative.
+is a software in the computer or computer itself.
+And so, it's, you know, most of the time, I mean, it's a very difficult, I think it's a very difficult issue. And I think you make an interesting point in Moscow about the different levels of abstraction. In any case, I think what's really interesting is that
+You have four corners of a square and you have to connect the four corners of the square with three straight lines ending up in the starting corner. Maybe we can briefly switch to Zurich for a suggestion on a solution.
+I have a bit, a problem with the cursor, yeah, like this.
+Okay. Yeah, I have, I can't write now. The writing system doesn't work, but yes, that's exactly so. You have to go beyond the square. Even if we talk about the square, normally people think inside the square. And so this is to demonstrate that we always have our biases.
+Can you, can the other side switch off the microphones?
+Please everybody switch off the microphones. Okay. Thank you. So.
+We have, we always have our biases. However, if we have computer programs, computer programs only have in there what we program into them. And so they don't have the biases. And with artificial evolution, it's similar to that. So that artificial evolution has actually a long history.
+In the 1960s, John Holland, Ingo Reichenberg, John Causa, and
+Normally, we talk about GAs, genetic algorithms. Uh, Reckenberg was more interested in using evolution for, uh, engineering problems. And Causa developed this notion of genetic programming.
+Now, what's interesting about, and I will not go into too much detail, I think what's interesting about evolution is this concept of cumulative selection
+which was championed also by Richard Dawkins, author of The Selfish Gene. Now, he is also very outspoken about the creationists. So watch out for the creationists.
+There is now in the United States a renaissance, you know, that people really believe in creation and they talk about intelligent design.
+And we are also talking about design of intelligent systems. And sometimes people call this intelligent design. But it's fundamentally different from what the creationists, uh, in the United States means. So careful, you know, whenever you hear the creationists. Now, um,
+Dawkins gives a very interesting example of to introduce
+Genetic algorithms or evolutionary algorithms, namely the, what he calls the biomorphs.
+And so he has these beautiful creatures here and then a concept which is called aesthetic selection. The term biomorph comes from an artist, painter Desmond Morris. Now there is a particular encoding and I was wondering whether I didn't have, is someone going to
+Did I have someone who would explain the, uh,
+could some, oh, I can't do this. Oops. I think I, I have a.
+Is someone, got, yeah. Osaka, is Osaka University connected?
+Is Osaka University connected? Ah, maybe not, huh?
+Ah, yes. Hi. Can you, could you give a short introduction? Could you give a short introduction to the biomorphs?
+Or did you not, uh, get the, uh, get the message? I mean, I'm, I'm happy to do it myself, but
+Yes, well, Richard Dawkins, he talked about biomorphs as a, as a visual representation of complex forms. In this case, like genes, that these designs are a product of random mutations that are also followed by, by non-random selection.
+Right. And how is the selection performed?
+Aesthetic criteria, you know, right? Yes. So what he likes, bigger ones, or colors, or, you know, whatever. So I think it's really. Start defining the shape.
+Yeah, there are particular shapes. Okay. I think, and here, uh, you want to say something about the encoding.
+So what we always need is some encoding in the genome, right? Yes.
+Okay, no, no, that, that's fine, yeah. So, I think, I think we can, we can see it, we can see it on the slide here. So, this is the genome and here it shows.
+how the properties of the creatures that we see displayed on the screen are actually encoded.
+I mean, this is just to, to get started on this. Now, there's, thank you very much to OSACOM. So, there is actually, uh, a scheme, you know, there's a big literature about evolutionary computation, about evolutionary approaches, and there is an overall scheme and
+All the approaches, or let's say 95% of the approaches, they fit into this general scheme. So we start with the genotype.
+This is developed into a phenotype. Process of development. Then.
+They have to do something in the real world. They have to interact with each other. They have to move in particular ways. Then there is a process of selection.
+So we have a fitness function. There is a process of selection that selects the best individuals.
+and then there is a new population and then there is a process of reproduction which is mutation or
+Selection, and I think this is just a cartoon version. Okay. Now.
+We are going to evolve as an example, the controller for this robot here.
+which is a very simple robot. It only has two motors here and it has three sensors here.
+And then the motors need to be
+The sensors need to be connected to the motors. Now, what do we need to specify here if, uh,
+We want to evolve a controller for this, for this robot. Maybe we can switch to Berlin for a second.
+Okay, so what do we need to specify here if we want to get a controller?
+So, you would connect them to the motors, right? This one to here, this one to here. If you don't know the connectivity, you just connect
+everything to everything, so you connect this sensor to this motor also, this sensor to this motor, and this sensor to this motor. Okay, and then, what do you do then?
+would be to test several robots with slightly different connection strength from the sensors to the cross and select the best one and modify the connections randomly and test them again and so on.
+Right. So, right. So implicitly, you already sort of assumed that there is some kind of an encoding.
+Of these connection strengths in the genome, right?
+Ah, as you can, you can see here, this would be kind of,
+and initial genome, so we have six connections.
+Three from the sensors to the left motor, three from the sensors to the right motors. We got this encoding.
+And then we do the mutation on that, and this will give, this is a binary representation.
+This is for the first connection weight with four bits, the second connection weight with four bits, and this gives the connection weights. And this, again, fits into this scheme. Now, we need a fitness function.
+for this robot. Can we briefly switch to Chiba maybe, and you can give us an idea on the fitness function that you would, you might want to use. I mean, so what does, what does it depend on, the fitness?
+Exactly. And the, the distance traveled would be positive, whereas. Yes.
+Exactly. So I think that's exactly right. If you want the robot to travel as far as possible without collisions, that's what we need to do. And designing a fitness function is really an art and there are no really systematic ways in which we can do this. And then we select the best ones.
+And, you know, there are various selection schemes that I won't go into here. And then we have two reproduction functions. One is crossover.
+So we choose randomly a crossover point here. We take two, we take two, uh, genes, uh, genomes.
+choose a crossover point and then we take this, put it here, we take this, put it here, and this one comes here.
+And then this one we take from here. And so we get two new individuals and the hope is that by recombining
+these, uh, genomes that we keep the good combinations and make a new one that might even have better combinations. Normally, this will not be the case, but it might actually happen. And then the second process that we use is mutation. So we randomly choose a particular
+bit or a particular location in the genome and with a certain probability, we flip it.
+How do we choose the mutation rate? So maybe we can briefly have a statement from Xi'an on the mutation rate. So what would be the considerations in choosing the mutation rate?
+We can't hear you. It's not loud enough.
+Okay. Yes. Thank you. Thank you very much for your considerations on choosing the mutation rate. It's always an issue how you should choose it. There are actually some genetic algorithms, namely evolutionary strategies, where mutation rate is itself subject to the evolutionary process. Okay. Now.
+Let's look at different approaches to evolutionary robotics. So in evolutionary robotics, typically,
+What people do is they start with a given robot and then they evolve the control typically in neural network just as we did in the example that we looked at five minutes ago.
+Now, that's very nice from an engineering point of view. However.
+If you look at biological evolution, there you never have a robot or a creature and afterwards you grow the brain for the creature, but you always have a coevolution of morphology and control, right? And I think one of the first
+To evolve morphology and control simultaneously were Carl Simms creatures, you know, he was able to grow.
+creatures like that. And before we look into how he actually did it, this coevolution of morphology and control, let's have a, just a short excerpt from a video, a one minute excerpt from a video. Natan, can we have the video?
+And some very simple strategies came up which could still propel the creatures across the ground. Some with counterweights that just swung and others with two leg-like appendages that can flip over each other. Here's one that has kind of like a rowing strategy and he can go quite quickly along the ground.
+This is a relative of that creature that has a slight variation in his gait. Every stroke, he does a somersault and then continues along.
+There was no selection against dizziness for these creatures. So that was a perfectly good solution.
+Okay. Yeah. Thank you. So what was the fitness function in this case? Maybe local audience here in Madrid. What was the fitness function that he used? Obviously.
+Yeah, velocity, distance traveled exactly. And then, the nice thing about this is, that's the only thing you need to tell.
+And so the, the encoding that he chose was a kind of a graph structure. This is now no longer only a bit string, because with bit strings, it would have been, you know, very difficult to get something useful out of the system. So he used a,
+graph structure as an encoding and you can see here if you have a developmental process this graph structures will grow into this physical structure here this graph structure will grow into this
+physical structure, so we have this process of development. Now, maybe we can briefly switch to Karlsruhe, and you can comment on the nature of the, how can you characterize this developmental process.
+Can you talk now? I think we hear some noise at least.
+We have to do it some other time. Okay. So, I think the, the point here is,
+That's the developmental process is entirely deterministic that is given a particular encoding in the genome.
+There is going to be a particular phenotype.
+Now, if you look at biological systems, in biological systems you have a developmental process and the resulting phenotype,
+depends on the specific interaction with the environment. So, if you are born in Madrid,
+you most likely will be speaking Spanish when you are an adult. If you're born in China, you will be speaking Chinese. So the environment has a very strong influence on the particular phenotype. So in this case,
+There, there, there was this famous, uh, Golem project by Lipson and Pollock. And what they did, they did a very similar thing as, uh, Carl Simms.
+They had bars, you know, certain length, diameter, and so on. And then at the end,
+of the process. So they did the simulation. They evolved creatures also for speed.
+And at the end of the process they had a 3D printer that would automatically produce
+these structures, except for the motors that had to be put in manually.
+Let's say in the, in the newspapers, in the, in the US, you know, they said, like, on the front page, for the first time in the history of mankind, there has been a self-reproducing robot.
+Now, uh, maybe we can have, uh, as NYU in Abu Dhabi connected, maybe we can have a brief statement about, uh,
+about, uh, the, uh, Golem project and, you know, to what extent do you think these claims are justified?
+Ah, okay. Okay. Yeah, that's no problem. I think.
+I think the whole evolution was conducted in the simulation, so it was very similar to what Carl Simms was doing, and the real world realization was only at the very end of the evolutionary process, and so there was no feedback from the real world.
+to the evolutionary process itself. So the fact that they produce the real world thing was only at the very end of the evolutionary process, which is still interesting, which would have been more interesting to have the feedback from the real world into the evolutionary process itself.
+Now, one of the issues with this approach here is that you have to specify what sorts of components you have in the system.
+And that will constrain forever what you will be able to do with your robot, okay?
+So, you will not be able to grow really, really complex structures like a muscle or a, a, a human brain or
+you know, a very complex, uh, skeleton, but you will be confined to these particular types of
+Now, if you look at biological systems, then again, the developmental process works differently. You don't have parameters. I mean, originally people thought there were parameters, you know, a gene coding for a particular property of the phenotype.
+Like, one gene for color of hair, one gene for body size, you know, one gene for length of the nose and so on. That was the original thinking.
+Now, with the human genome project, it became entirely clear that development is not just mapping genes onto
+made models of very simple models of genetic regulatory networks and he was trying to apply to grow behaving creatures so he had a developmental process which was guided by a genetic regulatory network and he called his system artificial ontogeny and one of the
+systems or creatures that he evolved was called the block pusher. So there was a heavy block in a simulated environment and the creature had to push the large block. So maybe we can have the, uh, video here, not on.
+Artificial Ontogeny is a system for automatically evolving virtual robots or agents in a three-dimensional physics-based simulation for various user-defined tasks.
+In our first set of experiments, we evolved agents to push a large block in their environment as far as possible during a fixed time period.
+Here we see an agent growing from a single, starting sphere into a set of connected spheres. These spheres are loosely modeled on biological cells, but also serve as the basic mechanical unit from which the agent is constructed.
+Each unit contains a complete copy of the genetic information shaping the growth of the agent, as well as sensors, motors, and neural structure.
+As these units grow and divide, so too does the neural structure grow inside the developing body.
+the agent shown here was extracted from one evolutionary run after two hours at this point artificial ontogeny has discovered how to grow the brain and body of the agent together to achieve an inchworm method of locomotion
+This agent is a descendant of the previous one and appeared in the evolving population after a further two hours had elapsed.
+White units contain both sensors and motors. Light gray units contain only sensors.
+The dark grey units contain only motors, and the black units are empty and only provide structural support.
+The combination of different types of units within a single agent indicates that cell differentiation has occurred.
+A genetic algorithm, based on genetic regulatory networks, was designed to first grow and then evaluate each agent from among a population of potential solutions.
+This agent was taken from a separate evolutionary run. In this run, artificial ontogeny discovers that pushing against the block with two points of contact instead of one is a much better strategy.
+These three agents taken together demonstrate that genetic regulatory networks can be used to design all aspects of an autonomous agent.
+including the body shape and size, the material from which the agent is constructed, the numbers and distribution of sensors and motors, and the construction of neural structure, which is distributed across the agent's body.
+The genetic regulatory networks are necessary because they allow evolution to grow but also to modify different parts of the agent's body at the same time. Thus, changes to one component do not disrupt the other components.
+Okay, thank you, Natan. So I think we have a very impressive.
+example of the power of evolutionary algorithms.
+based on genetic regulatory networks, and I think it's a more general approach to ontogenetic development than simply mapping a graph structure onto a phenotype, because you really get the dynamics of the genetic regulatory networks, even if they're, if the models are very simple.
+Okay. Now, one of the points that Josh mentioned in the video is this inchware method of locomotion, which interestingly only works on the basis of local interactions between neighboring
+Units in the neural network and by exploiting these local interactions, you get a global pattern of forward locomotion, which is another issue that we will be looking at also next week, getting global patterns from
+Phenotype, you know, like the length of the segments, the width of the segments, the types of the joints. It's the parameters of the genetic regulatory.
+networks and then you have transcription factors and so on and you have all the details in the slides. I don't want to go into that. Please study.
+the details, you should have enough information there that you can actually develop a certain understanding of how you can actually implement something like that. And I think it's an extremely powerful method. Now, I think what's, what's really, uh,
+Interesting is that the time scales are of course.
+Even though we can look at them separately, we have to understand them separately. They are tightly intertwined. So, if, for example, at the phylogenetic level, something like,
+A learning mechanism, a heavy and learning mechanism that you looked at in the other video.
+has evolved, this will of course influence the ontogenetic development, but also if you evolve certain characteristics of the system. For example, having a particular eye, insect eye with a particular distribution of the facets.
+Which is extremely powerful. This will influence the performance, which then will influence the fitness of the individuals, which will influence the selection, which in turn will influence the evolutionary process. So you always have to understand the interaction of these three
+time scales, if you want to understand the evolution of intelligent behavior. Okay, now we have a couple of principles.
+One principle that's very important is we're always talking about populations. Evolution without populations makes no sense.
+We always need population, so we need population thinking.
+Especially in western societies, we have a tendency to think about individuals. The individual is the important thing. Here, it's population. The individual doesn't count that much.
+We have cumulative selection and self-organization. So cumulative selection, you can look that up later, but means that you try to keep the good stuff that you have from the evolutionary process and don't throw it away.
+We have brain-body coevolution in biological evolution.
+You never have the body and then you evolve the brain for it, but the two evolves together.
+And if you have small changes, you shouldn't have changes that are too large.
+in the phenotype but sometimes you get large changes but it's kind of a smooth process and what we want to do
+And that's an important principle. We want to minimize designer bias. So remember the square. And we tend to think inside the square and find a solution inside.
+That's our bias. We all have our biases because we grew up on this planet. You know, we have gravity. The environment is structured in particular ways. We have a particular society. So we have our biases without being aware of them.
+And evolutionary algorithms don't have these biases. That's why they can be extremely powerful and extremely useful. Okay. So assignments for next week, please read chapter six. That's about evolution. So cognition from scratch. There are some additional slides for self-study.
+And I need a volunteer for the brain in the vet problem.
+That's, you also find in the slides, we can do that after the lecture. And then, uh, we have, uh,
+Two guest lecturers? I will announce them now and then we can switch.
+To the speakers. So let me just briefly introduce the first guest speaker.
+Professor Francesco Mondada from EPFL in Lausanne in Switzerland.
+He will talk about towards robots for daily life. I think if there is one person on the planet who has done
+Swiss National Competence Center for Research in Robotics, where he is a project leader for robots in daily life, robots in school, robots in homes.
+So we're very much looking forward to him. So that's the first guest speaker and the second guest speaker that we have.
+Also a great pleasure. We have Professor Robert Reiner from ETH in Zurich, who is also
+in the NCCR National Competence Center Robotics. He is an expert on rehabilitation
+Robotics is a world renowned expert on rehabilitation robotics and he will talk about design principles
+for intelligent rehabilitation. He will be, he's now, I'm not going to say on vacation in California, but he is on sabbatical. We call this sabbatical, which means that they are supposed to do research, but of course we all know that they also have very nice beaches in, uh,
+in California, and as he does, Robert told me, um,
+He is enjoying the beaches as much as he is enjoying the research that he can do there. He will be talking
+from, uh, California. So, in California, he will be talking at 1.30 a.m. So, thank you very much, Robert, for stay, staying up, uh, uh, so late. We really appreciate that. Okay. Now I suggest.
+Okay. Okay, Robert. Well, thanks for joining us. So I suggest that now we take a five minute break and we set up the first guest lecture by Francesco Mondada from Lausanne in Switzerland. Okay. So thanks very much. Let's take a five minute break. Okay.
