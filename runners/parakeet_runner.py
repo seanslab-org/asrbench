@@ -35,6 +35,11 @@ class ParakeetBase(ASRRunner):
             self.model = nemo_asr.models.ASRModel.from_pretrained(
                 model_name=self.model_name
             )
+        # Disable CUDA graphs — they OOM on Jetson Orin during warmup
+        if hasattr(self.model, "decoding") and hasattr(self.model.decoding, "decoding"):
+            dec = self.model.decoding.decoding
+            if hasattr(dec, "use_cuda_graphs"):
+                dec.use_cuda_graphs = False
         self.model.eval()
         if torch.cuda.is_available():
             self.model = self.model.cuda()
