@@ -29,17 +29,20 @@ class ParakeetBase(ASRRunner):
 
     def load(self):
         import nemo.collections.asr as nemo_asr
+        from omegaconf import open_dict
         if self.local_nemo_path and os.path.isfile(self.local_nemo_path):
             self.model = nemo_asr.models.ASRModel.restore_from(self.local_nemo_path)
         else:
             self.model = nemo_asr.models.ASRModel.from_pretrained(
                 model_name=self.model_name
             )
-        # Disable CUDA graphs — they OOM on Jetson Orin during warmup
-        if hasattr(self.model, "decoding") and hasattr(self.model.decoding, "decoding"):
-            dec = self.model.decoding.decoding
-            if hasattr(dec, "use_cuda_graphs"):
-                dec.use_cuda_graphs = False
+        # Use non-batched greedy decoding — greedy_batch uses CUDA graphs
+        # which OOM on Jetson Orin during warmup
+        decoding_cfg = self.model.cfg.decoding
+        if decoding_cfg.get("strategy") == "greedy_batch":
+            with open_dict(decoding_cfg):
+                decoding_cfg.strategy = "greedy"
+            self.model.change_decoding_strategy(decoding_cfg)
         self.model.eval()
         if torch.cuda.is_available():
             self.model = self.model.cuda()
