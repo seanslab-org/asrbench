@@ -5,11 +5,19 @@ Outputs lowercase text without punctuation.
 
 Requires: pip install nemo_toolkit[asr]
 Model: nvidia/parakeet-tdt-1.1b (CC-BY-4.0)
+
+Set PARAKEET_NEMO_PATH env var to load from a local .nemo file
+(useful when HuggingFace is unreachable, e.g. on Jetson).
 """
+import os
 import torch
 from typing import Optional
 from .base import ASRRunner
 from .registry import register
+
+LOCAL_NEMO_PATH = os.environ.get(
+    "PARAKEET_NEMO_PATH", "/home/x/models/parakeet-tdt-1.1b.nemo"
+)
 
 
 @register("parakeet-tdt-1.1b")
@@ -23,9 +31,12 @@ class ParakeetTDT11BRunner(ASRRunner):
 
     def load(self):
         import nemo.collections.asr as nemo_asr
-        self.model = nemo_asr.models.ASRModel.from_pretrained(
-            model_name="nvidia/parakeet-tdt-1.1b"
-        )
+        if os.path.isfile(LOCAL_NEMO_PATH):
+            self.model = nemo_asr.models.ASRModel.restore_from(LOCAL_NEMO_PATH)
+        else:
+            self.model = nemo_asr.models.ASRModel.from_pretrained(
+                model_name="nvidia/parakeet-tdt-1.1b"
+            )
         self.model.eval()
         if torch.cuda.is_available():
             self.model = self.model.cuda()
