@@ -1,13 +1,15 @@
-"""NVIDIA Parakeet-TDT-1.1B runner — English ASR via NeMo.
+"""NVIDIA Parakeet-TDT runners — NeMo-based ASR models.
 
-1.1B params, ~3-4GB VRAM FP16, TDT (Token-and-Duration Transducer) decoder.
-Outputs lowercase text without punctuation.
+Parakeet-TDT-1.1B: 1.1B params, English only, no punctuation, ~4.3GB VRAM.
+Parakeet-TDT-0.6B-v3: 600M params, 25 European languages, punctuation+caps, ~2-3GB VRAM.
+
+Note: v3 supports European languages only (en, de, fr, es, ru, etc.).
+      No Japanese or Chinese support.
 
 Requires: pip install nemo_toolkit[asr]
-Model: nvidia/parakeet-tdt-1.1b (CC-BY-4.0)
+License: CC-BY-4.0
 
-Set PARAKEET_NEMO_PATH env var to load from a local .nemo file
-(useful when HuggingFace is unreachable, e.g. on Jetson).
+Local .nemo paths used when HuggingFace is unreachable (e.g. Jetson).
 """
 import os
 import torch
@@ -15,27 +17,23 @@ from typing import Optional
 from .base import ASRRunner
 from .registry import register
 
-LOCAL_NEMO_PATH = os.environ.get(
-    "PARAKEET_NEMO_PATH", "/home/x/models/parakeet-tdt-1.1b.nemo"
-)
 
-
-@register("parakeet-tdt-1.1b")
-class ParakeetTDT11BRunner(ASRRunner):
-    name = "parakeet-tdt-1.1b"
-    languages = ["en"]
+class ParakeetBase(ASRRunner):
+    """Base runner for NeMo Parakeet-TDT models."""
     requires_gpu = True
+    model_name = ""
+    local_nemo_path = ""
 
     def __init__(self):
         self.model = None
 
     def load(self):
         import nemo.collections.asr as nemo_asr
-        if os.path.isfile(LOCAL_NEMO_PATH):
-            self.model = nemo_asr.models.ASRModel.restore_from(LOCAL_NEMO_PATH)
+        if self.local_nemo_path and os.path.isfile(self.local_nemo_path):
+            self.model = nemo_asr.models.ASRModel.restore_from(self.local_nemo_path)
         else:
             self.model = nemo_asr.models.ASRModel.from_pretrained(
-                model_name="nvidia/parakeet-tdt-1.1b"
+                model_name=self.model_name
             )
         self.model.eval()
         if torch.cuda.is_available():
@@ -52,3 +50,23 @@ class ParakeetTDT11BRunner(ASRRunner):
         del self.model
         self.model = None
         super().unload()
+
+
+@register("parakeet-tdt-1.1b")
+class ParakeetTDT11BRunner(ParakeetBase):
+    name = "parakeet-tdt-1.1b"
+    languages = ["en"]
+    model_name = "nvidia/parakeet-tdt-1.1b"
+    local_nemo_path = os.environ.get(
+        "PARAKEET_11B_NEMO_PATH", "/home/x/models/parakeet-tdt-1.1b.nemo"
+    )
+
+
+@register("parakeet-tdt-0.6b-v3")
+class ParakeetTDT06BV3Runner(ParakeetBase):
+    name = "parakeet-tdt-0.6b-v3"
+    languages = ["en"]  # 25 European langs but no JA/ZH
+    model_name = "nvidia/parakeet-tdt-0.6b-v3"
+    local_nemo_path = os.environ.get(
+        "PARAKEET_06BV3_NEMO_PATH", "/home/x/models/parakeet-tdt-0.6b-v3.nemo"
+    )
