@@ -22,6 +22,8 @@ for _mod in [
     "runners.firered_runner",
     "runners.vibevoice_runner",
     "runners.parakeet_runner",
+    "runners.voxtral_runner",
+    "runners.cohere_runner",
 ]:
     try:
         __import__(_mod)
