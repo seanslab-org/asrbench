@@ -1,6 +1,6 @@
 # ASR Bench v2 — Final Benchmark Report
 
-**Date:** 2026-03-24
+**Date:** 2026-04-06 (updated)
 **Hardware:** NVIDIA Jetson AGX Orin 32GB (JetPack 6.2, CUDA 12.6, PyTorch 2.5)
 **Purpose:** Select the best ASR model for Bosco meeting transcription (EN/ZH/JA)
 
@@ -12,28 +12,34 @@
 
 | Model | Params | EN WER% (LS-clean) | EN WER% (LS-other) | ZH CER% (AISHELL-1) | JA CER% (ReazonSpeech) | VRAM |
 |-------|--------|:---:|:---:|:---:|:---:|---:|
-| **qwen3-asr-1.7b** | 1.7B | **1.87** | **4.12** | **1.57** | 42.02 | 4.2GB |
+| **cohere-transcribe-2b** | 2.0B | **1.80** | — | — | — | 4.1GB |
+| **qwen3-asr-1.7b** | 1.7B | 1.87 | **4.12** | **1.57** | 42.02 | 4.2GB |
 | **qwen3-asr-0.6b** | 0.6B | 2.50 | 5.36 | 2.13 | 47.46 | 1.8GB |
 | **whisper-large-v3-turbo** | 809M | 2.36 | 5.23 | 9.31 | **26.92** | 3.4GB |
+| **moonshine/base** | ~60M | 2.55 | — | N/A | N/A | 0 (CPU) |
+| **moonshine/tiny** | ~27M | 3.48 | — | N/A | N/A | 0 (CPU) |
 | **kotoba-whisper-bilingual** | 756M | 3.07 | — | N/A | N/A | 1.6GB |
 
 ### Best Model Per Language
 
 | Language | Winner | Score | Runner-up | Score |
 |----------|--------|-------|-----------|-------|
-| **English** | Qwen3-ASR-1.7B | 1.87% WER | Whisper-turbo | 2.36% WER |
+| **English** | Cohere Transcribe 2B | 1.80% WER | Qwen3-ASR-1.7B | 1.87% WER |
 | **Chinese** | Qwen3-ASR-1.7B | 1.57% CER | Qwen3-ASR-0.6B | 2.13% CER |
 | **Japanese** | Whisper-turbo | 26.92% CER | Qwen3-ASR-1.7B | 42.02% CER |
 
 ### Inference Speed (Real-Time Factor)
 
-| Model | EN RTF | ZH RTF | JA RTF | Avg RTF |
-|-------|:---:|:---:|:---:|:---:|
-| whisper-large-v3-turbo | 0.17 | 0.18 | 0.26 | **0.20** |
-| qwen3-asr-0.6b | 0.31 | 0.23 | 0.36 | 0.30 |
-| qwen3-asr-1.7b | 0.34 | 0.23 | 0.37 | 0.31 |
+| Model | EN RTF | ZH RTF | JA RTF | Avg RTF | Runtime |
+|-------|:---:|:---:|:---:|:---:|:---:|
+| moonshine/tiny | **0.035** | N/A | N/A | 0.035 | CPU |
+| moonshine/base | 0.060 | N/A | N/A | 0.060 | CPU |
+| cohere-transcribe-2b | 0.096 | — | — | 0.096 | GPU |
+| whisper-large-v3-turbo | 0.17 | 0.18 | 0.26 | **0.20** | GPU |
+| qwen3-asr-0.6b | 0.31 | 0.23 | 0.36 | 0.30 | GPU |
+| qwen3-asr-1.7b | 0.34 | 0.23 | 0.37 | 0.31 | GPU |
 
-All models run faster than real-time. Whisper is ~1.5x faster than Qwen.
+All models run faster than real-time. Moonshine is the fastest (CPU-only, 17-28x RT) but EN-only. Among GPU models, Cohere Transcribe is fastest at 10.4x real-time, ~1.8x faster than Whisper-turbo.
 
 ---
 
@@ -116,17 +122,35 @@ Use language detection → route to best model:
 
 | Model | HuggingFace ID | Runtime | Notes |
 |-------|---------------|---------|-------|
+| cohere-transcribe-2b | `CohereLabs/cohere-transcribe-03-2026` | transformers | Fast-Conformer enc + Transformer dec, 14 langs, Apache 2.0 |
 | whisper-large-v3-turbo | `openai/whisper-large-v3-turbo` | openai-whisper | 4-layer distilled decoder |
 | qwen3-asr-0.6b | `Qwen/Qwen3-ASR-0.6B` | qwen-asr + GQA patch | LLM-based ASR, 52 langs |
 | qwen3-asr-1.7b | `Qwen/Qwen3-ASR-1.7B` | qwen-asr + GQA patch | Larger variant |
 | kotoba-whisper-bilingual | `kotoba-tech/kotoba-whisper-bilingual-v1.0` | transformers pipeline | Distilled Whisper, EN+JA |
+
+### Moonshine v2 (Useful Sensors) — Benchmarked 2026-04-02
+
+Edge-optimized, EN-only, CPU inference via ONNX Runtime (no GPU needed).
+
+| Model | Params | ONNX Size | EN WER% (LS-clean) | RTF | Speed | RAM | Runtime |
+|-------|--------|-----------|:---:|:---:|:---:|---:|---------|
+| moonshine/tiny | ~27M | 104 MB | 3.48 | 0.035 | 28x | ~330 MB | CPU (ONNX) |
+| moonshine/base | ~60M | 236 MB | 2.55 | 0.060 | 17x | ~585 MB | CPU (ONNX) |
+
+**Key findings:**
+- **moonshine/base achieves 2.55% WER** — competitive with Whisper-turbo (2.36%) at 17x real-time speed on CPU alone
+- **moonshine/tiny at 3.48% WER** — similar to SenseVoice (3.04%) but runs on CPU with only 330 MB RAM
+- Moonshine outputs punctuated text; WER above is normalized (punctuation stripped before comparison). Raw WER with punctuation: ~14%
+- Zero GPU/VRAM usage — frees the entire GPU for other workloads (washer, writer)
+- EN only — no ZH/JA support
+- Tested on LibriSpeech test-clean subset (388 samples, 52.8 min audio) due to partial dataset on device. Full test-clean has 2,620 samples.
+- Package: `useful-moonshine-onnx` (v20251121), models auto-downloaded from HuggingFace `UsefulSensors/moonshine`
 
 ### Models Not Benchmarked (deferred)
 - SenseVoice-Small (sherpa-onnx model downloaded but not run)
 - FireRedASR-AED (EN+ZH only, no JA)
 - Canary-1B-Flash (EN only)
 - Paraformer-Large (EN+ZH only)
-- Moonshine v2 (per-language models)
 - faster-whisper GPU INT8 (CTranslate2 CUDA build not attempted)
 
 ---
