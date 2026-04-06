@@ -91,30 +91,37 @@ All models stable on long-form audio. No repetition or degradation detected.
 
 ## Deployment Recommendation for Bosco
 
-### Option A: Single Model (simplest)
-**Qwen3-ASR-0.6B** — best overall tradeoff.
-- EN: 2.50% WER (competitive with Whisper)
-- ZH: 2.13% CER (4.4x better than Whisper)
-- JA: 47.46% CER (poor — but acceptable if JA is secondary)
-- VRAM: 1.8GB (leaves 28GB for Bosco washer + writer)
-- No hallucination on silence/noise
-- Covers 52 languages
+### Option A: Single Model (recommended)
+**Cohere Transcribe 2B** — best overall across all three languages.
+- EN: 1.80% WER (#1 — beats all other models)
+- ZH: 4.21% CER (good, though Qwen3 is better at 1.57%)
+- JA: 9.70% CER (#1 — 2.8x better than Whisper-turbo's 26.92%)
+- VRAM: 4.1GB (leaves ~28GB for Bosco washer + writer)
+- Fastest GPU model: RTF 0.104 avg (~9.6x real-time)
+- 14 languages, Apache 2.0 license
 
-### Option B: Language-Routed (best quality)
+### Option B: Language-Routed (best quality per language)
 Use language detection → route to best model:
-- **EN/ZH → Qwen3-ASR-0.6B** (or 1.7B if VRAM allows)
-- **JA → Whisper-large-v3-turbo**
-- Total VRAM: ~5.2GB (0.6B + whisper) or ~7.6GB (1.7B + whisper)
+- **EN/JA → Cohere Transcribe 2B**
+- **ZH → Qwen3-ASR-0.6B** (or 1.7B if VRAM allows)
+- Total VRAM: ~5.9GB (Cohere + Qwen 0.6B) or ~8.3GB (Cohere + Qwen 1.7B)
 
-### Option C: Speed-First
-**Whisper-large-v3-turbo** only.
-- Fastest (RTF 0.20)
-- Good EN/JA, poor ZH
-- Hallucinates on silence (needs post-processing filter)
+### Option C: Minimum VRAM
+**Qwen3-ASR-0.6B** — 1.8GB VRAM, good EN/ZH, poor JA.
+- Best choice when GPU memory is tight (e.g., running large LLM for washer)
+- No hallucination on silence/noise
+- 52 languages
+
+### Option D: Speed-First (EN only)
+**Moonshine/base** on CPU + GPU free for other tasks.
+- 2.55% WER on CPU at 17x real-time
+- Zero VRAM — entire GPU available for washer + writer
+- EN only
 
 ### Not Recommended
-- Qwen3-ASR-1.7B as sole model: excellent EN/ZH but 42% CER on JA is too high
-- Kotoba-Whisper: only EN+JA, no ZH support
+- **Whisper-large-v3-turbo** as sole model: hallucinates on silence, poor ZH (9.31% CER)
+- **Qwen3-ASR-1.7B** as sole model: excellent EN/ZH but 42% CER on JA
+- **Kotoba-Whisper**: only EN+JA, no ZH support
 
 ---
 
@@ -127,6 +134,19 @@ Use language detection → route to best model:
 | qwen3-asr-0.6b | `Qwen/Qwen3-ASR-0.6B` | qwen-asr + GQA patch | LLM-based ASR, 52 langs |
 | qwen3-asr-1.7b | `Qwen/Qwen3-ASR-1.7B` | qwen-asr + GQA patch | Larger variant |
 | kotoba-whisper-bilingual | `kotoba-tech/kotoba-whisper-bilingual-v1.0` | transformers pipeline | Distilled Whisper, EN+JA |
+
+### Cohere Transcribe 2B (Cohere Labs) — Benchmarked 2026-04-05
+
+Fast-Conformer encoder + Transformer decoder, 14 languages, Apache 2.0 license.
+
+**Key findings:**
+- **New EN WER leader at 1.80%** on LibriSpeech test-clean (2,620 samples) — beats Qwen3-ASR-1.7B (1.87%)
+- **Dramatic JA improvement: 9.70% CER** on ReazonSpeech (500 samples) — 2.8x better than Whisper-turbo (26.92%)
+- **Fastest GPU model** at RTF 0.104 avg (~9.6x real-time), ~1.9x faster than Whisper-turbo
+- ZH: 4.21% CER on AISHELL-1 — solid but behind Qwen3-ASR (1.57%)
+- VRAM: 4.1GB (bfloat16), fits comfortably on Orin 32GB alongside other Bosco services
+- Model: `CohereLabs/cohere-transcribe-03-2026`, requires transformers ≥5.5.0
+- Ran with `TRANSFORMERS_OFFLINE=1` on Jetson (model pre-cached via LAN rsync)
 
 ### Moonshine v2 (Useful Sensors) — Benchmarked 2026-04-02
 
