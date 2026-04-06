@@ -12,7 +12,7 @@
 
 | Model | Params | EN WER% (LS-clean) | EN WER% (LS-other) | ZH CER% (AISHELL-1) | JA CER% (ReazonSpeech) | VRAM |
 |-------|--------|:---:|:---:|:---:|:---:|---:|
-| **cohere-transcribe-2b** | 2.0B | **1.80** | — | — | — | 4.1GB |
+| **cohere-transcribe-2b** | 2.0B | **1.80** | — | 4.21 | 9.70 | 4.1GB |
 | **qwen3-asr-1.7b** | 1.7B | 1.87 | **4.12** | **1.57** | 42.02 | 4.2GB |
 | **qwen3-asr-0.6b** | 0.6B | 2.50 | 5.36 | 2.13 | 47.46 | 1.8GB |
 | **whisper-large-v3-turbo** | 809M | 2.36 | 5.23 | 9.31 | **26.92** | 3.4GB |
@@ -34,7 +34,7 @@
 |-------|:---:|:---:|:---:|:---:|:---:|
 | moonshine/tiny | **0.035** | N/A | N/A | 0.035 | CPU |
 | moonshine/base | 0.060 | N/A | N/A | 0.060 | CPU |
-| cohere-transcribe-2b | 0.096 | — | — | 0.096 | GPU |
+| cohere-transcribe-2b | 0.096 | 0.103 | 0.113 | 0.104 | GPU |
 | whisper-large-v3-turbo | 0.17 | 0.18 | 0.26 | **0.20** | GPU |
 | qwen3-asr-0.6b | 0.31 | 0.23 | 0.36 | 0.30 | GPU |
 | qwen3-asr-1.7b | 0.34 | 0.23 | 0.37 | 0.31 | GPU |

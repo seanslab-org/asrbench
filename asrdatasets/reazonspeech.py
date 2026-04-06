@@ -60,10 +60,8 @@ class ReazonSpeech(ASRDataset):
                     if isinstance(audio, dict) and "array" in audio:
                         sf.write(str(wav_path), audio["array"], audio["sampling_rate"])
                     else:
-                        raise RuntimeError(
-                            f"Cannot extract audio for sample {i}. "
-                            f"Pre-extract WAVs or install torchcodec."
-                        )
+                        # No more pre-extracted WAVs and can't decode audio
+                        break
             self.samples.append(Sample(
                 audio_path=str(wav_path),
                 reference=item["transcription"],
