@@ -37,16 +37,33 @@ class ReazonSpeech(ASRDataset):
                 f"Download via HuggingFace datasets and save_to_disk."
             )
         from datasets import load_from_disk
-        self._ds = load_from_disk(str(root))
+        # Disable audio decoding to avoid torchcodec dependency
+        try:
+            from datasets import Audio
+            self._ds = load_from_disk(str(root))
+            self._ds = self._ds.cast_column("audio", Audio(decode=False))
+        except Exception:
+            self._ds = load_from_disk(str(root))
         # Pre-extract audio to temp wav files for compatibility with runners
         self._wav_dir = Path(data_dir) / "standard" / "reazonspeech" / "test_wav"
         self._wav_dir.mkdir(exist_ok=True)
         self.samples = []
         for i, item in enumerate(self._ds):
+            # Support both naming conventions (reazonspeech_XXXXX / rs_XXXXX)
             wav_path = self._wav_dir / f"reazonspeech_{i:05d}.wav"
             if not wav_path.exists():
-                audio = item["audio"]
-                sf.write(str(wav_path), audio["array"], audio["sampling_rate"])
+                alt_path = self._wav_dir / f"rs_{i:05d}.wav"
+                if alt_path.exists():
+                    wav_path = alt_path
+                else:
+                    audio = item["audio"]
+                    if isinstance(audio, dict) and "array" in audio:
+                        sf.write(str(wav_path), audio["array"], audio["sampling_rate"])
+                    else:
+                        raise RuntimeError(
+                            f"Cannot extract audio for sample {i}. "
+                            f"Pre-extract WAVs or install torchcodec."
+                        )
             self.samples.append(Sample(
                 audio_path=str(wav_path),
                 reference=item["transcription"],
