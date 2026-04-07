@@ -9,8 +9,9 @@ openai-whisper
 # Faster-Whisper
 faster-whisper
 
-# Moonshine
-useful-moonshine
+# Moonshine — Flavors of Moonshine multilingual edge models
+# (loaded via transformers MoonshineForConditionalGeneration; transformers is
+# already a transitive dep via Cohere/Qwen/Whisper, no separate install needed)
 
 # FunASR (SenseVoice, Paraformer)
 funasr

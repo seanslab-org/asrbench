@@ -24,6 +24,7 @@ for _mod in [
     "runners.parakeet_runner",
     "runners.voxtral_runner",
     "runners.cohere_runner",
+    "runners.moonshine_runner",
 ]:
     try:
         __import__(_mod)
@@ -56,6 +57,7 @@ def run_standard_benchmark(
     dataset_names: list,
     data_dir: Path,
     results_dir: Path,
+    limit: int = 0,
 ):
     """Run benchmark on standard datasets with ground truth."""
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -98,16 +100,19 @@ def run_standard_benchmark(
                 print(f"  SKIP {ds_name} ({ds.language} not supported by {model_name})")
                 continue
 
-            print(f"  {len(ds)} samples, language={ds.language}")
+            sample_iter = list(ds)
+            if limit and limit > 0:
+                sample_iter = sample_iter[:limit]
+            print(f"  {len(sample_iter)}/{len(ds)} samples, language={ds.language}")
             completed = 0
             errors = 0
             hallucinations = 0
 
-            for i, sample in enumerate(ds):
+            for i, sample in enumerate(sample_iter):
                 # Warm-up: run but discard from results
                 is_warmup = i < WARMUP_SAMPLES
 
-                label = f"  [{i+1}/{len(ds)}] {sample.sample_id}"
+                label = f"  [{i+1}/{len(sample_iter)}] {sample.sample_id}"
                 if is_warmup:
                     label += " (warmup)"
                 print(f"{label}...", end=" ", flush=True)
@@ -431,6 +436,8 @@ def main():
                      help="Datasets to use (default: all available)")
     std.add_argument("--data-dir", type=Path, default=DATA_DIR)
     std.add_argument("--results-dir", type=Path, default=RESULTS_DIR)
+    std.add_argument("--limit", type=int, default=0,
+                     help="Cap samples per dataset (0 = all)")
 
     # Custom clips mode (legacy)
     cust = sub.add_parser("custom", help="Run on custom audio clips")
@@ -460,7 +467,7 @@ def main():
         print(f"ASR Bench v2 — Standard Benchmark")
         print(f"  Models: {models}")
         print(f"  Datasets: {datasets}")
-        run_standard_benchmark(models, datasets, args.data_dir, args.results_dir)
+        run_standard_benchmark(models, datasets, args.data_dir, args.results_dir, limit=args.limit)
 
     elif args.command == "custom":
         models = args.models or list_runners()
