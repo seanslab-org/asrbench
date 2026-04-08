@@ -1,0 +1,1407 @@
+{
+  "device" : "Version 26.4 (Build 23E244)",
+  "results" : [
+    {
+      "audioDurationS" : 10.435,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x103ffd680 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.07049500942230225,
+      "rtf" : 0.00675563099399159,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0000",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 3.275,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x1205784e0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.002628922462463379,
+      "rtf" : 0.0008027244160193523,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0001",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 6.625,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x120579170 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0016499757766723633,
+      "rtf" : 0.0002490529474222435,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0002",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 2.68,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x120579b90 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0019990205764770508,
+      "rtf" : 0.000745903200178004,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0003",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 5.2150625,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12057a2b0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0014590024948120117,
+      "rtf" : 0.0002797670200140481,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0004",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 9.635,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12057af40 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0013669729232788086,
+      "rtf" : 0.00014187575747574559,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0005",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 10.555,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12057b930 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0013699531555175781,
+      "rtf" : 0.00012979186693676722,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0006",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 4.275,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x103fffed0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0013689994812011719,
+      "rtf" : 0.00032023379677220394,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0007",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 6.73,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x1205388a0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.001219034194946289,
+      "rtf" : 0.00018113435288949316,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0008",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 10.575,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x120539650 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.001589059829711914,
+      "rtf" : 0.00015026570493729683,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0009",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 4.405,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12053a040 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0034389495849609375,
+      "rtf" : 0.0007806923007856838,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0010",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 12.445,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12053aa00 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0027250051498413086,
+      "rtf" : 0.00021896385294024173,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0011",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 11.64,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12053b3c0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0017859935760498047,
+      "rtf" : 0.00015343587423108287,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0012",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 7.915,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12053bdb0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0018720626831054688,
+      "rtf" : 0.0002365208696279809,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0013",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 2.225,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x1206105a0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.001819014549255371,
+      "rtf" : 0.0008175346288788185,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0014",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 5.815,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x1206112c0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0019279718399047852,
+      "rtf" : 0.00033155147719772743,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0015",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 3.54,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x120611c80 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0015779733657836914,
+      "rtf" : 0.0004457551880744891,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0016",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 8.87,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x120612670 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0018069744110107422,
+      "rtf" : 0.0002037175209707714,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0017",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 15.72,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x1206131b0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.002672910690307617,
+      "rtf" : 0.0001700324866607899,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0018",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 13.895,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x120613a50 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0019469261169433594,
+      "rtf" : 0.0001401170289271939,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0019",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 16.79,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x120613c60 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0019909143447875977,
+      "rtf" : 0.00011857738801593793,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0020",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 6.55,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12060c840 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0018450021743774414,
+      "rtf" : 0.00028167972127899867,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0021",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 11.175,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12060d5c0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0021779537200927734,
+      "rtf" : 0.00019489518748033765,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0022",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 13.275,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12060e0a0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.002147078514099121,
+      "rtf" : 0.00016173849447074357,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0023",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 11.655,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12060ea90 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0037250518798828125,
+      "rtf" : 0.00031960977090371624,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0024",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 6.61,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12060f480 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.004418015480041504,
+      "rtf" : 0.000668383582457111,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0025",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 4.01,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12060fe70 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0036710500717163086,
+      "rtf" : 0.000915473833345713,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0026",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 2.71,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x1206d46c0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0022050142288208008,
+      "rtf" : 0.0008136583870187457,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0027",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 7.83,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x1206d5320 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0020200014114379883,
+      "rtf" : 0.00025798230031136505,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0028",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 4.67,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x1206d5da0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0017271041870117188,
+      "rtf" : 0.0003698295903665351,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0029",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 2.715,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x1206d6730 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.002277970314025879,
+      "rtf" : 0.0008390314232139518,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0030",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 6.615,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x1206d71b0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0022630691528320312,
+      "rtf" : 0.0003421117389012897,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0031",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 4.09,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x1206d7ba0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.005074977874755859,
+      "rtf" : 0.0012408258862483764,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0032",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 3.33,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x1206d7ea0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0026270151138305664,
+      "rtf" : 0.0007888934275767466,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0033",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 5.81,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12071ca20 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0018409490585327148,
+      "rtf" : 0.00031685870198497676,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0034",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 3.445,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12071d6e0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0016160011291503906,
+      "rtf" : 0.00046908595911477236,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0035",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 3.25,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12071e1c0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0018160343170166016,
+      "rtf" : 0.000558779789851262,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0036",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 5.21,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12071eb50 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0021059513092041016,
+      "rtf" : 0.0004042133031101922,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0037",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 2.085,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12071f4b0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0018579959869384766,
+      "rtf" : 0.0008911251735915955,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0000",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 5.415,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12071fea0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0019589662551879883,
+      "rtf" : 0.0003617666214566922,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0001",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 11.6,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x1207687b0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0016770362854003906,
+      "rtf" : 0.00014457209356899919,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0002",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 2.175,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x120768b70 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0022460222244262695,
+      "rtf" : 0.00103265389628794,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0003",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 5.1750625,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12076a1c0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0034439563751220703,
+      "rtf" : 0.0006654907791204589,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0004",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 5.36,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12076a9d0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.001738905906677246,
+      "rtf" : 0.0003244227437830683,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0005",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 5.895,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12076b390 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0023130178451538086,
+      "rtf" : 0.0003923694393814773,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0006",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 3.44,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x12076bdb0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.001618027687072754,
+      "rtf" : 0.00047035688577696334,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0007",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 14.985,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x1207f8510 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.002447962760925293,
+      "rtf" : 0.00016336087827329283,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0008",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 20.055,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x1207f9200 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.003031015396118164,
+      "rtf" : 0.00015113514814849984,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0009",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 3.195,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x1207f9bf0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.00439608097076416,
+      "rtf" : 0.0013759251864676558,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0010",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 20.01,
+      "error" : "recognitionFailed: Error Domain=kLSRErrorDomain Code=300 \"Failed to initialize recognizer\" UserInfo={NSLocalizedDescription=Failed to initialize recognizer, NSUnderlyingError=0x1207fa5e0 {Error Domain=kLSRErrorDomain Code=300 \"Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json\" UserInfo={NSLocalizedDescription=Failed to create recognizer from=\/Users\/seanslab\/Library\/Developer\/CoreSimulator\/Devices\/BACFF0F9-91B1-478C-8605-8DDDA4B83E36\/data\/private\/var\/MobileAsset\/AssetsV2\/com_apple_MobileAsset_UAF_Siri_Understanding\/purpose_auto\/c079bfa6b8856202dc8cb2135fef3b06229ced6e.asset\/AssetData\/mini.json}}}",
+      "language" : "en",
+      "latencyS" : 0.0034409761428833008,
+      "rtf" : 0.00017196282573129937,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0011",
+      "transcript" : ""
+    },
+    {
+      "audioDurationS" : 10.435,
+      "language" : "en",
+      "latencyS" : 0.4189019203186035,
+      "rtf" : 0.04014393103196967,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0000",
+      "transcript" : "He hoped there would be stew for dinner, turnips and carrots and bruised potatoes, and fat, mutton pieces to be ladled out in thick, peppered, flour-fat and sauce. Us."
+    },
+    {
+      "audioDurationS" : 3.275,
+      "language" : "en",
+      "latencyS" : 0.09289002418518066,
+      "rtf" : 0.028363366163413943,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0001",
+      "transcript" : "1 Stuff it into you, his belly counseled him."
+    },
+    {
+      "audioDurationS" : 6.625,
+      "language" : "en",
+      "latencyS" : 0.14287209510803223,
+      "rtf" : 0.02156559926158977,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0002",
+      "transcript" : "After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels."
+    },
+    {
+      "audioDurationS" : 2.68,
+      "language" : "en",
+      "latencyS" : 0.06207692623138428,
+      "rtf" : 0.023163032175889654,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0003",
+      "transcript" : "Oh, Bertie,, any good in your mind?"
+    },
+    {
+      "audioDurationS" : 5.2150625,
+      "language" : "en",
+      "latencyS" : 0.14358603954315186,
+      "rtf" : 0.027532947024729207,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0004",
+      "transcript" : "You Number ten, fresh Nelly is waiting on you. Good night, husband."
+    },
+    {
+      "audioDurationS" : 9.635,
+      "language" : "en",
+      "latencyS" : 0.23835504055023193,
+      "rtf" : 0.024738457763386814,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0005",
+      "transcript" : "Mm- The music came nearer, and he recalled the words. The words of Shelley's fragment upon the moon wandering companionless. Pale for weariness."
+    },
+    {
+      "audioDurationS" : 10.555,
+      "language" : "en",
+      "latencyS" : 0.21332991123199463,
+      "rtf" : 0.020211265867550416,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0006",
+      "transcript" : "The dull light fell more faintly upon the page, whereon another equation began to unfold itself slowly. And to spread abroad its widening tale."
+    },
+    {
+      "audioDurationS" : 4.275,
+      "language" : "en",
+      "latencyS" : 0.08198702335357666,
+      "rtf" : 0.019178251076860036,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0007",
+      "transcript" : "A cold, lucid indifference reigned in his soul."
+    },
+    {
+      "audioDurationS" : 6.73,
+      "language" : "en",
+      "latencyS" : 0.1410599946975708,
+      "rtf" : 0.02095988034139239,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0008",
+      "transcript" : "The chaos in which his ardour extinguished itself was a cold, indifferent knowledge of himself."
+    },
+    {
+      "audioDurationS" : 10.575,
+      "language" : "en",
+      "latencyS" : 0.22346901893615723,
+      "rtf" : 0.021131822121622436,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0009",
+      "transcript" : "At most, by an alms given to a beggar whose blessing he fled from. He might hope wearily to win for himself some measure of actual grace."
+    },
+    {
+      "audioDurationS" : 4.405,
+      "language" : "en",
+      "latencyS" : 0.1007850170135498,
+      "rtf" : 0.022879686041668512,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0010",
+      "transcript" : "Well, now, Ennis, I declare you have a head, and so has my stick."
+    },
+    {
+      "audioDurationS" : 12.445,
+      "language" : "en",
+      "latencyS" : 0.34503698348999023,
+      "rtf" : 0.027724948452389733,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0011",
+      "transcript" : "1 On Saturday mornings, when the so diality met in the chapel to recite the little office, his place was a cushioned kneeling desk at the right of the altar, from which he led his wing. His wing of boys threw the responses."
+    },
+    {
+      "audioDurationS" : 11.64,
+      "language" : "en",
+      "latencyS" : 0.25161802768707275,
+      "rtf" : 0.021616669045281162,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0012",
+      "transcript" : "Her eyes seemed to regard him with mild pity. Her holiness, a strange light glowing faintly upon her frail flesh, did not humiliate the sinner who approached her."
+    },
+    {
+      "audioDurationS" : 7.915,
+      "language" : "en",
+      "latencyS" : 0.17688000202178955,
+      "rtf" : 0.022347441822083328,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0013",
+      "transcript" : "If ever, he was impelled to cast sin from him and to repent. The impulse that moved him was the wish to be her knight."
+    },
+    {
+      "audioDurationS" : 2.225,
+      "language" : "en",
+      "latencyS" : 0.054518938064575195,
+      "rtf" : 0.024502893512168625,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0014",
+      "transcript" : "He tried to think how it could be,"
+    },
+    {
+      "audioDurationS" : 5.815,
+      "language" : "en",
+      "latencyS" : 0.150130033493042,
+      "rtf" : 0.025817718571460358,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0015",
+      "transcript" : "But the dusk, Deepening in the schoolroom, covered over his thoughts. The bell rang,"
+    },
+    {
+      "audioDurationS" : 3.54,
+      "language" : "en",
+      "latencyS" : 0.10229289531707764,
+      "rtf" : 0.028896298112168824,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0016",
+      "transcript" : "Uh Then you can ask him questions on the catechism, deadlists."
+    },
+    {
+      "audioDurationS" : 8.87,
+      "language" : "en",
+      "latencyS" : 0.20766901969909668,
+      "rtf" : 0.02341251631331417,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0017",
+      "transcript" : "Stephen, Leaning back and drawing idly on his scribbler. Listened to the talk about him, which Heron checked from time to time by saying,"
+    },
+    {
+      "audioDurationS" : 15.72,
+      "language" : "en",
+      "latencyS" : 0.3651111125946045,
+      "rtf" : 0.023225897747748376,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0018",
+      "transcript" : "You It was strange, too, that he found an arid pleasure in following up to the end the rigid lines of the doctrines of the Church, and penetrating into obscure. Your silences only to hear and feel the more deeply his own condemnation."
+    },
+    {
+      "audioDurationS" : 13.895,
+      "language" : "en",
+      "latencyS" : 0.3223690986633301,
+      "rtf" : 0.02320036694230515,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0019",
+      "transcript" : "The sentence of St. James, which says that he who offends against one commandment becomes guilty of all, had seemed to him first a swollen phrase until. Until he had begun to grope in the darkness of his own state."
+    },
+    {
+      "audioDurationS" : 16.79,
+      "language" : "en",
+      "latencyS" : 0.3868229389190674,
+      "rtf" : 0.023038888559801515,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0020",
+      "transcript" : "If a man had stolen a pound in his youth and had used that pound to a mass a huge fortune, how much was he obliged to give back? The pound he had stolen only were the pound together with the compound interest accruing upon it, or all his huge fortune."
+    },
+    {
+      "audioDurationS" : 6.55,
+      "language" : "en",
+      "latencyS" : 0.1527690887451172,
+      "rtf" : 0.02332352499925453,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0021",
+      "transcript" : "If a layman in giving baptism pour the water before saying the words, is the child baptized."
+    },
+    {
+      "audioDurationS" : 11.175,
+      "language" : "en",
+      "latencyS" : 0.2476869821548462,
+      "rtf" : 0.02216438319059026,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0022",
+      "transcript" : "he How comes it that, while the first beatitude promises the kingdom of heaven to the poor of heart? The second beatitude promises also to the meek that they shall possess the land."
+    },
+    {
+      "audioDurationS" : 13.275,
+      "language" : "en",
+      "latencyS" : 0.2923029661178589,
+      "rtf" : 0.0220190558280873,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0023",
+      "transcript" : "Why was the sacrament of the Eucharist instituted under the two species of bread and wine, if Jesus Christ be present, body and blood, soul and divinity? In the red alone and in the wine alone."
+    },
+    {
+      "audioDurationS" : 11.655,
+      "language" : "en",
+      "latencyS" : 0.26069605350494385,
+      "rtf" : 0.02236774375846794,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0024",
+      "transcript" : "If the wine change into vinegar and the host crumble into corruption after they have been consecrated, is Jesus Christ still present under their species as God? As God and as man."
+    },
+    {
+      "audioDurationS" : 6.61,
+      "language" : "en",
+      "latencyS" : 0.12868106365203857,
+      "rtf" : 0.019467634440550465,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0025",
+      "transcript" : "A gentle kick from the tall boy in the bench behind urged Stephen to ask a difficult question."
+    },
+    {
+      "audioDurationS" : 4.01,
+      "language" : "en",
+      "latencyS" : 0.09559500217437744,
+      "rtf" : 0.023839152661939512,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0026",
+      "transcript" : "The rector did not ask for a catechism to hear the lesson from."
+    },
+    {
+      "audioDurationS" : 2.71,
+      "language" : "en",
+      "latencyS" : 0.08563995361328125,
+      "rtf" : 0.03160145889788976,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0027",
+      "transcript" : "He clasped his hands on the desk and said,"
+    },
+    {
+      "audioDurationS" : 7.83,
+      "language" : "en",
+      "latencyS" : 0.18414807319641113,
+      "rtf" : 0.02351827243887754,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0028",
+      "transcript" : "Right? The retreat will begin on Wednesday afternoon in honor of St. Francis Xavier, whose feast day is Saturday."
+    },
+    {
+      "audioDurationS" : 4.67,
+      "language" : "en",
+      "latencyS" : 0.09315204620361328,
+      "rtf" : 0.019946904968653808,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0029",
+      "transcript" : "On Friday, confession will be heard all the afternoon after beads."
+    },
+    {
+      "audioDurationS" : 2.715,
+      "language" : "en",
+      "latencyS" : 0.06981301307678223,
+      "rtf" : 0.025713816971190507,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0030",
+      "transcript" : "Beware of making that mistake."
+    },
+    {
+      "audioDurationS" : 6.615,
+      "language" : "en",
+      "latencyS" : 0.14311397075653076,
+      "rtf" : 0.02163476504255945,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0031",
+      "transcript" : "You Stephen's heart began slowly to fold and fade with fear like a withering flower."
+    },
+    {
+      "audioDurationS" : 4.09,
+      "language" : "en",
+      "latencyS" : 0.08753001689910889,
+      "rtf" : 0.02140098212692149,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0032",
+      "transcript" : "He is called, as you know, the apostle of the Indies."
+    },
+    {
+      "audioDurationS" : 3.33,
+      "language" : "en",
+      "latencyS" : 0.08233702182769775,
+      "rtf" : 0.024725832380690017,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0033",
+      "transcript" : "A great saint. St. Francis Xavier."
+    },
+    {
+      "audioDurationS" : 5.81,
+      "language" : "en",
+      "latencyS" : 0.14850497245788574,
+      "rtf" : 0.025560236223388252,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0034",
+      "transcript" : "Yeah The rector paused and then, Shaking his clasp to hands before him, went on."
+    },
+    {
+      "audioDurationS" : 3.445,
+      "language" : "en",
+      "latencyS" : 0.06732499599456787,
+      "rtf" : 0.019542814512211286,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0035",
+      "transcript" : "He had the faith in him that moves mountains."
+    },
+    {
+      "audioDurationS" : 3.25,
+      "language" : "en",
+      "latencyS" : 0.07866394519805908,
+      "rtf" : 0.024204290830172025,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0036",
+      "transcript" : "I A great Saint Saint Francis Xavier."
+    },
+    {
+      "audioDurationS" : 5.21,
+      "language" : "en",
+      "latencyS" : 0.13127195835113525,
+      "rtf" : 0.025196153234382967,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0037",
+      "transcript" : "You In the silence, their dark fire kindled the dusk into a tawny glow."
+    },
+    {
+      "audioDurationS" : 2.085,
+      "language" : "en",
+      "latencyS" : 0.06669902801513672,
+      "rtf" : 0.03198994149407037,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0000",
+      "transcript" : "Everything He could wait no longer."
+    },
+    {
+      "audioDurationS" : 5.415,
+      "language" : "en",
+      "latencyS" : 0.12695598602294922,
+      "rtf" : 0.02344524210950124,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0001",
+      "transcript" : "For a full hour, he had paced up and down, waiting. But he could wait no longer."
+    },
+    {
+      "audioDurationS" : 11.6,
+      "language" : "en",
+      "latencyS" : 0.266914963722229,
+      "rtf" : 0.0230099106657094,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0002",
+      "transcript" : "He set off abruptly for the bull, Walking rapidly, lest his father's shrill whistle might call him back. And in a few moments he had rounded the curve at the police barrack and was safe."
+    },
+    {
+      "audioDurationS" : 2.175,
+      "language" : "en",
+      "latencyS" : 0.0394749641418457,
+      "rtf" : 0.0181494088008486,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0003",
+      "transcript" : "The university,"
+    },
+    {
+      "audioDurationS" : 5.1750625,
+      "language" : "en",
+      "latencyS" : 0.10199499130249023,
+      "rtf" : 0.019708939032618493,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0004",
+      "transcript" : "Bride, after satisfaction, uplifted him like long, slow waves."
+    },
+    {
+      "audioDurationS" : 5.36,
+      "language" : "en",
+      "latencyS" : 0.11607396602630615,
+      "rtf" : 0.021655590676549655,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0005",
+      "transcript" : "Whose feet are as the feet of hearts and underneath the everlasting arms?"
+    },
+    {
+      "audioDurationS" : 5.895,
+      "language" : "en",
+      "latencyS" : 0.12553203105926514,
+      "rtf" : 0.021294661757296888,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0006",
+      "transcript" : "The pride of that dim image brought back to his mind the dignity of the office he had refused."
+    },
+    {
+      "audioDurationS" : 3.44,
+      "language" : "en",
+      "latencyS" : 0.07173705101013184,
+      "rtf" : 0.02085379389829414,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0007",
+      "transcript" : "Soon the whole bridge was trembling and resounding."
+    },
+    {
+      "audioDurationS" : 14.985,
+      "language" : "en",
+      "latencyS" : 0.334352970123291,
+      "rtf" : 0.02231251051873814,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0008",
+      "transcript" : "The uncouth faces passed him two by two, stained yellow or red or livid by the sea. And as he strove to look at them with ease and indifference, a faint stain of personal shame and commiseration rose to his own face."
+    },
+    {
+      "audioDurationS" : 20.055,
+      "language" : "en",
+      "latencyS" : 0.46329498291015625,
+      "rtf" : 0.023101220788339878,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0009",
+      "transcript" : "Angry with himself, he tried to hide his face from their eyes by gazing down sideways into the shallow, swirling water under the bridge. But he still saw a reflection therein of their top heavy silk hats. And humble, tape-like collars, and loosely hanging clerical clothes. Brother Hickey."
+    },
+    {
+      "audioDurationS" : 3.195,
+      "language" : "en",
+      "latencyS" : 0.08482503890991211,
+      "rtf" : 0.026549307953024136,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0010",
+      "transcript" : "Brother Macardall. Brother Kiev."
+    },
+    {
+      "audioDurationS" : 20.01,
+      "language" : "en",
+      "latencyS" : 0.46047306060791016,
+      "rtf" : 0.023012146956917046,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0011",
+      "transcript" : "Their piety would be. Like their names, like their faces, like their clothes. And was idle for him to tell himself that their humble and contrite hearts, it might be paid a far richer tribute of devotion than his had ever been. A gift tenfold more acceptable than his elaborate adoration."
+    },
+    {
+      "audioDurationS" : 10.435,
+      "language" : "en",
+      "latencyS" : 0.4284099340438843,
+      "rtf" : 0.04105509669802437,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0000",
+      "transcript" : "He hoped there would be stew for dinner, turnips and carrots and bruised potatoes and fat mutton pieces to be ladled out in thick peppered flower-fat and sauce."
+    },
+    {
+      "audioDurationS" : 3.275,
+      "language" : "en",
+      "latencyS" : 0.12841796875,
+      "rtf" : 0.039211593511450385,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0001",
+      "transcript" : "Stuff it into you, his belly counseled him."
+    },
+    {
+      "audioDurationS" : 6.625,
+      "language" : "en",
+      "latencyS" : 0.22477006912231445,
+      "rtf" : 0.03392755760336822,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0002",
+      "transcript" : "After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels."
+    },
+    {
+      "audioDurationS" : 2.68,
+      "language" : "en",
+      "latencyS" : 0.09073305130004883,
+      "rtf" : 0.03385561615673464,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0003",
+      "transcript" : "Hello, Bertie, any good in your mind?"
+    },
+    {
+      "audioDurationS" : 5.2150625,
+      "language" : "en",
+      "latencyS" : 0.17438697814941406,
+      "rtf" : 0.03343909649201981,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0004",
+      "transcript" : "Number ten, fresh Nelly is waiting on you. Good night husband."
+    },
+    {
+      "audioDurationS" : 9.635,
+      "language" : "en",
+      "latencyS" : 0.3316279649734497,
+      "rtf" : 0.034419093406689125,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0005",
+      "transcript" : "The music came nearer and he recalled the words. The words of Shelley's fragment upon the moon wandering companionless. Pale for weariness."
+    },
+    {
+      "audioDurationS" : 10.555,
+      "language" : "en",
+      "latencyS" : 0.3172420263290405,
+      "rtf" : 0.030056089656943678,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0006",
+      "transcript" : "The dull light fell more faintly upon the page, whereon another equation began to unfold itself slowly. And to spread abroad its widening tale."
+    },
+    {
+      "audioDurationS" : 4.275,
+      "language" : "en",
+      "latencyS" : 0.1180030107498169,
+      "rtf" : 0.027603043450249564,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0007",
+      "transcript" : "A cold, lucid indifference reigned in his soul."
+    },
+    {
+      "audioDurationS" : 6.73,
+      "language" : "en",
+      "latencyS" : 0.21402311325073242,
+      "rtf" : 0.03180135412343721,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0008",
+      "transcript" : "The chaos in which his ardour extinguished itself was a cold, indifferent knowledge of himself."
+    },
+    {
+      "audioDurationS" : 10.575,
+      "language" : "en",
+      "latencyS" : 0.32578301429748535,
+      "rtf" : 0.030806904425294126,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0009",
+      "transcript" : "At most, by an alms given to a beggar whose blessing he fled from. He might hope wearily to win for himself some measure of actual grace."
+    },
+    {
+      "audioDurationS" : 4.405,
+      "language" : "en",
+      "latencyS" : 0.15135705471038818,
+      "rtf" : 0.03436028483777257,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0010",
+      "transcript" : "Well, now, Ennis, I declare you have a head, and so has my stick."
+    },
+    {
+      "audioDurationS" : 12.445,
+      "language" : "en",
+      "latencyS" : 0.5021170377731323,
+      "rtf" : 0.04034688933492425,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0011",
+      "transcript" : "On Saturday mornings, when the sodality met in the chapel to recite the little office, his place was a cushioned kneeling desk at the right of the altar, from which he led his wing. His wing of boys through the responses."
+    },
+    {
+      "audioDurationS" : 11.64,
+      "language" : "en",
+      "latencyS" : 0.3823850154876709,
+      "rtf" : 0.032850946347738046,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0012",
+      "transcript" : "Her eyes seemed to regard him with mild pity. Her holiness, a strange light glowing faintly upon her frail flesh, did not humiliate the sinner who approached her."
+    },
+    {
+      "audioDurationS" : 7.915,
+      "language" : "en",
+      "latencyS" : 0.2590780258178711,
+      "rtf" : 0.0327325364267683,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0013",
+      "transcript" : "If ever, he was impelled to cast sin from him and to repent. The impulse that moved him was the wish to be her knight."
+    },
+    {
+      "audioDurationS" : 2.225,
+      "language" : "en",
+      "latencyS" : 0.07903897762298584,
+      "rtf" : 0.03552313601033071,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0014",
+      "transcript" : "He tried to think how it could be."
+    },
+    {
+      "audioDurationS" : 5.815,
+      "language" : "en",
+      "latencyS" : 0.20580697059631348,
+      "rtf" : 0.03539242830547093,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0015",
+      "transcript" : "But the dusk. Deepening in the schoolroom covered over his thoughts. The bell rang,"
+    },
+    {
+      "audioDurationS" : 3.54,
+      "language" : "en",
+      "latencyS" : 0.1406160593032837,
+      "rtf" : 0.03972205065064511,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0016",
+      "transcript" : "Then you can ask him questions on the catechism deadlifts."
+    },
+    {
+      "audioDurationS" : 8.87,
+      "language" : "en",
+      "latencyS" : 0.30295300483703613,
+      "rtf" : 0.034154791977117946,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0017",
+      "transcript" : "Stephen. Leaning back and drawing idly on his scribbler. Listened to the talk about him, which Heron checked from time to time by saying."
+    },
+    {
+      "audioDurationS" : 15.72,
+      "language" : "en",
+      "latencyS" : 0.5416409969329834,
+      "rtf" : 0.0344555341560422,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0018",
+      "transcript" : "It was strange, too, that he found an arid pleasure in following up to the end the rigid lines of the doctrines of the church, and penetrating into obscure. Scure silences only to hear and feel the more deeply his own condemnation."
+    },
+    {
+      "audioDurationS" : 13.895,
+      "language" : "en",
+      "latencyS" : 0.4720489978790283,
+      "rtf" : 0.0339725799121287,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0019",
+      "transcript" : "The sentence of St. James, which says that he who offends against one commandment becomes guilty of all, had seemed to him first a swollen phrase unto. Until he had begun to grope in the darkness of his own state."
+    },
+    {
+      "audioDurationS" : 16.79,
+      "language" : "en",
+      "latencyS" : 0.5983309745788574,
+      "rtf" : 0.03563615095764488,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0020",
+      "transcript" : "If a man had stolen a pound in his youth and had used that pound to amass a huge fortune, how much was he obliged to give back? The pound he had stolen only, or the pound together with the compound interest accruing upon it, or all his huge fortune."
+    },
+    {
+      "audioDurationS" : 6.55,
+      "language" : "en",
+      "latencyS" : 0.22013890743255615,
+      "rtf" : 0.033608993501153615,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0021",
+      "transcript" : "If a layman in giving baptism pour the water before saying the words, is the child baptized?"
+    },
+    {
+      "audioDurationS" : 11.175,
+      "language" : "en",
+      "latencyS" : 0.35509800910949707,
+      "rtf" : 0.03177610819771785,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0022",
+      "transcript" : "How comes it that while the first beatitude promises the Kingdom of Heaven to the poor of heart? The second beatitude promises also to the meek that they shall possess the land."
+    },
+    {
+      "audioDurationS" : 13.275,
+      "language" : "en",
+      "latencyS" : 0.43651294708251953,
+      "rtf" : 0.032882331230321624,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0023",
+      "transcript" : "Why was the sacrament of the Eucharist instituted under the two species of bread and wine, if Jesus Christ be present, body and blood, soul and divinity? In the bread alone and in the wine alone."
+    },
+    {
+      "audioDurationS" : 11.655,
+      "language" : "en",
+      "latencyS" : 0.38979601860046387,
+      "rtf" : 0.033444531840451645,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0024",
+      "transcript" : "If the wine change into vinegar and the host crumble into corruption after they have been consecrated, is Jesus Christ still present under their species as God? As God and as man,"
+    },
+    {
+      "audioDurationS" : 6.61,
+      "language" : "en",
+      "latencyS" : 0.19476497173309326,
+      "rtf" : 0.029465199959620766,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0025",
+      "transcript" : "A gentle kick from the tall boy in the bench behind urged Stephen to ask a difficult question."
+    },
+    {
+      "audioDurationS" : 4.01,
+      "language" : "en",
+      "latencyS" : 0.14114105701446533,
+      "rtf" : 0.03519727107592652,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0026",
+      "transcript" : "The rector did not ask for a catechism to hear the lesson from."
+    },
+    {
+      "audioDurationS" : 2.71,
+      "language" : "en",
+      "latencyS" : 0.11754703521728516,
+      "rtf" : 0.0433752897480757,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0027",
+      "transcript" : "He clasped his hands on the desk and said."
+    },
+    {
+      "audioDurationS" : 7.83,
+      "language" : "en",
+      "latencyS" : 0.27266407012939453,
+      "rtf" : 0.03482299746224707,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0028",
+      "transcript" : "The retreat will begin on Wednesday afternoon in honor of St. Francis Xavier, whose feast day is Saturday."
+    },
+    {
+      "audioDurationS" : 4.67,
+      "language" : "en",
+      "latencyS" : 0.13669800758361816,
+      "rtf" : 0.029271521966513527,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0029",
+      "transcript" : "On Friday, confession will be heard all the afternoon after beads."
+    },
+    {
+      "audioDurationS" : 2.715,
+      "language" : "en",
+      "latencyS" : 0.0946950912475586,
+      "rtf" : 0.034878486647351235,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0030",
+      "transcript" : "Beware of making that mistake."
+    },
+    {
+      "audioDurationS" : 6.615,
+      "language" : "en",
+      "latencyS" : 0.1992729902267456,
+      "rtf" : 0.03012441273269019,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0031",
+      "transcript" : "Stephen's heart began slowly to fold and fade with fear like a withering flower."
+    },
+    {
+      "audioDurationS" : 4.09,
+      "language" : "en",
+      "latencyS" : 0.1296529769897461,
+      "rtf" : 0.03169999437402105,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0032",
+      "transcript" : "He is called, as you know, the apostle of the Indies."
+    },
+    {
+      "audioDurationS" : 3.33,
+      "language" : "en",
+      "latencyS" : 0.10966300964355469,
+      "rtf" : 0.0329318347277942,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0033",
+      "transcript" : "A great saint. St. Francis Xavier."
+    },
+    {
+      "audioDurationS" : 5.81,
+      "language" : "en",
+      "latencyS" : 0.20555901527404785,
+      "rtf" : 0.03538020916937141,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0034",
+      "transcript" : "The rector paused, and then. Shaking his clasp to hands before him, went on."
+    },
+    {
+      "audioDurationS" : 3.445,
+      "language" : "en",
+      "latencyS" : 0.09407293796539307,
+      "rtf" : 0.027307093749025565,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0035",
+      "transcript" : "He had the faith in him that moves mountains."
+    },
+    {
+      "audioDurationS" : 3.25,
+      "language" : "en",
+      "latencyS" : 0.11250698566436768,
+      "rtf" : 0.03461753405057467,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0036",
+      "transcript" : "A great saint, St. Francis Xavier."
+    },
+    {
+      "audioDurationS" : 5.21,
+      "language" : "en",
+      "latencyS" : 0.1849910020828247,
+      "rtf" : 0.03550691018864198,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0037",
+      "transcript" : "In the silence, their dark fire kindled the dusk into a tawny glow."
+    },
+    {
+      "audioDurationS" : 2.085,
+      "language" : "en",
+      "latencyS" : 0.07988595962524414,
+      "rtf" : 0.03831460893297081,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0000",
+      "transcript" : "He could wait no longer."
+    },
+    {
+      "audioDurationS" : 5.415,
+      "language" : "en",
+      "latencyS" : 0.1859070062637329,
+      "rtf" : 0.03433185711241605,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0001",
+      "transcript" : "For a full hour, he had paced up and down waiting. But he could wait no longer."
+    },
+    {
+      "audioDurationS" : 11.6,
+      "language" : "en",
+      "latencyS" : 0.388949990272522,
+      "rtf" : 0.03353017157521741,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0002",
+      "transcript" : "He set off abruptly for the bull. Walking rapidly lest his father's shrill whistle might call him back. And in a few moments he had rounded the curve at the police barrack and was safe."
+    },
+    {
+      "audioDurationS" : 2.175,
+      "language" : "en",
+      "latencyS" : 0.05188107490539551,
+      "rtf" : 0.023853367772595637,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0003",
+      "transcript" : "The university."
+    },
+    {
+      "audioDurationS" : 5.1750625,
+      "language" : "en",
+      "latencyS" : 0.14791202545166016,
+      "rtf" : 0.02858168871422522,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0004",
+      "transcript" : "Pride after satisfaction uplifted him like long, slow waves."
+    },
+    {
+      "audioDurationS" : 5.36,
+      "language" : "en",
+      "latencyS" : 0.17051804065704346,
+      "rtf" : 0.03181306728676184,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0005",
+      "transcript" : "Whose feet are as the feet of hearts, and underneath the everlasting arms?"
+    },
+    {
+      "audioDurationS" : 5.895,
+      "language" : "en",
+      "latencyS" : 0.18836498260498047,
+      "rtf" : 0.031953347346052666,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0006",
+      "transcript" : "The pride of that dim image brought back to his mind the dignity of the office he had refused."
+    },
+    {
+      "audioDurationS" : 3.44,
+      "language" : "en",
+      "latencyS" : 0.10536503791809082,
+      "rtf" : 0.030629371487817098,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0007",
+      "transcript" : "Soon the whole bridge was trembling and resounding."
+    },
+    {
+      "audioDurationS" : 14.985,
+      "language" : "en",
+      "latencyS" : 0.5135030746459961,
+      "rtf" : 0.034267806115848926,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0008",
+      "transcript" : "The uncouth faces past him two by two, stained yellow or red or livid by the sea. And as he strove to look at them with ease and indifference, a faint stain of personal shame and commiseration rose to his own face."
+    },
+    {
+      "audioDurationS" : 20.055,
+      "language" : "en",
+      "latencyS" : 0.6801398992538452,
+      "rtf" : 0.03391373219914461,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0009",
+      "transcript" : "Angry with himself, he tried to hide his face from their eyes by gazing down sideways into the shallow swirling water under the bridge. But he still saw a reflection therein of their top-heavy silk hats. And humble tape-like collars, and loosely hanging clerical clothes. Brother Hickey."
+    },
+    {
+      "audioDurationS" : 3.195,
+      "language" : "en",
+      "latencyS" : 0.11232900619506836,
+      "rtf" : 0.035157748417861776,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0010",
+      "transcript" : "Brother Mccartle, Brother Kiev."
+    },
+    {
+      "audioDurationS" : 20.01,
+      "language" : "en",
+      "latencyS" : 0.6495490074157715,
+      "rtf" : 0.03246121976090812,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0011",
+      "transcript" : "Their piety would be. Like their names, like their faces, like their clothes. And was idle for him to tell himself that their humble and contrite hearts, it might be, paid a far richer tribute of devotion than his had ever been. A gift tenfold more acceptable than his elaborate adoration."
+    }
+  ],
+  "timestamp" : "2026-04-08T12:01:27Z",
+  "xcodeBuild" : "1"
+}
