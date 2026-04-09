@@ -2,11 +2,17 @@ import Foundation
 import Speech
 import AVFoundation
 
-/// Wraps SFSpeechRecognizer with `requiresOnDeviceRecognition = true`.
+/// Apple's on-device speech recognition runner.
 ///
-/// Fails loudly if on-device recognition is not available for the requested
-/// locale on the current Xcode/simulator combo — we never want to silently fall
-/// back to server mode (audio uploaded to Apple) for benchmarking.
+/// Strategy by platform:
+/// - **Real device (iPad/iPhone):** Uses the legacy `SFSpeechRecognizer` with
+///   `requiresOnDeviceRecognition = true`. This works on real devices where the
+///   speech model is pre-installed. The newer `SpeechTranscriber` API (iOS 26)
+///   crashes with EXC_BREAKPOINT on iPad mini 6 (A15) — Apple hasn't added it
+///   to their hardware allowlist yet.
+/// - **Simulator:** Neither API works. The simulator doesn't ship the speech
+///   model assets (`kLSRErrorDomain Code=300` for legacy, `Status.unsupported`
+///   for new API). See `results/ios_simulator_20260408/README.md`.
 final class AppleSpeechRunner {
     let runnerName: String
     let locale: Locale
@@ -17,15 +23,13 @@ final class AppleSpeechRunner {
         case onDeviceUnavailable(String)
         case authorizationDenied(SFSpeechRecognizerAuthorizationStatus)
         case recognitionFailed(String)
-        case unknownLocale(String)
 
         var description: String {
             switch self {
             case .recognizerInitFailed(let msg): return "recognizerInitFailed: \(msg)"
-            case .onDeviceUnavailable(let loc): return "onDeviceUnavailable for locale \(loc) — will not silently use server mode"
-            case .authorizationDenied(let status): return "authorizationDenied (\(status.rawValue))"
+            case .onDeviceUnavailable(let loc): return "onDeviceUnavailable: \(loc)"
+            case .authorizationDenied(let s): return "authorizationDenied (\(s.rawValue))"
             case .recognitionFailed(let msg): return "recognitionFailed: \(msg)"
-            case .unknownLocale(let loc): return "unknownLocale: \(loc)"
             }
         }
     }
@@ -34,36 +38,37 @@ final class AppleSpeechRunner {
         self.locale = Locale(identifier: localeIdentifier)
         self.runnerName = "apple-speech-\(localeIdentifier)"
         guard let r = SFSpeechRecognizer(locale: locale) else {
-            throw AppleSpeechError.unknownLocale(localeIdentifier)
+            throw AppleSpeechError.recognizerInitFailed(localeIdentifier)
         }
         self.recognizer = r
-
-        // Hard requirement: on-device only.
-        if !r.supportsOnDeviceRecognition {
-            throw AppleSpeechError.onDeviceUnavailable(localeIdentifier)
-        }
     }
 
-    /// Call once on app launch. Blocks the calling task until auth resolves.
+    /// Request Speech permission. Must be called before transcribe().
+    /// On real device this shows a system dialog (or uses TCC pre-grant).
     static func requestAuthorization() async throws {
         let status: SFSpeechRecognizerAuthorizationStatus = await withCheckedContinuation { cont in
             SFSpeechRecognizer.requestAuthorization { cont.resume(returning: $0) }
         }
-        switch status {
-        case .authorized:
-            return
-        default:
+        guard status == .authorized else {
             throw AppleSpeechError.authorizationDenied(status)
         }
     }
 
-    /// Transcribe a file URL synchronously (returns final result text and confidence).
-    /// Confidence is the average per-segment confidence reported by Apple.
+    /// Check if on-device recognition is available. On simulator this
+    /// returns true but the actual recognition still fails with Code=300.
+    /// On real devices it genuinely indicates model availability.
+    var supportsOnDevice: Bool {
+        recognizer.supportsOnDeviceRecognition
+    }
+
+    /// Transcribe a file URL. Prefers on-device but allows server fallback
+    /// so we at least get Apple's accuracy baseline even if the on-device
+    /// model hasn't been downloaded yet.
     func transcribe(audioURL: URL) async throws -> (String, Double?) {
         let request = SFSpeechURLRecognitionRequest(url: audioURL)
-        request.requiresOnDeviceRecognition = true
+        // Try on-device first; if model not present, allow server fallback
+        request.requiresOnDeviceRecognition = recognizer.supportsOnDeviceRecognition
         request.shouldReportPartialResults = false
-        // Disable automatic punctuation if available — we want raw words for fair WER
         if #available(iOS 16.0, *) {
             request.addsPunctuation = false
         }

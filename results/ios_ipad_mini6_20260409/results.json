@@ -1,0 +1,1407 @@
+{
+  "device" : "Version 26.3 (Build 23D127)",
+  "results" : [
+    {
+      "audioDurationS" : 10.435,
+      "confidence" : 0.9132038531480012,
+      "language" : "en",
+      "latencyS" : 0.8253179788589478,
+      "rtf" : 0.07909132523804004,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0000",
+      "transcript" : "He hoped there would be stew for dinner turnips and carrots and bruised potatoes and fat mutton pieces to be laid out in thick peppered flower fatten sauce"
+    },
+    {
+      "audioDurationS" : 3.275,
+      "confidence" : 0.8411428587777274,
+      "language" : "en",
+      "latencyS" : 0.1403980255126953,
+      "rtf" : 0.04286962611074666,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0001",
+      "transcript" : "Stuffed into you his belly counseled him"
+    },
+    {
+      "audioDurationS" : 6.625,
+      "confidence" : 0.8923391718417406,
+      "language" : "en",
+      "latencyS" : 0.3387019634246826,
+      "rtf" : 0.05112482466787662,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0002",
+      "transcript" : "After early nightfall the yellow lamps would light up here and there the squalid quarter of the Braunfels"
+    },
+    {
+      "audioDurationS" : 2.68,
+      "confidence" : 0.8721706668535868,
+      "language" : "en",
+      "latencyS" : 0.11498594284057617,
+      "rtf" : 0.042905202552453794,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0003",
+      "transcript" : "Hello Bertie any good in your mind"
+    },
+    {
+      "audioDurationS" : 5.2150625,
+      "confidence" : 0.9686363556168296,
+      "language" : "en",
+      "latencyS" : 0.18412601947784424,
+      "rtf" : 0.0353065796388527,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0004",
+      "transcript" : "Number 10 fresh Nelly is waiting on you good night husband"
+    },
+    {
+      "audioDurationS" : 9.635,
+      "confidence" : 0.9142608668493188,
+      "language" : "en",
+      "latencyS" : 0.34802496433258057,
+      "rtf" : 0.03612090963493311,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0005",
+      "transcript" : "The music came nearer and he recalled the words the words of Shelley's fragment upon the moon wandering companionless pale for weariness"
+    },
+    {
+      "audioDurationS" : 10.555,
+      "confidence" : 0.8638893365859985,
+      "language" : "en",
+      "latencyS" : 0.42395997047424316,
+      "rtf" : 0.04016674282086624,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0006",
+      "transcript" : "The dull light fell more faintly upon the page where on another equation began to unfold itself slowly and to spread abroad it's widening tail"
+    },
+    {
+      "audioDurationS" : 4.275,
+      "confidence" : 0.9100874236651829,
+      "language" : "en",
+      "latencyS" : 0.15714192390441895,
+      "rtf" : 0.03675834477296349,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0007",
+      "transcript" : "A cold lucid indifference rained in his soul"
+    },
+    {
+      "audioDurationS" : 6.73,
+      "confidence" : 0.8013482136385781,
+      "language" : "en",
+      "latencyS" : 0.2722899913787842,
+      "rtf" : 0.04045913690620864,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0008",
+      "transcript" : "The chaos in which is harder extinguished itself was a cold indifferent knowledge of himself"
+    },
+    {
+      "audioDurationS" : 10.575,
+      "confidence" : 0.9045555547431663,
+      "language" : "en",
+      "latencyS" : 0.34219610691070557,
+      "rtf" : 0.0323589699206341,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0009",
+      "transcript" : "At most by an arms given to a beggar whose blessing he fled from he might hope wearily to win for himself some measure of actual grace"
+    },
+    {
+      "audioDurationS" : 4.405,
+      "confidence" : 0.8876180809277755,
+      "language" : "en",
+      "latencyS" : 0.17745792865753174,
+      "rtf" : 0.040285568367203574,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0010",
+      "transcript" : "Well now Enis I declare you have a head and so has my stick"
+    },
+    {
+      "audioDurationS" : 12.445,
+      "confidence" : 0.9060338170904862,
+      "language" : "en",
+      "latencyS" : 0.42223691940307617,
+      "rtf" : 0.03392823779855975,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0011",
+      "transcript" : "On Saturday mornings when the sodality met in the chapel to recite the little office his place was a cushioned kneeling desk at the right of the altar from which he led his wing of boys through the responses"
+    },
+    {
+      "audioDurationS" : 11.64,
+      "confidence" : 0.9543170354984425,
+      "language" : "en",
+      "latencyS" : 0.38375091552734375,
+      "rtf" : 0.03296829171197111,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0012",
+      "transcript" : "Her eyes seemed to regard him with mild pity her holiness a strange light glowing faintly upon her frail flesh did not humiliate the sinner who approached her"
+    },
+    {
+      "audioDurationS" : 7.915,
+      "confidence" : 0.9659599876403808,
+      "language" : "en",
+      "latencyS" : 0.2814919948577881,
+      "rtf" : 0.03556437079694101,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0013",
+      "transcript" : "If ever he was impelled to cast sin from him and to repent the impulse that moved him was the wish to be her night"
+    },
+    {
+      "audioDurationS" : 2.225,
+      "confidence" : 0.9849999994039536,
+      "language" : "en",
+      "latencyS" : 0.09377098083496094,
+      "rtf" : 0.042144261049420643,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0014",
+      "transcript" : "He tried to think how it could be"
+    },
+    {
+      "audioDurationS" : 5.815,
+      "confidence" : 0.980733331044515,
+      "language" : "en",
+      "latencyS" : 0.1992650032043457,
+      "rtf" : 0.03426741241691241,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0015",
+      "transcript" : "But the dusk deepening in the school room covered over his thoughts the bell rang"
+    },
+    {
+      "audioDurationS" : 3.54,
+      "confidence" : 0.8725000023841858,
+      "language" : "en",
+      "latencyS" : 0.15994000434875488,
+      "rtf" : 0.045180792188913806,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0016",
+      "transcript" : "Then you can ask him questions on the catechism deadness"
+    },
+    {
+      "audioDurationS" : 8.87,
+      "confidence" : 0.9135416646798452,
+      "language" : "en",
+      "latencyS" : 0.31815409660339355,
+      "rtf" : 0.0358685565505517,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0017",
+      "transcript" : "Stephen leaning back and drawing idly on his scribbler listened to the talk about him which heron checked from time to time by saying"
+    },
+    {
+      "audioDurationS" : 15.72,
+      "confidence" : 0.9124634164135631,
+      "language" : "en",
+      "latencyS" : 0.5691390037536621,
+      "rtf" : 0.036204771231148986,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0018",
+      "transcript" : "It was strange too that he found an errored pleasure in following up to the end the rigid lines of the doctrines of the church and penetrating into obscure silences only to hear and feel the more deeply his own condemnation"
+    },
+    {
+      "audioDurationS" : 13.895,
+      "confidence" : 0.9171499997377396,
+      "language" : "en",
+      "latencyS" : 0.46202898025512695,
+      "rtf" : 0.03325145593775653,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0019",
+      "transcript" : "The sentence of Saint James which says that he who offends against one commandment becomes guilty of all had seemed to him first a swollen phrase until he had begun to grow up in the darkness of his own state"
+    },
+    {
+      "audioDurationS" : 16.79,
+      "confidence" : 0.897900003194809,
+      "language" : "en",
+      "latencyS" : 0.5470380783081055,
+      "rtf" : 0.03258118393734994,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0020",
+      "transcript" : "If a man had stolen a pound in his youth and had used that pound to a massive huge fortune how much was he obliged to give back the pound he had stolen only or the pound together with the compound interest accruing upon it or all his huge fortune"
+    },
+    {
+      "audioDurationS" : 6.55,
+      "confidence" : 0.9279411785742816,
+      "language" : "en",
+      "latencyS" : 0.22751104831695557,
+      "rtf" : 0.03473451119342833,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0021",
+      "transcript" : "If a Lehman in giving baptism pour the water before saying the words is the child baptized"
+    },
+    {
+      "audioDurationS" : 11.175,
+      "confidence" : 0.856819499284029,
+      "language" : "en",
+      "latencyS" : 0.4894070625305176,
+      "rtf" : 0.043794815438972484,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0022",
+      "transcript" : "How come it that while the first be attitude promises the kingdom of heaven to the poor of heart the second be attitude promises also to the meek that they shall possess the land"
+    },
+    {
+      "audioDurationS" : 13.275,
+      "confidence" : 0.9612571409770421,
+      "language" : "en",
+      "latencyS" : 0.4397759437561035,
+      "rtf" : 0.03312813135639198,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0023",
+      "transcript" : "Why was the sacrament of the Eucharist instituted under the two species of bread and wine if Jesus Christ be present body and blood soul and divinity in the bread alone and in the wine alone"
+    },
+    {
+      "audioDurationS" : 11.655,
+      "confidence" : 0.9258065351418087,
+      "language" : "en",
+      "latencyS" : 0.4105830192565918,
+      "rtf" : 0.03522805828027386,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0024",
+      "transcript" : "If the wine change into vinegar and the host crumble into corruption after they have been consecrated is Jesus Christ still present under their species as God and as man"
+    },
+    {
+      "audioDurationS" : 6.61,
+      "confidence" : 0.9467777775393592,
+      "language" : "en",
+      "latencyS" : 0.22481799125671387,
+      "rtf" : 0.03401179897983568,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0025",
+      "transcript" : "A gentle kick from the tall boy in the bench behind urged Steven to ask a difficult question"
+    },
+    {
+      "audioDurationS" : 4.01,
+      "confidence" : 0.9315833300352097,
+      "language" : "en",
+      "latencyS" : 0.15680193901062012,
+      "rtf" : 0.039102727932822975,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0026",
+      "transcript" : "Director did not ask for a catechism to hear the lesson from"
+    },
+    {
+      "audioDurationS" : 2.71,
+      "confidence" : 0.9529999958144294,
+      "language" : "en",
+      "latencyS" : 0.11019706726074219,
+      "rtf" : 0.040663124450458374,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0027",
+      "transcript" : "He clasped his hands on the desk and said"
+    },
+    {
+      "audioDurationS" : 7.83,
+      "confidence" : 0.980111108885871,
+      "language" : "en",
+      "latencyS" : 0.2624499797821045,
+      "rtf" : 0.033518515936411815,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0028",
+      "transcript" : "The retreat will begin on Wednesday afternoon in honor of Saint Francis Xavier whose feast day is Saturday"
+    },
+    {
+      "audioDurationS" : 4.67,
+      "confidence" : 0.9821818200024691,
+      "language" : "en",
+      "latencyS" : 0.16366302967071533,
+      "rtf" : 0.03504561663184483,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0029",
+      "transcript" : "On Friday confession will be heard all the afternoon after beads"
+    },
+    {
+      "audioDurationS" : 2.715,
+      "confidence" : 0.9917999982833863,
+      "language" : "en",
+      "latencyS" : 0.10555410385131836,
+      "rtf" : 0.038878122965494796,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0030",
+      "transcript" : "Beware of making that mistake"
+    },
+    {
+      "audioDurationS" : 6.615,
+      "confidence" : 0.9051034633929913,
+      "language" : "en",
+      "latencyS" : 0.251865029335022,
+      "rtf" : 0.0380748343665944,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0031",
+      "transcript" : "Stevens heart began slowly to fold and fade with fear like a withering flower"
+    },
+    {
+      "audioDurationS" : 4.09,
+      "confidence" : 0.9454545432871039,
+      "language" : "en",
+      "latencyS" : 0.15322589874267578,
+      "rtf" : 0.03746354492485961,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0032",
+      "transcript" : "He has called as you know the apostle of the Indies"
+    },
+    {
+      "audioDurationS" : 3.33,
+      "confidence" : 0.911000003417333,
+      "language" : "en",
+      "latencyS" : 0.12671709060668945,
+      "rtf" : 0.0380531803623692,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0033",
+      "transcript" : "A great saint Saint Francis Xavier"
+    },
+    {
+      "audioDurationS" : 5.81,
+      "confidence" : 0.9071538540033194,
+      "language" : "en",
+      "latencyS" : 0.2115321159362793,
+      "rtf" : 0.036408281572509346,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0034",
+      "transcript" : "The Rector paused and then shaking his clap hands before him went on"
+    },
+    {
+      "audioDurationS" : 3.445,
+      "confidence" : 0.9885555505752563,
+      "language" : "en",
+      "latencyS" : 0.12494099140167236,
+      "rtf" : 0.036267341480891835,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0035",
+      "transcript" : "He had the faith in him that moves mountains"
+    },
+    {
+      "audioDurationS" : 3.25,
+      "confidence" : 0.9196666677792867,
+      "language" : "en",
+      "latencyS" : 0.12064993381500244,
+      "rtf" : 0.03712305655846229,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0036",
+      "transcript" : "A great Saint Saint Francis Xavier"
+    },
+    {
+      "audioDurationS" : 5.21,
+      "confidence" : 0.8417692276147696,
+      "language" : "en",
+      "latencyS" : 0.19473505020141602,
+      "rtf" : 0.0373771689446096,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134686-0037",
+      "transcript" : "In the silence their dark fire kindled the dusk into a tiny glow"
+    },
+    {
+      "audioDurationS" : 2.085,
+      "confidence" : 0.9962000012397766,
+      "language" : "en",
+      "latencyS" : 0.09081900119781494,
+      "rtf" : 0.04355827395578654,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0000",
+      "transcript" : "He could wait no longer"
+    },
+    {
+      "audioDurationS" : 5.415,
+      "confidence" : 0.9602353011860567,
+      "language" : "en",
+      "latencyS" : 0.2004491090774536,
+      "rtf" : 0.03701737933101636,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0001",
+      "transcript" : "For a full hour he had paste up and down waiting but he could wait no longer"
+    },
+    {
+      "audioDurationS" : 11.6,
+      "confidence" : 0.880591942505403,
+      "language" : "en",
+      "latencyS" : 0.4273369312286377,
+      "rtf" : 0.03683939062315842,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0002",
+      "transcript" : "He set off abruptly for the bull walking rapidly left his father shrill whistle might call him back and in a few moments he had rounded the curve at the police barrack and was safe"
+    },
+    {
+      "audioDurationS" : 2.175,
+      "confidence" : 0.9334999918937683,
+      "language" : "en",
+      "latencyS" : 0.08722901344299316,
+      "rtf" : 0.040105293537008355,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0003",
+      "transcript" : "The university"
+    },
+    {
+      "audioDurationS" : 5.1750625,
+      "confidence" : 0.9602222243944804,
+      "language" : "en",
+      "latencyS" : 0.1813650131225586,
+      "rtf" : 0.0350459560870151,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0004",
+      "transcript" : "Bride after satisfaction uplifted him like long slow waves"
+    },
+    {
+      "audioDurationS" : 5.36,
+      "confidence" : 0.9698461569272555,
+      "language" : "en",
+      "latencyS" : 0.176672101020813,
+      "rtf" : 0.032961212877017344,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0005",
+      "transcript" : "Whose feet are as the feet of hearts and underneath the everlasting arms"
+    },
+    {
+      "audioDurationS" : 5.895,
+      "confidence" : 0.9219325482845306,
+      "language" : "en",
+      "latencyS" : 0.20345306396484375,
+      "rtf" : 0.03451281831464695,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0006",
+      "transcript" : "The pride of that dim image brought back to his mind the dignity of the office he had refused"
+    },
+    {
+      "audioDurationS" : 3.44,
+      "confidence" : 0.9730000048875809,
+      "language" : "en",
+      "latencyS" : 0.1211390495300293,
+      "rtf" : 0.03521483997965968,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0007",
+      "transcript" : "Soon the whole bridge was trembling and resounding"
+    },
+    {
+      "audioDurationS" : 14.985,
+      "confidence" : 0.866380954072589,
+      "language" : "en",
+      "latencyS" : 0.517907977104187,
+      "rtf" : 0.034561760233846314,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0008",
+      "transcript" : "The uncouth faces past him 2 x 2 stained yellow or red or lid by the sea and as he drove to look at them with ease and indifference a faint stain of personal shame and commiseration rose to his own face"
+    },
+    {
+      "audioDurationS" : 20.055,
+      "confidence" : 0.7960000038146973,
+      "language" : "en",
+      "latencyS" : 0.6057790517807007,
+      "rtf" : 0.030205886401431098,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0009",
+      "transcript" : "Brother Hickey"
+    },
+    {
+      "audioDurationS" : 3.195,
+      "confidence" : 0.5499154925346375,
+      "language" : "en",
+      "latencyS" : 0.19018006324768066,
+      "rtf" : 0.05952427644684841,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0010",
+      "transcript" : "Brother McCardle brother key off"
+    },
+    {
+      "audioDurationS" : 20.01,
+      "confidence" : 0.8785687304557638,
+      "language" : "en",
+      "latencyS" : 0.6458770036697388,
+      "rtf" : 0.032277711327823026,
+      "runner" : "apple-speech-en-US",
+      "sampleId" : "1089-134691-0011",
+      "transcript" : "Their priority would be like their names like their faces like their clothes and it was idle for him to tell himself that they're humble and contrite hearts it might be paid a far Richard tribute of devotion than his had ever been a gift tenfold more acceptable than his elaborate adoration"
+    },
+    {
+      "audioDurationS" : 10.435,
+      "language" : "en",
+      "latencyS" : 0.7138779163360596,
+      "rtf" : 0.06841187506814178,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0000",
+      "transcript" : "He hoped there would be stew for dinner, turnips and carrots and bruised potatoes and fat mutton pieces to be ladled out in thick peppered flower-fat and sauce."
+    },
+    {
+      "audioDurationS" : 3.275,
+      "language" : "en",
+      "latencyS" : 0.20114099979400635,
+      "rtf" : 0.0614170991737424,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0001",
+      "transcript" : "Stuff it into you, his belly counselled him."
+    },
+    {
+      "audioDurationS" : 6.625,
+      "language" : "en",
+      "latencyS" : 0.34215593338012695,
+      "rtf" : 0.05164617862341539,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0002",
+      "transcript" : "After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels."
+    },
+    {
+      "audioDurationS" : 2.68,
+      "language" : "en",
+      "latencyS" : 0.13948702812194824,
+      "rtf" : 0.05204739855296576,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0003",
+      "transcript" : "Hello, Bertie, any good in your mind?"
+    },
+    {
+      "audioDurationS" : 5.2150625,
+      "language" : "en",
+      "latencyS" : 0.27517902851104736,
+      "rtf" : 0.05276619954430985,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0004",
+      "transcript" : "Number ten, fresh Nelly is waiting on you. Good night husband."
+    },
+    {
+      "audioDurationS" : 9.635,
+      "language" : "en",
+      "latencyS" : 0.5094690322875977,
+      "rtf" : 0.052876910460570595,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0005",
+      "transcript" : "The music came nearer and he recalled the words. The words of Shelley's fragment upon the moon wandering companionless. Pale for weariness."
+    },
+    {
+      "audioDurationS" : 10.555,
+      "language" : "en",
+      "latencyS" : 0.4909619092941284,
+      "rtf" : 0.04651462901886579,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0006",
+      "transcript" : "The dull light fell more faintly upon the page, whereon another equation began to unfold itself slowly. And to spread abroad its widening tale."
+    },
+    {
+      "audioDurationS" : 4.275,
+      "language" : "en",
+      "latencyS" : 0.18656301498413086,
+      "rtf" : 0.043640471341317155,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0007",
+      "transcript" : "A cold, lucid indifference reigned in his soul."
+    },
+    {
+      "audioDurationS" : 6.73,
+      "language" : "en",
+      "latencyS" : 0.33216798305511475,
+      "rtf" : 0.04935631248961586,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0008",
+      "transcript" : "The chaos in which his ardour extinguished itself was a cold, indifferent knowledge of himself."
+    },
+    {
+      "audioDurationS" : 10.575,
+      "language" : "en",
+      "latencyS" : 0.5135140419006348,
+      "rtf" : 0.04855924746105294,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0009",
+      "transcript" : "At most, by an alms given to a beggar whose blessing he fled from. He might hope wearily to win for himself some measure of actual grace."
+    },
+    {
+      "audioDurationS" : 4.405,
+      "language" : "en",
+      "latencyS" : 0.23242509365081787,
+      "rtf" : 0.05276392591392006,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0010",
+      "transcript" : "Well, now, Ennis, I declare you have a head, and so has my stick."
+    },
+    {
+      "audioDurationS" : 12.445,
+      "language" : "en",
+      "latencyS" : 0.7664738893508911,
+      "rtf" : 0.06158890231827168,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0011",
+      "transcript" : "On Saturday mornings, when the sodality met in the chapel to recite the little office, his place was a cushioned kneeling desk at the right of the altar, from which he led his wing. His wing of boys through the responses."
+    },
+    {
+      "audioDurationS" : 11.64,
+      "language" : "en",
+      "latencyS" : 0.5874049663543701,
+      "rtf" : 0.05046434418851977,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0012",
+      "transcript" : "Her eyes seemed to regard him with mild pity. Her holiness, a strange light glowing faintly upon her frail flesh, did not humiliate the sinner who approached her."
+    },
+    {
+      "audioDurationS" : 7.915,
+      "language" : "en",
+      "latencyS" : 0.4075700044631958,
+      "rtf" : 0.05149336758852758,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0013",
+      "transcript" : "If ever, he was impelled to cast sin from him and to repent. The impulse that moved him was the wish to be her knight."
+    },
+    {
+      "audioDurationS" : 2.225,
+      "language" : "en",
+      "latencyS" : 0.12004101276397705,
+      "rtf" : 0.053951016972573956,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0014",
+      "transcript" : "He tried to think how it could be."
+    },
+    {
+      "audioDurationS" : 5.815,
+      "language" : "en",
+      "latencyS" : 0.3141660690307617,
+      "rtf" : 0.0540268390422634,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0015",
+      "transcript" : "But the dusk. Deepening in the schoolroom covered over his thoughts. The bell rang,"
+    },
+    {
+      "audioDurationS" : 3.54,
+      "language" : "en",
+      "latencyS" : 0.21819496154785156,
+      "rtf" : 0.06163699478752869,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0016",
+      "transcript" : "Then you can ask him questions on the catechism deadlifts."
+    },
+    {
+      "audioDurationS" : 8.87,
+      "language" : "en",
+      "latencyS" : 0.47275590896606445,
+      "rtf" : 0.05329829864329927,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0017",
+      "transcript" : "Stephen. Leaning back and drawing idly on his scribbler. Listened to the talk about him, which Heron checked from time to time by saying."
+    },
+    {
+      "audioDurationS" : 15.72,
+      "language" : "en",
+      "latencyS" : 0.8591359853744507,
+      "rtf" : 0.05465241637242053,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0018",
+      "transcript" : "It was strange, too, that he found an arid pleasure in following up to the end the rigid lines of the doctrines of the church, and penetrating into obscure. Scure silences only to hear and feel the more deeply his own condemnation."
+    },
+    {
+      "audioDurationS" : 13.895,
+      "language" : "en",
+      "latencyS" : 0.7249599695205688,
+      "rtf" : 0.05217416117456415,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0019",
+      "transcript" : "The sentence of St. James, which says that he who offends against one commandment becomes guilty of all, had seemed to him first a swollen phrase unto. Until he had begun to grope in the darkness of his own state."
+    },
+    {
+      "audioDurationS" : 16.79,
+      "language" : "en",
+      "latencyS" : 0.94035804271698,
+      "rtf" : 0.05600703053704467,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0020",
+      "transcript" : "If a man had stolen a pound in his youth and had used that pound to amass a huge fortune, how much was he obliged to give back? The pound he had stolen only, or the pound together with the compound interest accruing upon it, or all his huge fortune."
+    },
+    {
+      "audioDurationS" : 6.55,
+      "language" : "en",
+      "latencyS" : 0.34945499897003174,
+      "rtf" : 0.05335190823969951,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0021",
+      "transcript" : "If a layman in giving baptism pour the water before saying the words, is the child baptized?"
+    },
+    {
+      "audioDurationS" : 11.175,
+      "language" : "en",
+      "latencyS" : 0.5651239156723022,
+      "rtf" : 0.050570372767096396,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0022",
+      "transcript" : "How comes it that while the first beatitude promises the Kingdom of Heaven to the poor of heart? The second beatitude promises also to the meek that they shall possess the land."
+    },
+    {
+      "audioDurationS" : 13.275,
+      "language" : "en",
+      "latencyS" : 0.679176926612854,
+      "rtf" : 0.05116210369965002,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0023",
+      "transcript" : "Why was the sacrament of the Eucharist instituted under the two species of bread and wine, if Jesus Christ be present, body and blood, soul and divinity? In the bread alone and in the wine alone."
+    },
+    {
+      "audioDurationS" : 11.655,
+      "language" : "en",
+      "latencyS" : 0.6095170974731445,
+      "rtf" : 0.05229661925981506,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0024",
+      "transcript" : "If the wine change into vinegar and the host crumble into corruption after they have been consecrated, is Jesus Christ still present under their species as God? As God and as man,"
+    },
+    {
+      "audioDurationS" : 6.61,
+      "language" : "en",
+      "latencyS" : 0.2984429597854614,
+      "rtf" : 0.045150220845001726,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0025",
+      "transcript" : "A gentle kick from the tall boy in the bench behind urged Stephen to ask a difficult question."
+    },
+    {
+      "audioDurationS" : 4.01,
+      "language" : "en",
+      "latencyS" : 0.21591603755950928,
+      "rtf" : 0.053844398393892594,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0026",
+      "transcript" : "The rector did not ask for a catechism to hear the lesson from."
+    },
+    {
+      "audioDurationS" : 2.71,
+      "language" : "en",
+      "latencyS" : 0.18325293064117432,
+      "rtf" : 0.06762100761666949,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0027",
+      "transcript" : "He clasped his hands on the desk and said."
+    },
+    {
+      "audioDurationS" : 7.83,
+      "language" : "en",
+      "latencyS" : 0.4345170259475708,
+      "rtf" : 0.05549387304566677,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0028",
+      "transcript" : "The retreat will begin on Wednesday afternoon in honor of St. Francis Xavier, whose feast day is Saturday."
+    },
+    {
+      "audioDurationS" : 4.67,
+      "language" : "en",
+      "latencyS" : 0.21584606170654297,
+      "rtf" : 0.04621971342752526,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0029",
+      "transcript" : "On Friday, confession will be heard all the afternoon after beads."
+    },
+    {
+      "audioDurationS" : 2.715,
+      "language" : "en",
+      "latencyS" : 0.15226900577545166,
+      "rtf" : 0.0560843483519159,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0030",
+      "transcript" : "Beware of making that mistake."
+    },
+    {
+      "audioDurationS" : 6.615,
+      "language" : "en",
+      "latencyS" : 0.3168400526046753,
+      "rtf" : 0.047897211278106616,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0031",
+      "transcript" : "Stephen's heart began slowly to fold and fade with fear like a withering flower."
+    },
+    {
+      "audioDurationS" : 4.09,
+      "language" : "en",
+      "latencyS" : 0.19895291328430176,
+      "rtf" : 0.04864374407929138,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0032",
+      "transcript" : "He is called, as you know, the apostle of the Indies."
+    },
+    {
+      "audioDurationS" : 3.33,
+      "language" : "en",
+      "latencyS" : 0.18034303188323975,
+      "rtf" : 0.05415706663160352,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0033",
+      "transcript" : "A great saint. St. Francis Xavier."
+    },
+    {
+      "audioDurationS" : 5.81,
+      "language" : "en",
+      "latencyS" : 0.31989896297454834,
+      "rtf" : 0.05506006247410471,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0034",
+      "transcript" : "The rector paused, and then. Shaking his clasp to hands before him, went on."
+    },
+    {
+      "audioDurationS" : 3.445,
+      "language" : "en",
+      "latencyS" : 0.15251600742340088,
+      "rtf" : 0.0442717002680409,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0035",
+      "transcript" : "He had the faith in him that moves mountains."
+    },
+    {
+      "audioDurationS" : 3.25,
+      "language" : "en",
+      "latencyS" : 0.18276095390319824,
+      "rtf" : 0.05623413966252254,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0036",
+      "transcript" : "A great saint, St. Francis Xavier."
+    },
+    {
+      "audioDurationS" : 5.21,
+      "language" : "en",
+      "latencyS" : 0.29110002517700195,
+      "rtf" : 0.05587332536986602,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134686-0037",
+      "transcript" : "In the silence, their dark fire kindled the dusk into a tawny glow."
+    },
+    {
+      "audioDurationS" : 2.085,
+      "language" : "en",
+      "latencyS" : 0.1266549825668335,
+      "rtf" : 0.060745794996083215,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0000",
+      "transcript" : "He could wait no longer."
+    },
+    {
+      "audioDurationS" : 5.415,
+      "language" : "en",
+      "latencyS" : 0.275020956993103,
+      "rtf" : 0.05078872705320462,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0001",
+      "transcript" : "For a full hour, he had paced up and down waiting. But he could wait no longer."
+    },
+    {
+      "audioDurationS" : 11.6,
+      "language" : "en",
+      "latencyS" : 0.6052780151367188,
+      "rtf" : 0.05217913923592403,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0002",
+      "transcript" : "He set off abruptly for the bull. Walking rapidly lest his father's shrill whistle might call him back. And in a few moments he had rounded the curve at the police barrack and was safe."
+    },
+    {
+      "audioDurationS" : 2.175,
+      "language" : "en",
+      "latencyS" : 0.08743500709533691,
+      "rtf" : 0.04020000326222387,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0003",
+      "transcript" : "The university."
+    },
+    {
+      "audioDurationS" : 5.1750625,
+      "language" : "en",
+      "latencyS" : 0.22330105304718018,
+      "rtf" : 0.043149440812971854,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0004",
+      "transcript" : "Pride after satisfaction uplifted him like long, slow waves."
+    },
+    {
+      "audioDurationS" : 5.36,
+      "language" : "en",
+      "latencyS" : 0.26245808601379395,
+      "rtf" : 0.048966060823469014,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0005",
+      "transcript" : "Whose feet are as the feet of hearts, and underneath the everlasting arms?"
+    },
+    {
+      "audioDurationS" : 5.895,
+      "language" : "en",
+      "latencyS" : 0.2860959768295288,
+      "rtf" : 0.04853197232053076,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0006",
+      "transcript" : "The pride of that dim image brought back to his mind the dignity of the office he had refused."
+    },
+    {
+      "audioDurationS" : 3.44,
+      "language" : "en",
+      "latencyS" : 0.16623401641845703,
+      "rtf" : 0.0483238419821096,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0007",
+      "transcript" : "Soon the whole bridge was trembling and resounding."
+    },
+    {
+      "audioDurationS" : 14.985,
+      "language" : "en",
+      "latencyS" : 0.7981200218200684,
+      "rtf" : 0.05326126271738862,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0008",
+      "transcript" : "The uncouth faces past him two by two, stained yellow or red or livid by the sea. And as he strove to look at them with ease and indifference, a faint stain of personal shame and commiseration rose to his own face."
+    },
+    {
+      "audioDurationS" : 20.055,
+      "language" : "en",
+      "latencyS" : 1.056283950805664,
+      "rtf" : 0.05266935680905829,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0009",
+      "transcript" : "Angry with himself, he tried to hide his face from their eyes by gazing down sideways into the shallow swirling water under the bridge. But he still saw a reflection therein of their top-heavy silk hats. And humble tape-like collars, and loosely hanging clerical clothes. Brother Hickey."
+    },
+    {
+      "audioDurationS" : 3.195,
+      "language" : "en",
+      "latencyS" : 0.17517399787902832,
+      "rtf" : 0.05482754237215284,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0010",
+      "transcript" : "Brother Mccartle, Brother Kiev."
+    },
+    {
+      "audioDurationS" : 20.01,
+      "language" : "en",
+      "latencyS" : 1.0335770845413208,
+      "rtf" : 0.05165302771320943,
+      "runner" : "moonshine-base-en",
+      "sampleId" : "1089-134691-0011",
+      "transcript" : "Their piety would be. Like their names, like their faces, like their clothes. And was idle for him to tell himself that their humble and contrite hearts, it might be, paid a far richer tribute of devotion than his had ever been. A gift tenfold more acceptable than his elaborate adoration."
+    },
+    {
+      "audioDurationS" : 10.435,
+      "language" : "en",
+      "latencyS" : 0.4670369625091553,
+      "rtf" : 0.044756776474284166,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0000",
+      "transcript" : "He hoped there would be stew for dinner, turnips and carrots and bruised potatoes, and fat, mutton pieces to be ladled out in thick, peppered, flower-fat and sauce. Us."
+    },
+    {
+      "audioDurationS" : 3.275,
+      "language" : "en",
+      "latencyS" : 0.14597904682159424,
+      "rtf" : 0.044573754754685266,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0001",
+      "transcript" : "1 Stuff it into you, his belly counseled him."
+    },
+    {
+      "audioDurationS" : 6.625,
+      "language" : "en",
+      "latencyS" : 0.23503899574279785,
+      "rtf" : 0.03547758426306383,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0002",
+      "transcript" : "After early nightfall, the yellow lamps would light up here and there the squalid quarter of the brothels."
+    },
+    {
+      "audioDurationS" : 2.68,
+      "language" : "en",
+      "latencyS" : 0.09439599514007568,
+      "rtf" : 0.035222386246296894,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0003",
+      "transcript" : "Oh, Bertie,, any good in your mind?"
+    },
+    {
+      "audioDurationS" : 5.2150625,
+      "language" : "en",
+      "latencyS" : 0.20200490951538086,
+      "rtf" : 0.03873489713984844,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0004",
+      "transcript" : "You Number ten, fresh Nelly is waiting on you. Good night, husband."
+    },
+    {
+      "audioDurationS" : 9.635,
+      "language" : "en",
+      "latencyS" : 0.3747309446334839,
+      "rtf" : 0.03889267718043424,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0005",
+      "transcript" : "Mm- The music came nearer, and he recalled the words. The words of Shelley's fragment upon the moon wandering companionless. Pale for weariness."
+    },
+    {
+      "audioDurationS" : 10.555,
+      "language" : "en",
+      "latencyS" : 0.3372119665145874,
+      "rtf" : 0.03194807830550331,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0006",
+      "transcript" : "The dull light fell more faintly upon the page, whereon another equation began to unfold itself slowly. And to spread abroad its widening tale."
+    },
+    {
+      "audioDurationS" : 4.275,
+      "language" : "en",
+      "latencyS" : 0.12465095520019531,
+      "rtf" : 0.02915811817548428,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0007",
+      "transcript" : "A cold, lucid indifference reigned in his soul."
+    },
+    {
+      "audioDurationS" : 6.73,
+      "language" : "en",
+      "latencyS" : 0.2204660177230835,
+      "rtf" : 0.03275869505543588,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0008",
+      "transcript" : "The chaos in which his ardour extinguished itself was a cold, indifferent knowledge of himself."
+    },
+    {
+      "audioDurationS" : 10.575,
+      "language" : "en",
+      "latencyS" : 0.34083402156829834,
+      "rtf" : 0.03223016752418897,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0009",
+      "transcript" : "At most, by an alms given to a beggar whose blessing he fled from. He might hope wearily to win for himself some measure of actual grace."
+    },
+    {
+      "audioDurationS" : 4.405,
+      "language" : "en",
+      "latencyS" : 0.15121304988861084,
+      "rtf" : 0.034327593618299845,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0010",
+      "transcript" : "Well, now, Ennis, I declare you have a head, and so has my stick."
+    },
+    {
+      "audioDurationS" : 12.445,
+      "language" : "en",
+      "latencyS" : 0.5185860395431519,
+      "rtf" : 0.04167023218506644,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0011",
+      "transcript" : "1 On Saturday mornings, when the so diality met in the chapel to recite the little office, his place was a cushioned kneeling desk at the right of the altar, from which he led his wing. His wing of boys threw the responses."
+    },
+    {
+      "audioDurationS" : 11.64,
+      "language" : "en",
+      "latencyS" : 0.38670289516448975,
+      "rtf" : 0.033221898210007705,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0012",
+      "transcript" : "Her eyes seemed to regard him with mild pity. Her holiness, a strange light glowing faintly upon her frail flesh, did not humiliate the sinner who approached her."
+    },
+    {
+      "audioDurationS" : 7.915,
+      "language" : "en",
+      "latencyS" : 0.262813925743103,
+      "rtf" : 0.03320453894416968,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0013",
+      "transcript" : "If ever, he was impelled to cast sin from him and to repent. The impulse that moved him was the wish to be her knight."
+    },
+    {
+      "audioDurationS" : 2.225,
+      "language" : "en",
+      "latencyS" : 0.08255898952484131,
+      "rtf" : 0.03710516383138935,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0014",
+      "transcript" : "He tried to think how it could be,"
+    },
+    {
+      "audioDurationS" : 5.815,
+      "language" : "en",
+      "latencyS" : 0.2249659299850464,
+      "rtf" : 0.03868717626570015,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0015",
+      "transcript" : "But the dusk, Deepening in the schoolroom, covered over his thoughts. The bell rang,"
+    },
+    {
+      "audioDurationS" : 3.54,
+      "language" : "en",
+      "latencyS" : 0.15760695934295654,
+      "rtf" : 0.04452173992738885,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0016",
+      "transcript" : "Uh Then you can ask him questions on the catechism, deadlists."
+    },
+    {
+      "audioDurationS" : 8.87,
+      "language" : "en",
+      "latencyS" : 0.3246210813522339,
+      "rtf" : 0.03659764164061262,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0017",
+      "transcript" : "Stephen, Leaning back and drawing idly on his scribbler. Listened to the talk about him, which Heron checked from time to time by saying,"
+    },
+    {
+      "audioDurationS" : 15.72,
+      "language" : "en",
+      "latencyS" : 0.5634720325469971,
+      "rtf" : 0.035844276879579966,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0018",
+      "transcript" : "You It was strange, too, that he found an arid pleasure in following up to the end the rigid lines of the doctrines of the Church, and penetrating into obscure. Your silences only to hear and feel the more deeply his own condemnation."
+    },
+    {
+      "audioDurationS" : 13.895,
+      "language" : "en",
+      "latencyS" : 0.4702500104904175,
+      "rtf" : 0.03384310978700378,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0019",
+      "transcript" : "The sentence of St. James, which says that he who offends against one commandment becomes guilty of all, had seemed to him first a swollen phrase until. Until he had begun to grope in the darkness of his own state."
+    },
+    {
+      "audioDurationS" : 16.79,
+      "language" : "en",
+      "latencyS" : 0.5910199880599976,
+      "rtf" : 0.035200713999999855,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0020",
+      "transcript" : "If a man had stolen a pound in his youth and had used that pound to a mass a huge fortune, how much was he obliged to give back? The pound he had stolen only were the pound together with the compound interest accruing upon it, or all his huge fortune."
+    },
+    {
+      "audioDurationS" : 6.55,
+      "language" : "en",
+      "latencyS" : 0.24630999565124512,
+      "rtf" : 0.037604579488739714,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0021",
+      "transcript" : "If a layman in giving baptism pour the water before saying the words, is the child baptized."
+    },
+    {
+      "audioDurationS" : 11.175,
+      "language" : "en",
+      "latencyS" : 0.3816009759902954,
+      "rtf" : 0.03414773834365059,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0022",
+      "transcript" : "he How comes it that, while the first beatitude promises the kingdom of heaven to the poor of heart? The second beatitude promises also to the meek that they shall possess the land."
+    },
+    {
+      "audioDurationS" : 13.275,
+      "language" : "en",
+      "latencyS" : 0.4497809410095215,
+      "rtf" : 0.033881803465877325,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0023",
+      "transcript" : "Why was the sacrament of the Eucharist instituted under the two species of bread and wine, if Jesus Christ be present, body and blood, soul and divinity? In the red alone and in the wine alone."
+    },
+    {
+      "audioDurationS" : 11.655,
+      "language" : "en",
+      "latencyS" : 0.41624605655670166,
+      "rtf" : 0.03571394736651237,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0024",
+      "transcript" : "If the wine change into vinegar and the host crumble into corruption after they have been consecrated, is Jesus Christ still present under their species as God? As God and as man."
+    },
+    {
+      "audioDurationS" : 6.61,
+      "language" : "en",
+      "latencyS" : 0.1993420124053955,
+      "rtf" : 0.030157641816247426,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0025",
+      "transcript" : "A gentle kick from the tall boy in the bench behind urged Stephen to ask a difficult question."
+    },
+    {
+      "audioDurationS" : 4.01,
+      "language" : "en",
+      "latencyS" : 0.1379300355911255,
+      "rtf" : 0.034396517603771944,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0026",
+      "transcript" : "The rector did not ask for a catechism to hear the lesson from."
+    },
+    {
+      "audioDurationS" : 2.71,
+      "language" : "en",
+      "latencyS" : 0.1306760311126709,
+      "rtf" : 0.04821993767995236,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0027",
+      "transcript" : "He clasped his hands on the desk and said,"
+    },
+    {
+      "audioDurationS" : 7.83,
+      "language" : "en",
+      "latencyS" : 0.2866179943084717,
+      "rtf" : 0.0366051078299453,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0028",
+      "transcript" : "Right? The retreat will begin on Wednesday afternoon in honor of St. Francis Xavier, whose feast day is Saturday."
+    },
+    {
+      "audioDurationS" : 4.67,
+      "language" : "en",
+      "latencyS" : 0.14137601852416992,
+      "rtf" : 0.030273237371342597,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0029",
+      "transcript" : "On Friday, confession will be heard all the afternoon after beads."
+    },
+    {
+      "audioDurationS" : 2.715,
+      "language" : "en",
+      "latencyS" : 0.112091064453125,
+      "rtf" : 0.04128584326081952,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0030",
+      "transcript" : "Beware of making that mistake."
+    },
+    {
+      "audioDurationS" : 6.615,
+      "language" : "en",
+      "latencyS" : 0.2204129695892334,
+      "rtf" : 0.03332017680865206,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0031",
+      "transcript" : "You Stephen's heart began slowly to fold and fade with fear like a withering flower."
+    },
+    {
+      "audioDurationS" : 4.09,
+      "language" : "en",
+      "latencyS" : 0.13514602184295654,
+      "rtf" : 0.03304303712541725,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0032",
+      "transcript" : "He is called, as you know, the apostle of the Indies."
+    },
+    {
+      "audioDurationS" : 3.33,
+      "language" : "en",
+      "latencyS" : 0.1280900239944458,
+      "rtf" : 0.038465472671004745,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0033",
+      "transcript" : "A great saint. St. Francis Xavier."
+    },
+    {
+      "audioDurationS" : 5.81,
+      "language" : "en",
+      "latencyS" : 0.22727596759796143,
+      "rtf" : 0.03911806671221367,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0034",
+      "transcript" : "Yeah The rector paused and then, Shaking his clasp to hands before him, went on."
+    },
+    {
+      "audioDurationS" : 3.445,
+      "language" : "en",
+      "latencyS" : 0.10749495029449463,
+      "rtf" : 0.031203178605078267,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0035",
+      "transcript" : "He had the faith in him that moves mountains."
+    },
+    {
+      "audioDurationS" : 3.25,
+      "language" : "en",
+      "latencyS" : 0.12693190574645996,
+      "rtf" : 0.039055970998910755,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0036",
+      "transcript" : "I A great Saint Saint Francis Xavier."
+    },
+    {
+      "audioDurationS" : 5.21,
+      "language" : "en",
+      "latencyS" : 0.20071196556091309,
+      "rtf" : 0.0385243695894267,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134686-0037",
+      "transcript" : "You In the silence, their dark fire kindled the dusk into a tawny glow."
+    },
+    {
+      "audioDurationS" : 2.085,
+      "language" : "en",
+      "latencyS" : 0.09925103187561035,
+      "rtf" : 0.04760241336959729,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0000",
+      "transcript" : "Everything He could wait no longer."
+    },
+    {
+      "audioDurationS" : 5.415,
+      "language" : "en",
+      "latencyS" : 0.19225800037384033,
+      "rtf" : 0.03550470921031216,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0001",
+      "transcript" : "For a full hour, he had paced up and down, waiting. But he could wait no longer."
+    },
+    {
+      "audioDurationS" : 11.6,
+      "language" : "en",
+      "latencyS" : 0.41497302055358887,
+      "rtf" : 0.03577353625461973,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0002",
+      "transcript" : "He set off abruptly for the bull, Walking rapidly, lest his father's shrill whistle might call him back. And in a few moments he had rounded the curve at the police barrack and was safe."
+    },
+    {
+      "audioDurationS" : 2.175,
+      "language" : "en",
+      "latencyS" : 0.061907052993774414,
+      "rtf" : 0.028463012870700882,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0003",
+      "transcript" : "The university,"
+    },
+    {
+      "audioDurationS" : 5.1750625,
+      "language" : "en",
+      "latencyS" : 0.16012799739837646,
+      "rtf" : 0.030942234494438756,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0004",
+      "transcript" : "Bride, after satisfaction, uplifted him like long, slow waves."
+    },
+    {
+      "audioDurationS" : 5.36,
+      "language" : "en",
+      "latencyS" : 0.16762495040893555,
+      "rtf" : 0.031273311643458125,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0005",
+      "transcript" : "Whose feet are as the feet of hearts and underneath the everlasting arms?"
+    },
+    {
+      "audioDurationS" : 5.895,
+      "language" : "en",
+      "latencyS" : 0.19386494159698486,
+      "rtf" : 0.03288633445241474,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0006",
+      "transcript" : "The pride of that dim image brought back to his mind the dignity of the office he had refused."
+    },
+    {
+      "audioDurationS" : 3.44,
+      "language" : "en",
+      "latencyS" : 0.10796201229095459,
+      "rtf" : 0.03138430589853331,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0007",
+      "transcript" : "Soon the whole bridge was trembling and resounding."
+    },
+    {
+      "audioDurationS" : 14.985,
+      "language" : "en",
+      "latencyS" : 0.5124030113220215,
+      "rtf" : 0.03419439514995139,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0008",
+      "transcript" : "The uncouth faces passed him two by two, stained yellow or red or livid by the sea. And as he strove to look at them with ease and indifference, a faint stain of personal shame and commiseration rose to his own face."
+    },
+    {
+      "audioDurationS" : 20.055,
+      "language" : "en",
+      "latencyS" : 0.6975510120391846,
+      "rtf" : 0.034781900375925434,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0009",
+      "transcript" : "Angry with himself, he tried to hide his face from their eyes by gazing down sideways into the shallow, swirling water under the bridge. But he still saw a reflection therein of their top heavy silk hats. And humble, tape-like collars, and loosely hanging clerical clothes. Brother Hickey."
+    },
+    {
+      "audioDurationS" : 3.195,
+      "language" : "en",
+      "latencyS" : 0.12653493881225586,
+      "rtf" : 0.03960404970649636,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0010",
+      "transcript" : "Brother Macardall. Brother Kiev."
+    },
+    {
+      "audioDurationS" : 20.01,
+      "language" : "en",
+      "latencyS" : 0.6771990060806274,
+      "rtf" : 0.03384302878963655,
+      "runner" : "moonshine-tiny-en",
+      "sampleId" : "1089-134691-0011",
+      "transcript" : "Their piety would be. Like their names, like their faces, like their clothes. And was idle for him to tell himself that their humble and contrite hearts, it might be paid a far, richer tribute of devotion than his had ever been. A gift tenfold more acceptable than his elaborate adoration."
+    }
+  ],
+  "timestamp" : "2026-04-09T13:41:50Z",
+  "xcodeBuild" : "1"
+}

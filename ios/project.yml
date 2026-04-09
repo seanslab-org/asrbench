@@ -2,7 +2,7 @@ name: AsrBenchIOS
 options:
   bundleIdPrefix: ai.moonshine.asrbench
   deploymentTarget:
-    iOS: "17.0"
+    iOS: "17.0"   # SFSpeechRecognizer needs iOS 10+; Moonshine swift needs iOS 14+
   createIntermediateGroups: true
 settings:
   base:

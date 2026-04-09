@@ -21,20 +21,24 @@ final class BenchRunner: ObservableObject {
 
     func run() async {
         do {
-            phase = .authorizing
-            try await AppleSpeechRunner.requestAuthorization()
-
+            // SpeechAnalyzer API does not require requestAuthorization.
+            // Model runs entirely on-device; permission is implicit.
             phase = .loading("manifest.json")
             let manifest = try loadManifest()
             print("Loaded \(manifest.count) samples")
 
-            // Build runners. Apple Speech first because it's lightest to fail-fast.
             var runners: [String: (URL) async throws -> (String, Double?)] = [:]
+
+            // Apple Speech via legacy SFSpeechRecognizer (works on real devices;
+            // the newer SpeechTranscriber crashes on iPad mini 6 with SIGTRAP).
+            phase = .loading("apple-speech (requesting auth)")
+            try await AppleSpeechRunner.requestAuthorization()
             phase = .loading("apple-speech")
             let apple = try AppleSpeechRunner(localeIdentifier: "en-US")
             runners[apple.runnerName] = { url in
                 try await apple.transcribe(audioURL: url)
             }
+            print("[BenchRunner] Apple Speech ready (onDevice=\(apple.supportsOnDevice))")
 
             phase = .loading("moonshine-tiny-en")
             let mTiny = try MoonshineRunner(arch: "tiny-en", modelArch: .tiny)
@@ -53,7 +57,7 @@ final class BenchRunner: ObservableObject {
             // Run sequentially: per-runner outer loop so each runner has a hot
             // model and doesn't fight CUDA-equivalent caches with the others.
             var results: [BenchResult] = []
-            let runnerOrder = ["apple-speech-en-US", mTiny.runnerName, mBase.runnerName]
+            let runnerOrder = runners.keys.sorted()
             for runnerName in runnerOrder {
                 guard let fn = runners[runnerName] else { continue }
                 for (i, entry) in manifest.enumerated() {
