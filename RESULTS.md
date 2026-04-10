@@ -1,8 +1,8 @@
 # ASR Bench v2 — Final Benchmark Report
 
-**Date:** 2026-04-07 (updated — added Moonshine multilingual Flavors)
-**Hardware:** NVIDIA Jetson AGX Orin 32GB (JetPack 6, CUDA 12.6, PyTorch 2.8)
-**Purpose:** Select the best ASR model for Bosco / lonote meeting transcription (EN/ZH/JA)
+**Date:** 2026-04-09 (updated — added iPad mini 6 + iOS Simulator results)
+**Hardware:** NVIDIA Jetson AGX Orin 32GB, iPad mini 6 (A15 Bionic), Mac mini (Apple Silicon)
+**Purpose:** Select the best ASR model for Bosco / lonote / Memio (EN/ZH/JA)
 
 ---
 
@@ -18,11 +18,15 @@
 | **whisper-large-v3-turbo** | 809M | 2.36 | 5.23 | 9.31 | 26.92 | 3.4GB |
 | **moonshine-base-{en,ja,zh}** † | 61M each | 4.54 | — | 6.88 ‡ | **7.11** | 153MB ea |
 | **moonshine-tiny-{en,ja,zh}** † | 27M each | 5.90 | — | 8.99 ‡ | 13.59 | 78MB ea |
+| **vibevoice-asr** §  | ~9B | 3.11 § | — | n/t | n/t | 16.4GB |
 | **kotoba-whisper-bilingual** | 756M | 3.07 | — | N/A | N/A | 1.6GB |
 
 † Moonshine "Flavors" — separate monolingual models per language (arXiv 2509.02523).
 Listed VRAM is per loaded model on CUDA fp16; CPU fp32 is also viable at 0 VRAM.
 ‡ AISHELL-1 numbers are on a 1,000-sample subset (full set has 7,176).
+§ VibeVoice-ASR benchmarked on a 386-sample LibriSpeech subset only (not full 2620).
+ZH/JA not yet tested. Has built-in speaker diarization (unique among tested models).
+n/t = not tested.
 
 ### Best Model Per Language
 
@@ -44,11 +48,34 @@ Listed VRAM is per loaded model on CUDA fp16; CPU fp32 is also viable at 0 VRAM.
 | whisper-large-v3-turbo | 0.17 | 0.18 | 0.26 | 0.20 | GPU |
 | qwen3-asr-0.6b | 0.31 | 0.23 | 0.36 | 0.30 | GPU |
 | qwen3-asr-1.7b | 0.34 | 0.23 | 0.37 | 0.31 | GPU |
+| vibevoice-asr | 0.84 | n/t | n/t | 0.84 | GPU (16.4GB) |
 
 All models run faster than real-time. The Moonshine Flavors models on GPU fp16 sit in
 the same speed class as Cohere (~6–11× real-time). The legacy ONNX runtime is roughly
 3× faster on CPU for English-only deployments and uses zero VRAM, but cannot load the
 new multilingual variants.
+
+### iOS / iPad Results (Moonshine via moonshine-swift v0.0.51)
+
+Benchmarked on iPad mini 6 (A15 Bionic, iPadOS 26.3) and iOS Simulator (Mac mini CPU).
+50 LibriSpeech test-clean samples, single speaker subset.
+
+| Model | Platform | WER% | RTF | Latency | Notes |
+|-------|----------|:---:|:---:|:---:|---|
+| moonshine-base-en | **iPad mini 6** | **2.45** | 0.053 | 0.396s | A15 Bionic, real hardware |
+| moonshine-tiny-en | **iPad mini 6** | 4.69 | 0.036 | 0.267s | A15 Bionic, real hardware |
+| apple-speech-en-US | **iPad mini 6** | 10.92 | 0.038 | 0.280s | SFSpeechRecognizer on-device |
+| moonshine-base-en | Mac Simulator | 2.55 | 0.034 | 0.253s | Mac CPU, not iPhone hardware |
+| moonshine-tiny-en | Mac Simulator | 4.59 | 0.024 | 0.177s | Mac CPU, not iPhone hardware |
+
+**Key finding:** Moonshine-base beats Apple's native `SFSpeechRecognizer` by **4.5×
+on accuracy** (2.45% vs 10.92% WER) at comparable speed on the same iPad hardware.
+All runners at 19–28× real-time on A15 Bionic, 0 errors across 150 total records.
+
+**Note:** Simulator RTF is Mac CPU latency, not iPhone hardware. The iPad numbers
+are the authoritative real-device measurements. Apple's new iOS 26
+`SpeechTranscriber` API crashes on iPad mini 6 (SIGTRAP — not in Apple's hardware
+allowlist), so the legacy `SFSpeechRecognizer` was used instead.
 
 ---
 
@@ -157,6 +184,41 @@ Use language detection → route to best model. With Moonshine Flavors now in pl
 | moonshine-{tiny,base}-en | `UsefulSensors/moonshine-{tiny,base}` | transformers | EN-only edge ASR, ~27 M / 61 M params |
 | moonshine-{tiny,base}-ja | `UsefulSensors/moonshine-{tiny,base}-ja` | transformers | JA-only Flavors, arXiv 2509.02523 |
 | moonshine-{tiny,base}-zh | `UsefulSensors/moonshine-{tiny,base}-zh` | transformers | ZH-only Flavors, arXiv 2509.02523 |
+| vibevoice-asr | `microsoft/VibeVoice-ASR-HF` | transformers | ~9B params, built-in diarization, 50+ langs |
+
+### VibeVoice-ASR (Microsoft) — Benchmarked 2026-03-26
+
+Unified speech-to-text model (~9B params, Qwen2.5 backbone) with built-in speaker
+diarization. Handles 60-min long-form audio in a single pass, generating structured
+transcriptions with Who (Speaker), When (Timestamps), and What (Content).
+
+| Metric | Value |
+|---|---|
+| EN WER (LS-clean, 386 samples) | **3.11%** |
+| WER (median) | 0.00% |
+| Perfect transcriptions | 269/386 (70%) |
+| RTF (avg) | 0.841 (barely real-time) |
+| RTF (range) | 0.401 – 1.763 |
+| VRAM (peak, BF16) | **16,434 MB** |
+| Load time | 426.5s (~7 min from NTFS SSD) |
+| Hallucinations | 0 |
+| Errors | 0 |
+
+**Key findings:**
+- **Only model in the bench with built-in speaker diarization** — all others need
+  pyannote bolted on separately
+- **3.11% WER on a 386-sample subset** — competitive but not the leader (Cohere 1.80%,
+  Qwen3-1.7B 1.87%). Official Open ASR Leaderboard reports 2.20% on full LS-clean
+- **16.4 GB VRAM (BF16)** — eats half the Orin's 32 GB, leaving little room for LLM.
+  Community INT8 quantization (~12 GB) and INT4 (~6.6 GB) exist but WER impact on ASR
+  is unverified
+- **RTF 0.84** — barely real-time. A 1-hour meeting takes ~50 min to transcribe.
+  Slowest model in the bench by a wide margin
+- Loaded via `VibeVoiceAsrForConditionalGeneration` from transformers with
+  `attn_implementation="eager"` (SDPA not supported for acoustic tokenizer on Jetson)
+- **ZH/JA not yet benchmarked** — listed as n/t in the summary table
+- Model downloaded via parallel curl from HuggingFace CDN to Mac, transferred to Jetson
+  via SCP (HF blocked on Jetson's network)
 
 ### Cohere Transcribe 2B (Cohere Labs) — Benchmarked 2026-04-05
 
