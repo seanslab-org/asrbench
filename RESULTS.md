@@ -305,3 +305,65 @@ runtime/decoding differences both contribute.
 7. **No WenetSpeech TEST_MEETING**: The most Bosco-relevant ZH benchmark was not run due to time constraints.
 8. **No streaming evaluation**: All results are offline batch mode. Streaming mode WER is typically 0.3-1.0% worse.
 9. **No safety/hallucination tests for Moonshine**: silence/non-speech behavior was not exercised. Worth confirming before production use.
+10. **VibeVoice-ASR INT8/INT4 not achievable on Jetson**: bitsandbytes INT8 fails due to unified memory architecture (meta tensor errors, NVML assertions). GPTQ/AWQ fail because gptqmodel can't detect Jetson's custom PyTorch. Quantized VibeVoice requires a discrete GPU (A100/H100/RTX).
+
+---
+
+## Speaker Diarization Options
+
+Speaker diarization identifies *who* spoke *when*. Most ASR models above produce
+plain transcripts without speaker attribution. Only VibeVoice-ASR has built-in
+diarization. For all other ASR models, a separate diarization pipeline is needed.
+
+### iOS (iPad / iPhone)
+
+| Library | Models | Speed | DER | RAM | License | Notes |
+|---------|--------|------:|----:|----:|---------|-------|
+| **[FluidAudio](https://github.com/FluidInference/FluidAudio)** | pyannote 3.0 segmentation + WeSpeaker embedding, CoreML | 60× RT (M1) | ~22% | ~50 MB | MIT/Apache 2.0 | Runs on Apple Neural Engine; Swift Package (SPM/CocoaPods) |
+| **[SpeakerKit](https://www.argmaxinc.com/blog/speakerkit)** (WhisperKit) | pyannote-based, CoreML | ~1s for 4 min (iPhone) | — | — | — | Integrated with WhisperKit ASR; Interspeech 2025 paper |
+| **[speech-swift](https://github.com/soniqo/speech-swift)** | pyannote via MLX | — | — | — | — | MLX-native, Apple Silicon only |
+
+**Recommendation for Memio iPad:** FluidAudio — CoreML on ANE, ~50 MB, open source,
+composable with any ASR (Moonshine). Combined stack: Moonshine (~585 MB) + FluidAudio
+(~50 MB) ≈ 635 MB total, fits iPad mini 6's 4 GB.
+
+### Android
+
+| Library | Models | Speed | DER | License | Notes |
+|---------|--------|------:|----:|---------|-------|
+| **[sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx)** | pyannote 3.0 + 3D-Speaker or NeMo TitaNet-Small, ONNX | ~10-30× RT (est.) | ~20-25% | Apache 2.0 | Pre-built APKs for arm64/armeabi/x86; Java/Kotlin bindings; 12 languages |
+| **[pyannote-onnx-extended](https://github.com/samson6460/pyannote-onnx-extended)** | pyannote 3.1, ONNX export | — | ~10% | MIT | Python-focused; needs integration work for Android |
+
+**Recommendation for Memio Android:** sherpa-onnx — ONNX Runtime, same pyannote base
+models as FluidAudio, pre-built APKs, Apache 2.0. Kotlin integration.
+
+### Server / Jetson (Python)
+
+| Library | Models | Speed | DER | Notes |
+|---------|--------|------:|----:|-------|
+| **[pyannote 3.1](https://github.com/pyannote/pyannote-audio)** | pyannote/segmentation-3.0 + WeSpeaker | 40× RT (V100) | ~10% | Gold standard; Python + PyTorch |
+| **VibeVoice-ASR (built-in)** | Integrated in ASR model | 1.2× RT (Orin) | ~4.3% DER | No separate pipeline needed; 16.4 GB VRAM |
+
+### Cross-platform comparison
+
+| | iOS | Android | Server |
+|---|---|---|---|
+| **Best option** | FluidAudio (CoreML) | sherpa-onnx (ONNX) | pyannote 3.1 (PyTorch) |
+| **Underlying models** | pyannote 3.0 + WeSpeaker | pyannote 3.0 + 3D-Speaker | pyannote 3.0 + WeSpeaker |
+| **Runtime** | Apple Neural Engine | ONNX Runtime (CPU/NNAPI) | CUDA GPU |
+| **Package** | Swift SPM | Gradle AAR/APK | pip |
+| **DER** | ~22% | ~20-25% | ~10% |
+| **Speed** | 60× RT | 10-30× RT | 40× RT |
+| **License** | MIT/Apache 2.0 | Apache 2.0 | MIT (research license for models) |
+
+All three platforms use the same pyannote-family models underneath. The accuracy
+and speed differences come from the runtime (CoreML > ONNX > PyTorch on
+consumer hardware) and model precision (CoreML fp32 vs ONNX quantized).
+
+### Combined ASR + diarization stack for Memio
+
+| Platform | ASR | Diarization | Total RAM | Stack |
+|----------|-----|-------------|----------:|-------|
+| **iPad** | Moonshine-base (moonshine-swift) | FluidAudio (CoreML) | ~635 MB | Swift, ANE |
+| **Android** | Moonshine-base (ONNX) | sherpa-onnx (pyannote+3D-Speaker) | ~800 MB | Kotlin, ONNX |
+| **Jetson** | Cohere/Moonshine (transformers) | pyannote 3.1 (PyTorch) | ~1-5 GB | Python, CUDA |
