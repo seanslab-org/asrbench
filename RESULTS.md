@@ -18,7 +18,8 @@
 | **whisper-large-v3-turbo** | 809M | 2.36 | 5.23 | 9.31 | 26.92 | 3.4GB |
 | **moonshine-base-{en,ja,zh}** † | 61M each | 4.54 | — | 6.88 ‡ | **7.11** | 153MB ea |
 | **moonshine-tiny-{en,ja,zh}** † | 27M each | 5.90 | — | 8.99 ‡ | 13.59 | 78MB ea |
-| **vibevoice-asr** §  | ~9B | 3.11 § | — | n/t | n/t | 16.4GB |
+| **vibevoice-asr (BF16)** §  | ~9B | 3.11 § | — | n/t | n/t | 16.4GB |
+| **vibevoice-asr (INT8)** §¶ | ~9B | 5.51 §¶ | — | n/t | n/t | ~10GB |
 | **kotoba-whisper-bilingual** | 756M | 3.07 | — | N/A | N/A | 1.6GB |
 
 † Moonshine "Flavors" — separate monolingual models per language (arXiv 2509.02523).
@@ -27,6 +28,7 @@ Listed VRAM is per loaded model on CUDA fp16; CPU fp32 is also viable at 0 VRAM.
 § VibeVoice-ASR benchmarked on a 386-sample LibriSpeech subset only (not full 2620).
 ZH/JA not yet tested. Has built-in speaker diarization (unique among tested models).
 n/t = not tested.
+¶ INT8 preliminary on 50 samples (DGX Spark1 GB10); 386-sample run in progress.
 
 ### Best Model Per Language
 
@@ -210,8 +212,7 @@ transcriptions with Who (Speaker), When (Timestamps), and What (Content).
 - **3.11% WER on a 386-sample subset** — competitive but not the leader (Cohere 1.80%,
   Qwen3-1.7B 1.87%). Official Open ASR Leaderboard reports 2.20% on full LS-clean
 - **16.4 GB VRAM (BF16)** — eats half the Orin's 32 GB, leaving little room for LLM.
-  Community INT8 quantization (~12 GB) and INT4 (~6.6 GB) exist but WER impact on ASR
-  is unverified
+  INT8 quantization saves ~6 GB but degrades WER — see INT8 section below
 - **RTF 0.84** — barely real-time. A 1-hour meeting takes ~50 min to transcribe.
   Slowest model in the bench by a wide margin
 - Loaded via `VibeVoiceAsrForConditionalGeneration` from transformers with
@@ -219,6 +220,41 @@ transcriptions with Who (Speaker), When (Timestamps), and What (Content).
 - **ZH/JA not yet benchmarked** — listed as n/t in the summary table
 - Model downloaded via parallel curl from HuggingFace CDN to Mac, transferred to Jetson
   via SCP (HF blocked on Jetson's network)
+
+### VibeVoice-ASR INT8 (bitsandbytes) — Benchmarked 2026-04-11
+
+Same model as above with selective INT8 quantization via bitsandbytes: Qwen2.5-7B
+LLM backbone quantized to INT8, audio-critical components (acoustic/semantic
+tokenizer encoders, projections, lm_head) kept at BF16. First-ever INT8 WER
+benchmark for this model.
+
+| Metric | BF16 (Jetson Orin) | INT8 (DGX Spark1) |
+|---|---:|---:|
+| EN WER (LS-clean) | **3.11%** (386 samples) | **5.51%** (50 samples, preliminary) |
+| Perfect transcriptions | 269/386 (70%) | 33/50 (66%) |
+| RTF | 0.841 | 0.553 |
+| VRAM | 16.4 GB | ~10-11 GB |
+| Load time | 426s | 1700s (incl. download) |
+| Errors | 0 | 0 |
+
+**Note:** 386-sample apples-to-apples INT8 run is in progress on Spark1
+(ETA ~3 hours from 2026-04-11 21:00 UTC+8). The 50-sample preliminary
+result above will be updated with the full 386-sample number when available.
+
+**Key findings:**
+- **INT8 degrades WER by +2.4% absolute** (3.11% → 5.51%). The selective
+  quantization preserves audio encoder precision but the LLM decoder's
+  reduced precision affects text generation accuracy
+- **~6 GB VRAM saved** (~10-11 GB vs 16.4 GB) — makes VibeVoice viable
+  alongside a smaller LLM on a 32 GB device
+- **RTF not directly comparable** — different hardware (GB10 vs Orin).
+  GB10 is faster, so the 0.553 RTF doesn't reflect INT8's speed impact
+- **bitsandbytes INT8 fails on Jetson Orin** (unified memory architecture
+  causes meta tensor errors). Only works on GB10 with 128 GB unified
+  memory where no CPU offloading is needed
+- **GPTQ/AWQ INT4 also fail on Jetson** (gptqmodel can't detect Jetson's
+  custom PyTorch). Quantized VibeVoice requires ≥128 GB unified memory
+  or a discrete GPU
 
 ### Cohere Transcribe 2B (Cohere Labs) — Benchmarked 2026-04-05
 
