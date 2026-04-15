@@ -13,8 +13,10 @@
 | Model | Params | EN WER% (LS-clean) | EN WER% (LS-other) | ZH CER% (AISHELL-1) | JA CER% (ReazonSpeech) | VRAM |
 |-------|--------|:---:|:---:|:---:|:---:|---:|
 | **cohere-transcribe-2b** | 2.0B | **1.80** | — | 4.21 | 9.70 | 4.1GB |
-| **qwen3-asr-1.7b** | 1.7B | 1.87 | **4.12** | **1.57** | 42.02 | 4.2GB |
+| **parakeet-tdt-1.1b** ◆ | 1.1B | 1.82 | **3.43** | N/A | N/A | 4.2GB |
+| **qwen3-asr-1.7b** | 1.7B | 1.87 | 4.12 | **1.57** | 42.02 | 4.2GB |
 | **qwen3-asr-0.6b** | 0.6B | 2.50 | 5.36 | 2.13 | 47.46 | 1.8GB |
+| **parakeet-tdt-0.6b-v3** ◆ | 0.6B | 2.56 | 4.63 | N/A | N/A | 2.6GB |
 | **whisper-large-v3-turbo** | 809M | 2.36 | 5.23 | 9.31 | 26.92 | 3.4GB |
 | **moonshine-base-{en,ja,zh}** † | 61M each | 4.54 | — | 6.88 ‡ | **7.11** | 153MB ea |
 | **moonshine-tiny-{en,ja,zh}** † | 27M each | 5.90 | — | 8.99 ‡ | 13.59 | 78MB ea |
@@ -29,14 +31,21 @@ Listed VRAM is per loaded model on CUDA fp16; CPU fp32 is also viable at 0 VRAM.
 ZH/JA not yet tested. Has built-in speaker diarization (unique among tested models).
 n/t = not tested.
 ¶ INT8 preliminary on 50 samples (DGX Spark1 GB10); 386-sample run in progress.
+◆ Parakeet-TDT (NVIDIA NeMo) — English-only (1.1B) / 25 European languages (0.6B-v3); **no Chinese or Japanese**. Benchmarked 2026-04-15 on full LS-clean (2618) + LS-other (2937) on Jetson AGX Orin 32GB via NeMo toolkit (greedy decoding; CUDA graphs disabled due to Jetson OOM). 0 errors, 1 hallucination per model on LS-other.
 
 ### Best Model Per Language
 
 | Language | Winner | Score | Runner-up | Score |
 |----------|--------|-------|-----------|-------|
-| **English** | Cohere Transcribe 2B | 1.80% WER | Qwen3-ASR-1.7B | 1.87% WER |
+| **English (LS-clean)** | Cohere Transcribe 2B | 1.80% WER | Parakeet-TDT-1.1B | 1.82% WER |
+| **English (LS-other)** | **Parakeet-TDT-1.1B** | **3.43% WER** | Qwen3-ASR-1.7B | 4.12% WER |
 | **Chinese** | Qwen3-ASR-1.7B | 1.57% CER | Qwen3-ASR-0.6B | 2.13% CER |
 | **Japanese** | **Moonshine-base-ja** | **7.11% CER** | Cohere Transcribe 2B | 9.70% CER |
+
+Note: On LS-clean, Cohere (1.80%) and Parakeet-TDT-1.1B (1.82%) are statistically
+indistinguishable (gap = 2 word-errors across 2618 utterances). Parakeet takes
+LS-other decisively (0.69 pp lead). **Cohere remains the only top-tier EN model
+that also handles ZH/JA** — Parakeet is English-only.
 
 ### Inference Speed (Real-Time Factor)
 
@@ -47,6 +56,8 @@ n/t = not tested.
 | moonshine/tiny (legacy ONNX, EN only) | 0.035 | — | — | — | CPU |
 | moonshine/base (legacy ONNX, EN only) | 0.060 | — | — | — | CPU |
 | cohere-transcribe-2b | 0.096 | 0.103 | 0.113 | 0.104 | GPU |
+| parakeet-tdt-0.6b-v3 | 0.039 | n/a | n/a | — | GPU fp32 (NeMo) |
+| parakeet-tdt-1.1b | 0.054 | n/a | n/a | — | GPU fp32 (NeMo) |
 | whisper-large-v3-turbo | 0.17 | 0.18 | 0.26 | 0.20 | GPU |
 | qwen3-asr-0.6b | 0.31 | 0.23 | 0.36 | 0.30 | GPU |
 | qwen3-asr-1.7b | 0.34 | 0.23 | 0.37 | 0.31 | GPU |
@@ -139,11 +150,14 @@ All models stable on long-form audio. No repetition or degradation detected.
 - 14 languages, Apache 2.0 license
 
 ### Option B: Language-Routed (best quality per language)
-Use language detection → route to best model. With Moonshine Flavors now in play:
-- **EN → Cohere Transcribe 2B** (1.80% WER, beats Moonshine's 4.54%)
+Use language detection → route to best model. With Parakeet-TDT + Moonshine Flavors in play:
+- **EN (noisy / LS-other-like) → Parakeet-TDT-1.1B** (3.43% WER — new leader on LS-other, 4.17 GB)
+- **EN (clean) → Cohere 2B or Parakeet-TDT-1.1B** (1.80 vs 1.82% — tied)
 - **ZH → Qwen3-ASR-0.6B** (2.13% CER) or **1.7B** (1.57% CER)
-- **JA → Moonshine-base-ja** (7.11% CER, **new leader**, 153 MB VRAM)
-- Cohere + Qwen + Moonshine-ja total ≈ 6 GB VRAM. Leaves ~26 GB for the LLM.
+- **JA → Moonshine-base-ja** (7.11% CER, 153 MB VRAM)
+- Parakeet-1.1B + Qwen + Moonshine-ja total ≈ 6.0 GB VRAM. Leaves ~26 GB for the LLM.
+- If you prefer a single multilingual EN model (still covering 14 langs for hot-swap),
+  swap Parakeet for Cohere at a 0.02 pp EN cost.
 
 ### Option C: Minimum VRAM, full multilingual (Moonshine-only) — **new**
 **Moonshine-base × {en, ja, zh}** — three small specialized models, all GPU fp16.
@@ -268,6 +282,103 @@ Fast-Conformer encoder + Transformer decoder, 14 languages, Apache 2.0 license.
 - VRAM: 4.1GB (bfloat16), fits comfortably on Orin 32GB alongside other Bosco services
 - Model: `CohereLabs/cohere-transcribe-03-2026`, requires transformers ≥5.5.0
 - Ran with `TRANSFORMERS_OFFLINE=1` on Jetson (model pre-cached via LAN rsync)
+
+### Parakeet-TDT (NVIDIA NeMo) — Benchmarked 2026-04-15
+
+NVIDIA Parakeet TDT (Token-and-Duration-Transducer), Fast-Conformer encoder +
+transducer decoder, CC-BY-4.0 license. NeMo toolkit runtime (`nemo_toolkit[asr]`).
+Ran with `greedy` decoding — `greedy_batch` uses CUDA graphs that OOM on Jetson
+Orin during NeMo warmup (fix in `runners/parakeet_runner.py:42–45`).
+
+| Model | Params | LS-clean WER% | LS-other WER% | RTF (clean) | VRAM | Languages |
+|-------|--------|:---:|:---:|:---:|---:|---|
+| parakeet-tdt-0.6b-v3 | 0.6B | 2.56 | 4.63 | 0.038 | 2.60 GB | 25 European (no ZH/JA) |
+| parakeet-tdt-1.1b | 1.1B | **1.82** | **3.43** | 0.052 | 4.17 GB | English only |
+
+Full LS-clean (2618 samples) + LS-other (2937 samples). 0 errors, 1 hallucination
+per model on LS-other.
+
+**Key findings:**
+- **Parakeet-TDT-1.1B ties Cohere on LS-clean** (1.82% vs 1.80%) — a 2-error
+  difference across 2618 utterances, well within measurement noise.
+- **Parakeet-TDT-1.1B is the new LS-other champion at 3.43%** — 0.69 pp ahead
+  of Qwen3-ASR-1.7B (4.12%) and the best LS-other result in the bench.
+- **Fastest GPU model in the bench** — RTF 0.052 (~19× real-time), nearly 2×
+  faster than Cohere's 0.096. 0.6B-v3 is even faster at 0.038 but trades ~0.7 pp
+  of WER on clean.
+- **Critical limitation: English-only.** The 1.1B variant has no multilingual
+  support; the 0.6B-v3 covers 25 European languages but **not Chinese or
+  Japanese**. Not a viable single-model replacement for Bosco's EN/ZH/JA use case.
+- VRAM: 4.17 GB (1.1B) is on par with Cohere's 4.1 GB; 0.6B-v3 at 2.60 GB is
+  lighter than any other top-10 model except the Moonshine Flavors family.
+- Model files: `nvidia/parakeet-tdt-1.1b`, `nvidia/parakeet-tdt-0.6b-v3`
+  (pre-cached as local `.nemo` on Orin via LAN rsync — HF blocked).
+
+### sugr-asr-bench — Top-3 EN on long-form meeting audio — Benchmarked 2026-04-15
+
+15 English clips from `sugr-asr-bench/english/` (NPR-style meeting/lecture audio,
+24 kHz MP3, **33-42 min each**, 572 min total, 95,302 reference words after
+normalization). Each clip transcribed with 30-second chunking (`transcribe_chunked`
+in `tests/sugr_bench_top3.py`). Metric: WER after `EnglishTextNormalizer`.
+
+| Model | Avg WER | Min | Max | Avg RTF | Notes |
+|-------|:---:|:---:|:---:|:---:|---|
+| **parakeet-tdt-1.1b** | **5.28%** | 3.01% | 13.56% | 0.026 | Tight variance; hyp_words match ref within ±2% |
+| cohere-transcribe-2b | 25.62% | 10.98% | 63.10% | 0.060 | Truncates chunks — hyp/ref words 38–93% |
+| qwen3-asr-1.7b | pending | — | — | — | Download retry in progress (HF blocked on Orin) |
+
+**Per-clip WER (cohere / parakeet):**
+
+| Clip | Dur (s) | Ref words | Cohere WER | Parakeet WER | Cohere hyp/ref % |
+|------|--------:|----------:|-----------:|-------------:|-----------------:|
+| en_1  | 2523 | 6381 | 12.02% |  3.35% | 89.5% |
+| en_2  | 2353 | 6904 | 25.77% |  6.03% | 77.9% |
+| en_3  | 2504 | 5436 | 11.02% |  3.97% | 92.6% |
+| en_4  | 2346 | 7275 | 20.78% |  6.20% | 82.1% |
+| en_5  | 2225 | 6247 | **58.54%** | 5.76% | **42.7%** |
+| en_6  | 2470 | 8116 | 10.98% |  4.97% | 91.9% |
+| en_7  | 2478 | 8362 | 31.82% |  3.01% | 69.7% |
+| en_8  | 2455 | 6339 | **46.10%** | 4.64% | **55.7%** |
+| en_9  | 2210 | 6709 | 18.69% |  5.41% | 84.9% |
+| en_10 | 2082 | 5279 | 12.62% |  5.53% | 91.1% |
+| en_11 | 2083 | 5147 | 16.34% |  3.75% | 85.7% |
+| en_12 | 2035 | 2677 | 24.36% | 13.56% | 82.9% |
+| en_13 | 2140 | 6870 | 17.15% |  4.40% | 85.4% |
+| en_14 | 2010 | 7353 | 15.10% |  3.22% | 87.2% |
+| en_15 | 2401 | 6907 | **63.10%** | 5.36% | **38.0%** |
+
+**Key findings:**
+- **Parakeet-TDT-1.1B wins decisively on long-form content** — 5.28% avg WER vs
+  Cohere's 25.62%, a ~5× gap. This inverts the LS-clean result where the two were
+  tied (1.82 vs 1.80%). On long-form meeting audio with 30-second chunking,
+  Parakeet is the clear winner.
+- **Cohere's failure mode is chunk-level truncation, not mis-transcription.**
+  Cohere's hypothesis contains only 38–93% of the reference word count per clip,
+  with the worst offenders (en_5, en_8, en_15) missing 44–62% of content.
+  Parakeet's hyp_words match ref_words to within ±2% on every clip. The Cohere
+  decoder is emitting early EOS on some 30-second chunks (suspected cause:
+  silence, music, or speaker transitions at chunk boundaries), losing whole
+  segments.
+- **Parakeet is also ~2.3× faster** on long-form (RTF 0.026 vs 0.060). Combined
+  with the WER advantage, the case for Parakeet on English-only long-form
+  transcription is strong. Cohere's multilingual advantage (14 langs incl. ZH/JA)
+  is its only remaining edge.
+- **Cohere runner bug found and patched.** Initial run produced WER=100% on all
+  15 clips because `processor.decode()` on a 2D `[batch, seq]` tensor returns a
+  Python list, and `str(list)` gives `'[" text..."]'` — which
+  `whisper_normalizer` collapses to empty string. Fixed in
+  `runners/cohere_runner.py` by using `batch_decode()` and indexing `[0]`.
+  Result above (25.62%) is post-fix. **This bug did not affect the earlier
+  LibriSpeech Cohere result (1.80% WER)** — different decode path, confirmed
+  with cached transcripts.
+- **Qwen3-ASR-1.7B pending.** The `qwen-asr` pip install on Orin downgraded
+  transformers from 5.4.0 to 4.57.6, and the Qwen3-ASR model isn't cached
+  locally. HF direct and hf-mirror.com both failed from Jetson (connection
+  resets). Downloading via hf_transfer on Mac to rsync to Orin; will append
+  the third row when complete.
+
+Artifacts: `results/sugr_top3_20260415/{cohere,parakeet}.json` (per-clip raw
+hypotheses + WER + RTF). Driver: `tests/sugr_bench_top3.py`.
 
 ### Moonshine — Flavors of Moonshine multilingual — Benchmarked 2026-04-07
 

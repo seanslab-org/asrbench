@@ -74,8 +74,16 @@ class CohereTranscribe2BRunner(ASRRunner):
         with torch.no_grad():
             outputs = self.model.generate(**inputs, max_new_tokens=max_tokens)
 
-        text = self.processor.decode(outputs, skip_special_tokens=True)
-        return text.strip() if isinstance(text, str) else str(text).strip()
+        # processor.decode on a 2D [batch, seq] tensor returns a list of strings;
+        # str(list) produces '["text"]' which the whisper normalizer collapses
+        # to empty. Use batch_decode or index to get a clean string.
+        if hasattr(self.processor, "batch_decode"):
+            texts = self.processor.batch_decode(outputs, skip_special_tokens=True)
+            text = texts[0] if texts else ""
+        else:
+            decoded = self.processor.decode(outputs, skip_special_tokens=True)
+            text = decoded[0] if isinstance(decoded, list) else decoded
+        return text.strip()
 
     def unload(self):
         del self.model
