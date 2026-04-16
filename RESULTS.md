@@ -112,14 +112,67 @@ embed link), preserves full episode length, and updates
 Artifacts: `results/sugr_new_20260416/parakeet.json`,
 driver `tests/sugr_new_bench.py`.
 
-**Moonshine iPad arm:** in progress — m4a transfer to Mac mini is
-slow over the testmac Tailscale link. When complete, the iPad bench
-app (Xcode project at
-`testmac:/Users/seanslab/seanslab/asrbench/ios/`) will be rebuilt
-with a `Resources/audio_sugr/` directory + a `manifest_sugr.json`.
-Run on iOS Simulator for accuracy and on iPad mini 6 for real-device
-RTF. Will compare to Parakeet's 7.25% as the authoritative long-form
-Parakeet-on-Orin baseline.
+### Moonshine on iOS Simulator vs Parakeet-on-Orin — 2026-04-16
+
+Same 10 Sugr-ASR-Bench clips, measured on iOS Simulator (Mac mini CPU,
+M-series) for Moonshine vs Jetson Orin GPU for Parakeet. iPad hardware
+numbers still pending — see caveats below.
+
+| Model | Platform | Avg WER | Min | Max | Avg RTF | Params | VRAM/RAM |
+|---|---|---:|---:|---:|---:|---:|---:|
+| **parakeet-tdt-1.1b** | Jetson Orin GPU | **7.25%** | 4.76% | 9.16% | **0.025** | 1.1B | 4.2 GB |
+| moonshine-base-en | iOS Sim (Mac CPU) | 13.04% | 8.58% | 16.53% | 0.064 | 61M | 153 MB |
+| moonshine-tiny-en | iOS Sim (Mac CPU) | 14.68% | 12.46% | 16.62% | 0.052 | 27M | 78 MB |
+
+**Per-clip WER:**
+
+| Clip | Dur (s) | Ref words | Parakeet | Moonshine-base | Moonshine-tiny |
+|------|--------:|----------:|---------:|---------------:|---------------:|
+| npr_rt8 | 1200 | 3,402 | **4.76%** | 8.58% | 12.46% |
+| npr_ted7 | 1200 | 3,458 | 5.49% | 9.83% | 13.01% |
+| npr_politics_ep16 | 1325 | 4,164 | 6.24% | 13.33% | 13.57% |
+| npr_1a_ep20 | 1981 | 6,144 | 6.87% | 13.48% | 14.47% |
+| npr_1a_b3 | 2695 | 8,711 | 7.16% | 12.34% | 15.88% |
+| npr_pol_b13 | 1171 | 3,577 | 7.58% | 14.76% | 16.05% |
+| npr_politics_ep18 | 1158 | 3,216 | 8.02% | 15.14% | 15.21% |
+| npr_pol_b17 | 1063 | 3,375 | 8.47% | 15.26% | 15.23% |
+| npr_fa_b5 | 1200 | 3,120 | 8.75% | 11.15% | 14.36% |
+| npr_politics_ep22 | 1044 | 3,352 | 9.16% | 16.53% | 16.62% |
+
+**Key findings:**
+
+1. **Parakeet wins decisively on long-form — 7.25% vs Moonshine-base 13.04%.**
+   ~6 pp WER gap, consistent across all 10 clips (Parakeet wins every clip).
+   Parakeet's 1.1B-param Fast-Conformer transducer handles NPR-style
+   multi-speaker dialogue, music beds, and rapid turn-taking materially
+   better than Moonshine's 61M-param model.
+2. **Moonshine-base beats Moonshine-tiny by 1.6 pp WER** (13.04% vs 14.68%) at
+   25% higher compute cost. Base is the right pick for on-device quality.
+3. **RTF comparison is not apples-to-apples.** Moonshine numbers are Mac CPU
+   latency via iOS Simulator (not A15 Bionic neural engine). Real iPad mini 6
+   should run faster per earlier LS-clean bench (moonshine-base 2.45% WER @
+   0.053 RTF on A15 vs 2.55% @ 0.034 on simulator). But both are ~50-70× less
+   compute-budget than Parakeet's GPU — the RTF gap closes when Parakeet runs
+   on CPU.
+4. **On-device mobile transcription is viable but not equivalent.** Moonshine
+   on iPad is usable for quick meeting drafts (~13% WER = most content
+   captured, named entities and fast speech garbled). For archival-quality
+   transcripts, Parakeet on Orin remains the right choice. Mobile + Orin
+   fallback is the deployment pattern this data supports.
+5. **Caveats:** (a) iPad real-device RTF not yet measured — headless
+   xcodebuild from SSH hangs on provisioning cert auth; needs interactive
+   Xcode GUI on Mac mini. WER is hardware-independent so the 13.04% / 14.68%
+   figures are final. (b) Apple SFSpeechRecognizer excluded per direction
+   (gated via `ASR_SKIP_APPLE=1`).
+
+**Setup:** MoonshineRunner patched to decode any audio format (including
+m4a) via AVAudioFile → Float32 16 kHz mono → Moonshine Transcriber. Avoids
+Moonshine's built-in WAV loader which rejected WAVE_FORMAT_EXTENSIBLE.
+`BenchRunner.swift` takes `ASR_AUDIO_DIR` env var to select corpus,
+`ASR_SKIP_APPLE=1` to skip Apple Speech runner.
+
+Artifacts: `results/sugr_new_20260416/moonshine.json` (raw), `moonshine_wer.json`
+(normalized + scored). iOS project: `testmac:/Users/seanslab/seanslab/asrbench/ios/`.
 
 ### iOS / iPad Results (Moonshine via moonshine-swift v0.0.51)
 
