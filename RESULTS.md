@@ -68,6 +68,49 @@ the same speed class as Cohere (~6–11× real-time). The legacy ONNX runtime is
 3× faster on CPU for English-only deployments and uses zero VRAM, but cannot load the
 new multilingual variants.
 
+### Parakeet-TDT-1.1B on Sugr-ASR-Bench (5 valid clips) — 2026-04-16
+
+Benchmark on the standalone Sugr-ASR-Bench corpus (NPR news/politics content,
+10-20 min clips, 16 kHz mono). **5 of 10 clips excluded** due to corpus
+mismatch (audio and reference.txt paired incorrectly at ingestion — see
+"Sugr-ASR-Bench corpus data bug" below).
+
+| Clip | Duration | Ref words | WER | RTF | Show |
+|------|--------:|----------:|----:|----:|------|
+| npr_rt8 | 20:00 | 3,259 | **4.76%** | 0.025 | Rough Translation |
+| npr_ted7 | 20:00 | 3,370 | 5.49% | 0.023 | TED Radio Hour |
+| npr_pol_b13 | 19:31 | 3,445 | 7.58% | 0.039 | NPR Politics |
+| npr_pol_b17 | 17:43 | 3,292 | 8.47% | 0.039 | NPR Politics |
+| npr_fa_b5 | 20:00 | 2,987 | 8.75% | 0.039 | Fresh Air Weekend |
+| **AVG (5 clips)** | **97 min** | **16,353** | **7.01%** | **0.033** | |
+
+Per-clip WERs are consistent with earlier sugr_top3 results (5.28% on 15
+different clips). 7.01% on these 5 NPR-style clips is slightly higher
+than the earlier 5.28%, consistent with NPR audio having more rapid-fire
+dialogue, music beds, and 3-5 speaker turns per clip vs the earlier
+lecture/webinar-heavy set. No Parakeet-specific failures — all 5 clips
+produced clean hypotheses with ~±3% word count vs reference.
+
+**Sugr-ASR-Bench corpus data bug (flagged 2026-04-16):**
+5 of 10 clips (`npr_1a_b3`, `npr_1a_ep20`, `npr_politics_ep16`,
+`npr_politics_ep18`, `npr_politics_ep22`) have audio paired with
+transcripts from different episodes. Audio says "The News Roundup with
+host Nila" but reference says "NPR Politics Podcast with Tamara Keith."
+WER on these clips ranges 48-93% — the metric is meaningless because
+the pairing is wrong. Corpus requires re-scraping references from
+correct source URLs before further benchmarking.
+
+Artifacts: `results/sugr_new_20260416/parakeet.json`,
+driver `tests/sugr_new_bench.py`, raw Orin log at
+`x@100.123.48.6:/home/x/sugr_new_parakeet.log`.
+
+**Moonshine iPad arm:** deferred pending corpus fix. Pre-prep done
+(m4a + manifest staged on Mac mini at
+`/Users/seanslab/seanslab/asrbench/ios/Resources/audio_sugr/`) but the
+automated Mac-mini build sub-agent crashed at the Xcode stage. Next
+attempt should run after corpus cleanup so only the 5 valid clips need
+to be bundled into the iOS app.
+
 ### iOS / iPad Results (Moonshine via moonshine-swift v0.0.51)
 
 Benchmarked on iPad mini 6 (A15 Bionic, iPadOS 26.3) and iOS Simulator (Mac mini CPU).
