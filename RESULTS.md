@@ -323,62 +323,79 @@ in `tests/sugr_bench_top3.py`). Metric: WER after `EnglishTextNormalizer`.
 
 | Model | Avg WER | Min | Max | Avg RTF | Notes |
 |-------|:---:|:---:|:---:|:---:|---|
-| **parakeet-tdt-1.1b** | **5.28%** | 3.01% | 13.56% | 0.026 | Tight variance; hyp_words match ref within ±2% |
+| **qwen3-asr-1.7b** | **4.64%** | 2.69% | 18.23% | 0.325 | New long-form leader; 3× real-time on Orin |
+| parakeet-tdt-1.1b | 5.28% | 3.01% | 13.56% | **0.026** | Fastest (~38× real-time); 0.64 pp behind Qwen3 |
 | cohere-transcribe-2b | 25.62% | 10.98% | 63.10% | 0.060 | Truncates chunks — hyp/ref words 38–93% |
-| qwen3-asr-1.7b | pending | — | — | — | Download retry in progress (HF blocked on Orin) |
 
-**Per-clip WER (cohere / parakeet):**
+**Per-clip WER (all three models):**
 
-| Clip | Dur (s) | Ref words | Cohere WER | Parakeet WER | Cohere hyp/ref % |
-|------|--------:|----------:|-----------:|-------------:|-----------------:|
-| en_1  | 2523 | 6381 | 12.02% |  3.35% | 89.5% |
-| en_2  | 2353 | 6904 | 25.77% |  6.03% | 77.9% |
-| en_3  | 2504 | 5436 | 11.02% |  3.97% | 92.6% |
-| en_4  | 2346 | 7275 | 20.78% |  6.20% | 82.1% |
-| en_5  | 2225 | 6247 | **58.54%** | 5.76% | **42.7%** |
-| en_6  | 2470 | 8116 | 10.98% |  4.97% | 91.9% |
-| en_7  | 2478 | 8362 | 31.82% |  3.01% | 69.7% |
-| en_8  | 2455 | 6339 | **46.10%** | 4.64% | **55.7%** |
-| en_9  | 2210 | 6709 | 18.69% |  5.41% | 84.9% |
-| en_10 | 2082 | 5279 | 12.62% |  5.53% | 91.1% |
-| en_11 | 2083 | 5147 | 16.34% |  3.75% | 85.7% |
-| en_12 | 2035 | 2677 | 24.36% | 13.56% | 82.9% |
-| en_13 | 2140 | 6870 | 17.15% |  4.40% | 85.4% |
-| en_14 | 2010 | 7353 | 15.10% |  3.22% | 87.2% |
-| en_15 | 2401 | 6907 | **63.10%** | 5.36% | **38.0%** |
+| Clip | Dur (s) | Ref words | Qwen3 WER | Parakeet WER | Cohere WER | C hyp/ref |
+|------|--------:|----------:|----------:|-------------:|-----------:|----------:|
+| en_1  | 2523 | 6381 |  2.93% |  3.35% | 12.02% | 89.5% |
+| en_2  | 2353 | 6904 |  4.03% |  6.03% | 25.77% | 77.9% |
+| en_3  | 2504 | 5436 |  3.26% |  3.97% | 11.02% | 92.6% |
+| en_4  | 2346 | 7275 |  3.85% |  6.20% | 20.78% | 82.1% |
+| en_5  | 2225 | 6247 |  4.47% |  5.76% | **58.54%** | **42.7%** |
+| en_6  | 2470 | 8116 |  3.12% |  4.97% | 10.98% | 91.9% |
+| en_7  | 2478 | 8362 |  **2.69%** |  3.01% | 31.82% | 69.7% |
+| en_8  | 2455 | 6339 |  4.18% |  4.64% | **46.10%** | **55.7%** |
+| en_9  | 2210 | 6709 |  4.89% |  5.41% | 18.69% | 84.9% |
+| en_10 | 2082 | 5279 |  4.68% |  5.53% | 12.62% | 91.1% |
+| en_11 | 2083 | 5147 |  3.30% |  3.75% | 16.34% | 85.7% |
+| en_12 | 2035 | 2677 | **18.23%** | **13.56%** | 24.36% | 82.9% |
+| en_13 | 2140 | 6870 |  3.42% |  4.40% | 17.15% | 85.4% |
+| en_14 | 2010 | 7353 |  2.86% |  3.22% | 15.10% | 87.2% |
+| en_15 | 2401 | 6907 |  3.65% |  5.36% | **63.10%** | **38.0%** |
+
+Qwen3 and Parakeet both produce hyp_words within ±2% of ref_words — no
+chunk truncation. Cohere's hyp/ref % column (right) shows its systematic
+under-generation on long-form content.
 
 **Key findings:**
-- **Parakeet-TDT-1.1B wins decisively on long-form content** — 5.28% avg WER vs
-  Cohere's 25.62%, a ~5× gap. This inverts the LS-clean result where the two were
-  tied (1.82 vs 1.80%). On long-form meeting audio with 30-second chunking,
-  Parakeet is the clear winner.
-- **Cohere's failure mode is chunk-level truncation, not mis-transcription.**
-  Cohere's hypothesis contains only 38–93% of the reference word count per clip,
-  with the worst offenders (en_5, en_8, en_15) missing 44–62% of content.
-  Parakeet's hyp_words match ref_words to within ±2% on every clip. The Cohere
-  decoder is emitting early EOS on some 30-second chunks (suspected cause:
-  silence, music, or speaker transitions at chunk boundaries), losing whole
-  segments.
-- **Parakeet is also ~2.3× faster** on long-form (RTF 0.026 vs 0.060). Combined
-  with the WER advantage, the case for Parakeet on English-only long-form
-  transcription is strong. Cohere's multilingual advantage (14 langs incl. ZH/JA)
-  is its only remaining edge.
-- **Cohere runner bug found and patched.** Initial run produced WER=100% on all
-  15 clips because `processor.decode()` on a 2D `[batch, seq]` tensor returns a
-  Python list, and `str(list)` gives `'[" text..."]'` — which
-  `whisper_normalizer` collapses to empty string. Fixed in
-  `runners/cohere_runner.py` by using `batch_decode()` and indexing `[0]`.
-  Result above (25.62%) is post-fix. **This bug did not affect the earlier
-  LibriSpeech Cohere result (1.80% WER)** — different decode path, confirmed
-  with cached transcripts.
-- **Qwen3-ASR-1.7B pending.** The `qwen-asr` pip install on Orin downgraded
-  transformers from 5.4.0 to 4.57.6, and the Qwen3-ASR model isn't cached
-  locally. HF direct and hf-mirror.com both failed from Jetson (connection
-  resets). Downloading via hf_transfer on Mac to rsync to Orin; will append
-  the third row when complete.
+- **Qwen3-ASR-1.7B is the long-form accuracy leader at 4.64% avg WER**,
+  beating Parakeet-TDT-1.1B (5.28%) by 0.64 pp and Cohere-Transcribe-2B
+  (25.62%) by ~5.5×. Qwen3 wins 14 of 15 clips against Parakeet — only
+  en_12 (the shortest, noisiest clip at 2,677 ref words) goes to Parakeet
+  (13.56% vs Qwen3 18.23%).
+- **Parakeet is ~12× faster.** RTF 0.026 vs 0.325 — Parakeet runs at
+  ~38× real-time, Qwen3 at ~3× real-time on the same Jetson Orin. For
+  most meeting-transcription workloads (not batch-archival), Parakeet's
+  speed advantage outweighs the 0.64 pp WER gap. For overnight batch
+  archival where accuracy dominates, Qwen3 wins.
+- **Both Qwen3 and Parakeet produce faithful word counts** (hyp ±2% of
+  ref on every clip). Cohere's hypothesis contains only 38–93% of the
+  reference word count per clip, with worst offenders (en_5, en_8,
+  en_15) missing 44–62% of content. The Cohere decoder emits early EOS
+  on some 30-second chunks (silence / music / speaker-transition
+  boundaries), losing whole segments.
+- **This inverts the LS-clean ranking.** On LibriSpeech clean short
+  utterances, Cohere (1.80%) > Qwen3 (1.87%) > Parakeet (1.82%) —
+  statistically tied. On long-form chunked content: Qwen3 (4.64%) >
+  Parakeet (5.28%) >> Cohere (25.62%). Short-utterance benchmarks do
+  not predict long-form performance.
+- **Cohere runner bug found and patched during this benchmark.** Initial
+  run produced WER=100% on all 15 clips because `processor.decode()` on
+  a 2D `[batch, seq]` tensor returns a Python list, and `str(list)` gives
+  `'[" text..."]'` — which `whisper_normalizer` collapses to empty string.
+  Fixed in `runners/cohere_runner.py` via `batch_decode()` with `[0]`
+  indexing. Result above (25.62%) is post-fix. **Bug did not affect the
+  earlier LibriSpeech Cohere 1.80% result** — different decode path.
 
-Artifacts: `results/sugr_top3_20260415/{cohere,parakeet}.json` (per-clip raw
-hypotheses + WER + RTF). Driver: `tests/sugr_bench_top3.py`.
+### Model selection (updated)
+
+- **Bosco English-only long-form (Orin, streaming):** **Parakeet-TDT-1.1B**
+  — 5.28% WER at 0.026 RTF is the best speed/accuracy ratio, and real-time
+  budget on Orin matters.
+- **Bosco English-only long-form (Spark 2 / batch):** **Qwen3-ASR-1.7B** —
+  0.64 pp accuracy gain is worth the 12× slowdown when runtime budget is
+  overnight, not interactive.
+- **Bosco multilingual (EN/ZH/JA):** **Cohere Transcribe 2B** remains the
+  only viable top-tier option that covers all three languages. Its
+  long-form truncation is a known failure mode to mitigate with larger
+  chunks or a different inference strategy.
+
+Artifacts: `results/sugr_top3_20260415/{cohere,parakeet,qwen3}.json`
+(per-clip raw hypotheses + WER + RTF). Driver: `tests/sugr_bench_top3.py`.
 
 ### Moonshine — Flavors of Moonshine multilingual — Benchmarked 2026-04-07
 
