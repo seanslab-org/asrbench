@@ -68,48 +68,58 @@ the same speed class as Cohere (~6–11× real-time). The legacy ONNX runtime is
 3× faster on CPU for English-only deployments and uses zero VRAM, but cannot load the
 new multilingual variants.
 
-### Parakeet-TDT-1.1B on Sugr-ASR-Bench (5 valid clips) — 2026-04-16
+### Parakeet-TDT-1.1B on Sugr-ASR-Bench (10 clips, corpus-fixed) — 2026-04-16
 
-Benchmark on the standalone Sugr-ASR-Bench corpus (NPR news/politics content,
-10-20 min clips, 16 kHz mono). **5 of 10 clips excluded** due to corpus
-mismatch (audio and reference.txt paired incorrectly at ingestion — see
-"Sugr-ASR-Bench corpus data bug" below).
+Benchmark on the standalone Sugr-ASR-Bench corpus (NPR news/politics
+content, 10-44 min clips, 16 kHz mono) after fixing 5 of 10 clips
+that had mismatched audio/reference pairs upstream (see
+"Sugr-ASR-Bench corpus fix" note below).
 
 | Clip | Duration | Ref words | WER | RTF | Show |
 |------|--------:|----------:|----:|----:|------|
-| npr_rt8 | 20:00 | 3,259 | **4.76%** | 0.025 | Rough Translation |
-| npr_ted7 | 20:00 | 3,370 | 5.49% | 0.023 | TED Radio Hour |
-| npr_pol_b13 | 19:31 | 3,445 | 7.58% | 0.039 | NPR Politics |
-| npr_pol_b17 | 17:43 | 3,292 | 8.47% | 0.039 | NPR Politics |
-| npr_fa_b5 | 20:00 | 2,987 | 8.75% | 0.039 | Fresh Air Weekend |
-| **AVG (5 clips)** | **97 min** | **16,353** | **7.01%** | **0.033** | |
+| npr_rt8 | 20:00 | 3,402 | **4.76%** | 0.023 | Rough Translation |
+| npr_ted7 | 20:00 | 3,458 | 5.49% | 0.026 | TED Radio Hour |
+| npr_politics_ep16 | 22:05 | 4,164 | 6.24% | 0.023 | NPR Politics |
+| npr_1a_ep20 | 33:01 | 6,144 | 6.87% | 0.024 | 1A Political Divisions |
+| npr_1a_b3 | 44:55 | 8,711 | 7.16% | 0.036 | NPR Politics 10th Anniversary |
+| npr_pol_b13 | 19:31 | 3,577 | 7.58% | 0.023 | NPR Politics |
+| npr_politics_ep18 | 19:18 | 3,216 | 8.02% | 0.025 | NPR Politics |
+| npr_pol_b17 | 17:43 | 3,375 | 8.47% | 0.026 | NPR Politics |
+| npr_fa_b5 | 20:00 | 3,120 | 8.75% | 0.025 | Fresh Air Weekend |
+| npr_politics_ep22 | 17:24 | 3,352 | 9.16% | 0.023 | NPR Politics |
+| **AVG (10 clips)** | **234 min** | **42,519** | **7.25%** | **0.025** | |
 
-Per-clip WERs are consistent with earlier sugr_top3 results (5.28% on 15
-different clips). 7.01% on these 5 NPR-style clips is slightly higher
-than the earlier 5.28%, consistent with NPR audio having more rapid-fire
-dialogue, music beds, and 3-5 speaker turns per clip vs the earlier
-lecture/webinar-heavy set. No Parakeet-specific failures — all 5 clips
-produced clean hypotheses with ~±3% word count vs reference.
+All 10 clips WER in a tight 4.76-9.16% band. hyp_words match ref_words
+within ±5% on every clip — no chunk truncation or EOS dropouts.
+RTF 0.025 = ~40× real-time, consistent with Parakeet's earlier
+sugr_top3 run on 15 different clips (5.28% on lecture/webinar content
+vs 7.25% here on faster-paced NPR news/politics). The +2 pp gap
+reflects harder content (3-5 speakers, rapid turns, music beds), not a
+model regression.
 
-**Sugr-ASR-Bench corpus data bug (flagged 2026-04-16):**
-5 of 10 clips (`npr_1a_b3`, `npr_1a_ep20`, `npr_politics_ep16`,
-`npr_politics_ep18`, `npr_politics_ep22`) have audio paired with
-transcripts from different episodes. Audio says "The News Roundup with
-host Nila" but reference says "NPR Politics Podcast with Tamara Keith."
-WER on these clips ranges 48-93% — the metric is meaningless because
-the pairing is wrong. Corpus requires re-scraping references from
-correct source URLs before further benchmarking.
+**Sugr-ASR-Bench corpus fix (2026-04-16):**
+Initial run produced bimodal WER (5 clips at 5-9%, 5 clips at 48-93%).
+Investigation showed 5 clips had audio paired with transcripts from
+different NPR episodes at ingestion. The audio was also artificially
+trimmed to 600/1200 s while references covered the full 17-45 min
+episodes. Fix script
+(`Sugr-ASR-Bench/scripts/fix_mismatched_audio.py`) re-downloads
+correct MP3 from `reference_url` (found via NPR's play.podtrac.com
+embed link), preserves full episode length, and updates
+`duration_sec` in meta.json. Committed to Sugr-ASR-Bench repo as
+`4c61d89`. Original audio preserved as `audio.opus.bak` (gitignored).
 
 Artifacts: `results/sugr_new_20260416/parakeet.json`,
-driver `tests/sugr_new_bench.py`, raw Orin log at
-`x@100.123.48.6:/home/x/sugr_new_parakeet.log`.
+driver `tests/sugr_new_bench.py`.
 
-**Moonshine iPad arm:** deferred pending corpus fix. Pre-prep done
-(m4a + manifest staged on Mac mini at
-`/Users/seanslab/seanslab/asrbench/ios/Resources/audio_sugr/`) but the
-automated Mac-mini build sub-agent crashed at the Xcode stage. Next
-attempt should run after corpus cleanup so only the 5 valid clips need
-to be bundled into the iOS app.
+**Moonshine iPad arm:** in progress — m4a transfer to Mac mini is
+slow over the testmac Tailscale link. When complete, the iPad bench
+app (Xcode project at
+`testmac:/Users/seanslab/seanslab/asrbench/ios/`) will be rebuilt
+with a `Resources/audio_sugr/` directory + a `manifest_sugr.json`.
+Run on iOS Simulator for accuracy and on iPad mini 6 for real-device
+RTF. Will compare to Parakeet's 7.25% as the authoritative long-form
+Parakeet-on-Orin baseline.
 
 ### iOS / iPad Results (Moonshine via moonshine-swift v0.0.51)
 
