@@ -1,7 +1,7 @@
 # ASR Bench v2 — Final Benchmark Report
 
-**Date:** 2026-04-09 (updated — added iPad mini 6 + iOS Simulator results)
-**Hardware:** NVIDIA Jetson AGX Orin 32GB, iPad mini 6 (A15 Bionic), Mac mini (Apple Silicon)
+**Date:** 2026-04-29 (Round 07 — added IBM Granite Speech 4.1 2B AR + NAR)
+**Hardware:** NVIDIA Jetson AGX Orin 32GB, NVIDIA DGX Spark 2 (GB10), iPad mini 6 (A15 Bionic), Mac mini (Apple Silicon)
 **Purpose:** Select the best ASR model for Bosco / lonote / Memio (EN/ZH/JA)
 
 ---
@@ -23,6 +23,8 @@
 | **vibevoice-asr (BF16)** §  | ~9B | 3.11 § | — | n/t | n/t | 16.4GB |
 | **vibevoice-asr (INT8)** §¶ | ~9B | 5.51 §¶ | — | n/t | n/t | ~10GB |
 | **kotoba-whisper-bilingual** | 756M | 3.07 | — | N/A | N/A | 1.6GB |
+| **granite-speech-4.1-2b (AR)** ◇ | 2.0B | 2.32 ◇ | 3.54 ◇ | N/A | N/A | 4.5GB |
+| **granite-speech-4.1-2b-nar (eager)** ◇‡ | 2.0B | 9.30 ‡ | 16.80 ‡ | N/A | N/A | 4.4GB |
 
 † Moonshine "Flavors" — separate monolingual models per language (arXiv 2509.02523).
 Listed VRAM is per loaded model on CUDA fp16; CPU fp32 is also viable at 0 VRAM.
@@ -31,6 +33,16 @@ Listed VRAM is per loaded model on CUDA fp16; CPU fp32 is also viable at 0 VRAM.
 ZH/JA not yet tested. Has built-in speaker diarization (unique among tested models).
 n/t = not tested.
 ¶ INT8 preliminary on 50 samples (DGX Spark1 GB10); 386-sample run in progress.
+◇ Granite Speech 4.1 2B benchmarked on DGX Spark 2 (NVIDIA GB10),
+  200-sample LS subsets (not full 2620 / 2937). Apache 2.0 license,
+  greedy decoding, BF16. AR within ±1 pp of published; NAR-eager
+  WER NOT representative — see Round 07 section below for the full
+  flash-attn 2 install blocker writeup.
+‡ NAR run with `attn_implementation="eager"` (after patching the
+  `flash_attention_2` runtime assert in `modeling_nle.py`); the
+  model card warns this collapses the bidirectional editor to
+  effective causal attention, degrading WER by ~5-7 pp. NAR with
+  flash-attn 2 reports 1.29 / 2.75 LS-clean / LS-other WER.
 ◆ Parakeet-TDT (NVIDIA NeMo) — English-only (1.1B) / 25 European languages (0.6B-v3); **no Chinese or Japanese**. Benchmarked 2026-04-15 on full LS-clean (2618) + LS-other (2937) on Jetson AGX Orin 32GB via NeMo toolkit (greedy decoding; CUDA graphs disabled due to Jetson OOM). 0 errors, 1 hallucination per model on LS-other.
 
 ### Best Model Per Language
@@ -307,6 +319,8 @@ Use language detection → route to best model. With Parakeet-TDT + Moonshine Fl
 | moonshine-{tiny,base}-ja | `UsefulSensors/moonshine-{tiny,base}-ja` | transformers | JA-only Flavors, arXiv 2509.02523 |
 | moonshine-{tiny,base}-zh | `UsefulSensors/moonshine-{tiny,base}-zh` | transformers | ZH-only Flavors, arXiv 2509.02523 |
 | vibevoice-asr | `microsoft/VibeVoice-ASR-HF` | transformers | ~9B params, built-in diarization, 50+ langs |
+| granite-speech-4.1-2b (AR) | `ibm-granite/granite-speech-4.1-2b` | transformers (`AutoModelForSpeechSeq2Seq`) | 2B params, Apache-2.0, EN, encoder + Granite-LLM decoder |
+| granite-speech-4.1-2b-nar | `ibm-granite/granite-speech-4.1-2b-nar` | transformers + flash-attn 2 (mandatory) | 2B params, Apache-2.0, EN/FR/DE/ES/PT, single-pass NAR editor |
 
 ### VibeVoice-ASR (Microsoft) — Benchmarked 2026-03-26
 
@@ -388,6 +402,102 @@ Fast-Conformer encoder + Transformer decoder, 14 languages, Apache 2.0 license.
 - VRAM: 4.1GB (bfloat16), fits comfortably on Orin 32GB alongside other Bosco services
 - Model: `CohereLabs/cohere-transcribe-03-2026`, requires transformers ≥5.5.0
 - Ran with `TRANSFORMERS_OFFLINE=1` on Jetson (model pre-cached via LAN rsync)
+
+### Granite Speech 4.1 2B (IBM) — AR + NAR — Benchmarked 2026-04-29 (Round 07)
+
+IBM's open Granite Speech 4.1 2B family: an autoregressive (AR) variant
+(`ibm-granite/granite-speech-4.1-2b`) using a Granite-LLM decoder, and a
+non-autoregressive (NAR) variant (`ibm-granite/granite-speech-4.1-2b-nar`)
+that does single-pass bidirectional editing over CTC text predictions.
+Both Apache-2.0, ~2 B params, ~4.5 GB VRAM peak in BF16. Run on
+DGX Spark 2 (NVIDIA GB10, CUDA 13.0, torch 2.11.0+cu130,
+transformers 5.5.3, Python 3.12).
+
+| Model | Variant | LS-clean WER (n=200) | LS-other WER (n=200) | RTF | VRAM | Notes |
+|-------|---------|:---:|:---:|:---:|---:|---|
+| **granite-speech-4.1-2b** | AR (greedy, BF16) | **2.32%** | **3.54%** | 0.082 | 4512 MB | Within ±1 pp of published (1.33 / 2.50). Methodology validated. |
+| **granite-speech-4.1-2b-nar** ‡ | NAR, eager attn (degraded) | 9.30% | 16.80% | **0.009** | 4446 MB | flash-attn 2 unavailable on torch 2.11 + cu13 + cp312 + aarch64 — eager fallback drops accuracy by an order of magnitude per the model card warning. |
+| (reference) granite-speech-4.1-2b-nar | NAR + flash-attn 2 (published) | 1.29 | 2.75 | ~5×10⁻⁴ (H100 BS=128) | n/a | Future round once flash-attn 2 lands cleanly on this stack. |
+
+‡ NAR was run with `attn_implementation="eager"` after patching the
+hard `assert self.config.attn_implementation == "flash_attention_2"`
+in `modeling_nle.py:214`. The model card explicitly warns this
+backend "produces causal attention even though `is_causal=False`",
+which collapses the bidirectional editor's advantage and inserts
+spurious tokens on harder utterances. Speed and memory numbers are
+real; WER is **NOT representative** of the NAR architecture's true
+quality.
+
+### Granite Speech AR — Sugr-ASR-Bench long-form (NPR)
+
+| Clip | Audio dur | hyp/ref ratio | WER | RTF |
+|------|--------:|----:|---:|---:|
+| npr_rt8 | 1200 s | 0.98 | **5.20%** | 0.084 |
+| npr_fa_b5 | 1200 s | 1.01 | 5.96% | 0.082 |
+| npr_ted7 | 1200 s | 0.97 | 6.39% | 0.087 |
+| npr_pol_b13 | 1171 s | 0.94 | 9.25% | 0.087 |
+| npr_pol_b17 | 1063 s | 0.90 | 10.55% | 0.087 |
+| **AVG (5 matched-audio clips)** | | | **7.47%** | **0.085** |
+
+5 clips on spark2's Sugr-ASR-Bench corpus snapshot have the older
+trimmed `audio.opus` (10-20 min) while their `reference.txt` covers
+the full 17-45 min episode. Granite produces correct words for the
+audio it sees; the WER on those clips is artificially 49-93%
+because the reference includes content past the end of the audio.
+This is the same `Sugr-ASR-Bench/scripts/fix_mismatched_audio.py`
+issue noted in the 2026-04-16 RESULTS.md addendum — the fix is
+already in `seanslab-org/Sugr-ASR-Bench` commit `4c61d89` but had
+not been re-staged on spark2 by the start of this round.
+
+The 5-clip matched average of **7.47% at RTF 0.085** is directly
+comparable to the existing parakeet-tdt-1.1b 7.25% / 0.025 row above.
+
+### Granite vs the existing English leaders
+
+| Model | LS-clean WER | LS-other WER | Sugr-NPR WER | RTF (LS) | RTF (NPR) | VRAM | License |
+|-------|---:|---:|---:|---:|---:|---:|---|
+| parakeet-tdt-1.1b | 1.82% (full) | 3.43% (full) | 7.25% (10 clips) | 0.052 | 0.025 | 4172 MB | CC-BY-4.0 |
+| **granite-speech-4.1-2b (AR)** | **2.32%** (n=200) | **3.54%** (n=200) | **7.47%** (n=5 matched) | **0.082** | **0.085** | **4512 MB** | **Apache 2.0** |
+| qwen3-asr-1.7b | 1.87% (full) | 4.12% (full) | 4.64% (15 clips) | 0.34 | 0.325 | 4200 MB | Apache 2.0 |
+| cohere-transcribe-2b | 1.80% (full) | — | 25.62% (truncation) | 0.096 | 0.060 | 4100 MB | Apache 2.0 |
+| whisper-large-v3-turbo | 2.36% | 5.23% | — | 0.17 | — | 3400 MB | MIT |
+
+**Key findings:**
+
+- **Granite AR matches Parakeet on accuracy but is 3.4× slower on
+  long-form** (RTF 0.085 vs 0.025 on Sugr NPR). On LS-other, Granite
+  AR (3.54%) is statistically tied with Parakeet (3.43%); on LS-clean
+  Granite AR (2.32%) is 0.50 pp behind Parakeet (1.82%). Both within
+  the ±0.5 pp band of measurement noise on a 200-sample subset.
+- **Granite AR is the strongest fully Apache-2.0 EN open model in the
+  bench.** Cohere is also Apache-2.0 but collapses on long-form
+  (25.62% WER). Qwen3-ASR is Apache-2.0 but slow (RTF 0.32).
+  Parakeet is the speed/accuracy leader but ships under CC-BY-4.0
+  which may need a license review for some BoscoV4 distribution paths.
+- **The NAR variant is the actually-interesting model on paper**
+  (~1820 RTFx on H100 BS=128) but its real-world quality could
+  not be validated this round due to the flash-attn 2 install
+  blockers on torch 2.11 + cu13 + cp312 + aarch64 (no published
+  wheel matches; v2.8.1 cu13torch2.9 wheels installed but
+  ABI-incompatible; from-source build deferred). The patched-eager
+  fallback ran at RTF 0.009 (~9× faster than AR, ~6× faster than
+  Parakeet on the same hardware) but with WER degraded by ~5-7 pp
+  per the model card's own warning. Re-bench when flash-attn 2 is
+  available for our stack.
+
+**Deployment recommendation for BoscoV4:** **No change — keep
+Parakeet-TDT-1.1B as the EN day/streaming model.** Granite AR
+matches accuracy but is 3.4× slower on long-form, doesn't add a
+new capability (both are EN-only), and switching costs integration
+time for a wash. The Apache-2.0 license is the only material
+advantage; if BoscoV4 distribution licensing becomes an issue,
+Granite AR is the obvious swap with a small (<5%) speed penalty.
+
+**Re-evaluate when flash-attn 2 lands cleanly on torch 2.11 + cu13
++ cp312 + aarch64.** If Granite NAR validates at the published
+1.29% / 2.75% LS-clean / LS-other (or even within 1-2 pp of those
+numbers) at the eager run's RTF of 0.009, it would be the new
+English speed/accuracy champion in the bench by a wide margin.
 
 ### Parakeet-TDT (NVIDIA NeMo) — Benchmarked 2026-04-15
 

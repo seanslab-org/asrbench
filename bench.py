@@ -25,6 +25,10 @@ for _mod in [
     "runners.voxtral_runner",
     "runners.cohere_runner",
     "runners.moonshine_runner",
+    "runners.funasr_nano_onnx_runner",
+    "runners.funasr_nano_runner",
+    "runners.granite_speech_ar",
+    "runners.granite_speech_nar",
 ]:
     try:
         __import__(_mod)
